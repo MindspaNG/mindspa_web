@@ -25,6 +25,79 @@ p {
   word-spacing: 2.0ch;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.logo {
+max-width: 100%;
+height: auto;
+image-resolution: 300dpi;
+}
+
+.header {
+    position: relative;
+    height: 100%;
+}
+
+.nav {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    left: 50%;
+    top: 0.8rem;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        position: static;
+        transform: translateX(0);
+        background-color: transparent;
+        padding: 0;
+    }
+
+.nav-link {
+        color: black; 
+}
+
+.nav-link:hover {
+    color: var(--colour4);
+    transition: 0.15s;
+}
+
+.item {
+    padding: 0;
+}
+
+#download-item {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+#download-app {
+    background-color: var(--colour1);
+    color: var(--colour3);
+    padding: 16px 25px;
+    border-radius: 32px;
+}
+
+#download-app:hover {
+    color: var(--colour3);
+    background-color: var(--colour5);
+   
+}
+
 .button {
   background: var(--colour1);
   border: 2px solid var(--colour3);
@@ -43,6 +116,7 @@ p {
 .grid {
   display: grid;
   padding: 20px;
+  padding-top: 140px;
 }
 
 .welcome-text {
