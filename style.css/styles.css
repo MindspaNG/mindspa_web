@@ -1,99 +1,168 @@
-/*variables*/
-:root{
-    --colour1: #ec8d3b;
-    --colour2: #699482;
-    --colour3: #ffffff;
-    --colour4: #ff8458;
-    --colour5: #c5ccd1;
-}
-/*base styles*/
-body{
-    overflow-x: hidden;
-    background: var(--colour3);
-}
-h1{
-    font-family: poppins;
-    font-size: xx-large;
-    color:#699482;
-}
-p{
-    font-size: larger;
-    font-family: poppins;
-    word-spacing: 2.0ch;
-}
-.button{
-    background: var(--colour1);
-    border: 2px solid var(--colour3);
-    color: var(--colour3);
-    padding: 12px 20px;
-    border-radius: 20px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
-    display: inline-block;
-}
-.button:hover{
-    color: var(--colour3);
-    background: var(--colour5);
-}
-.grid{
-    display: grid;
-    padding: 20px;
-
-}
-.welcome-text{
-    padding-top: 20%;
-   text-align: left;
-    grid-column: 1/6;
-    
+/* variables */
+:root {
+  --colour1: #ec8d3b;
+  --colour2: #699482;
+  --colour3: #ffffff;
+  --colour4: #ff8458;
+  --colour5: #c5ccd1;
 }
 
-.welcome-img{
+/* base styles */
+body {
+  overflow-x: hidden;
+  background: var(--colour3);
+}
 
-overflow: hidden;
-    grid-column: 6/13;
+h1 {
+  font-family: poppins;
+  font-size: xx-large;
+  color: #699482;
+}
+
+p {
+  font-size: larger;
+  font-family: poppins;
+  word-spacing: 2.0ch;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.logo {
+max-width: 100%;
+height: auto;
+image-resolution: 300dpi;
+}
+
+.header {
+    position: relative;
     height: 100%;
-    width: 100%;
-    
-    
 }
 
-.welcome-text .store-btns{
-    display: grid;
-    width: 50%;
-    height: 30%;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+.nav {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    left: 50%;
+    top: 0.8rem;
+    transform: translateX(-50%);
+    z-index: 999;
 }
 
-.welcome-text .store-btns .img1{
-    
-    width: 90%;
-    height: 30%;
+.nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        position: static;
+        transform: translateX(0);
+        background-color: transparent;
+        padding: 0;
+    }
+
+.nav-link {
+        color: black; 
+}
+
+.nav-link:hover {
+    color: var(--colour4);
+    transition: 0.15s;
+}
+
+.item {
+    padding: 0;
+}
+
+#download-item {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+#download-app {
+    background-color: var(--colour1);
+    color: var(--colour3);
+    padding: 16px 25px;
+    border-radius: 32px;
+}
+
+#download-app:hover {
+    color: var(--colour3);
+    background-color: var(--colour5);
    
-    
 }
 
-.welcome-text .store-btns .img2{
-    
-    width: 80%;
-    height: 70%;
-   
-    
+.button {
+  background: var(--colour1);
+  border: 2px solid var(--colour3);
+  color: var(--colour3);
+  padding: 12px 20px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+  display: inline-block;
+}
+
+.button:hover {
+  color: var(--colour3);
+  background: var(--colour5);
+}
+
+.grid {
+  display: grid;
+  padding: 20px;
+  padding-top: 140px;
+}
+
+.welcome-text {
+  padding-top: 20%;
+  text-align: left;
+  grid-column: 1/6;
+}
+
+.welcome-img {
+  overflow: hidden;
+  grid-column: 6/13;
+  height: 100%;width: 100%;
+}
+
+.welcome-text .store-btns {
+  display: grid;
+  width: 50%;
+  height: 30%;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.welcome-text .store-btns .img1 {
+  width: 90%;
+  height: 30%;
+}
+
+.welcome-text .store-btns .img2 {
+  width: 80%;
+  height: 70%;
 }
 
 
-/*mobile styles*/
+/* mobile styles */
 
-/*small tablet styles*/
-@media screen and (min-width: 620px){
-
-}
-/*large tablets & laptops styles*/
-@media screen and (min-width: 1200px){
+/* small tablet styles */
+@media screen and (min-width: 620px) {
 
 }
-/*desktop styles*/
-@media screen and (min-width: 1200px){
 
+/* large tablets & laptops styles */
+@media screen and (min-width: 1200px) {
 
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
 
 }
