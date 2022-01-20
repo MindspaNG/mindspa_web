@@ -5,6 +5,7 @@
   --colour3: #ffffff;
   --colour4: #000000;
   --colour5: #c5ccd1;
+  --colour6: #fffaf4;
 }
 
 /* base styles */
@@ -27,6 +28,13 @@ h1 {
 h2 {
   color: var(--colour2);
   font-size: 42px;
+  font-weight: medium;
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  color: var(--colour2);
+  font-size: 32px;
   font-weight: medium;
   font-family: 'Poppins', sans-serif;
 }
@@ -154,13 +162,8 @@ padding-bottom: 25px;
 
 .hero {
 
-  background-color: #fffaf4;
-  width: 100%;
-  /*height:80%;*/
-  
-
-  
-  
+  background-color: var(--colour6);
+  width: 100%;  
 }
 
 .grid {
@@ -182,8 +185,6 @@ padding-bottom: 25px;
 .grid .welcome-img img {
 height: 90%;
 width: 80%;
-
-
 }
 
 .welcome-text {
@@ -206,12 +207,6 @@ width: 80%;
   font-size: 18px;
   border-radius: 10px;
   width: 300px;
-  /*color: var(--colour3);
-  padding: 3%;
-  border-radius: 10px;
-  height: 75px;
-  width: 331px;
-  font-size: 24px;*/
   font-family: 'Poppins', sans-serif;
 }
 
@@ -219,26 +214,6 @@ width: 80%;
   color: var(--colour3);
   background: var(--colour5);
 }
-
-
-
-/*.leading .store-btns {
-  display: grid;
-  width: 50%;
-  height: 30%;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.leading .store-btns .img1 {
-  width: 90%;
-  height: 30%;
-}
-
-.leading .store-btns .img2 {
-  width: 80%;
-  height: 70%;
-}*/
 
 .grid2 {
   display: grid;
@@ -257,12 +232,219 @@ padding-right: 5%;
 
 .grid2 .leading2 {
   grid-template-columns: 6/13;
- padding-left: 3%;
+ padding-left: 3%; 
+}
+
+#whatWeOffer {
+  background-color: var(--colour6);
+  position: relative;
+  z-index: 1;
+}
+
+.bg2 {
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  z-index: -1;
+}
+
+.bg3 {
+  position: absolute;
+  bottom: 0%;
+  right: 0px;
+  z-index: 2;
+}
+
+#whatWeOffer h2 {
+  text-align: center;
+  padding-top: 2%;
+}
+ .grid3 {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
+   gap: 5%; 
+   padding-right: 10%;
+   padding-left: 10%;
+  }
+
+ .grid3 div {
+   background-color: hsl(0, 0%, 100%);
+   align-items: center;
+   border-style:groove;
+   border-width: 0.5px;
+   border-radius: 20px;
+   text-align: center;
+   padding: 3%;
+   height: 460px;
+ }
+
+ .grid3 .img1 {
+  width: 147px;
+  height: 210.13px;
+}
+
+.grid3 .img2 {
+  width: 305.89px;
+  height: 258px;
+}
+
+ .grid3 .img3 {
+   width: 209px;
+   height: 197.11px;
+ }
+
+.info {
+text-align: left;
+margin-top: 5%;
+margin-left: 0%;
+ }
+
+  .privacy {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-right: 15%;
+  padding-left: 10%;
+  
+  }
+
+  
+
+ .privacyLink{
+   text-decoration: underline;
+ }
+
+ .privacyLink a {
+   color: var(--colour1);
+ }
+ 
+ .privacyLink a:hover {
+   color: var(--colour5);
+ }
+ 
+
+ #resources {
+   align-items: center;
+   padding-left: 10%;
+   padding-right: 10%;
+   padding-top: 2%;
+   text-align: center;
+ }
+
+ .grid4 {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ padding-top: 2%;
+ }
+
+ #contact {
+  padding-left: 10%;
+  padding-right: 10%;
+ }
+
+ #contact h2 {
+  padding-top: 2%;
+  text-align: center;
+ }
+
+ .contdiv {
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: 10%
+ }
+
+ 
+ .item7 {
+   display: flex;
+   
+ }
+
+
+ .contdiv img{
+   width: 50px;
+   height: 50px;
+   padding: 3%;
+ }
+
+ .contdiv p {
+   padding: 1%;
+ }
+ 
+ .button3 {
+  background: var(--colour2);
+  border: none;
+  color: var(--colour3);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 300px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2%;
+}
+
+.button3:hover {
+  color: var(--colour2);
+  background: var(--colour5);
+}
+
+input,textarea {
+padding: 10px 16px;
+border-radius: 10px;
+border: 1px solid #0e402d;
+padding: 3%
+}
+
+/*.item9 {
+  padding: 3%;
+  display: grid;
+  grid-template-columns: auto auto;
+  
+  
+}*/
+
+#download {
+  height: 100%;
+  
+}
+
+.grid5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 5%;
+  padding-left: 10%;
+  margin-top: 10%;
   
   
 }
 
+.item14 img {
+  height: 60%;
+  width: 50%;
+}
+.item15 {
+ padding-right: 5%;
+  text-align: justify;
+  
+}
 
+.item15 img {
+  height: 30px;
+  width: 30px;
+  padding: 1%;
+}
+
+.item15 div {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+
+.item15 p {
+  min-height: 50px;;
+}
 
 
 
