@@ -21,7 +21,7 @@
 
   - The figma design that will be implemented for this project can be found [here](https://www.figma.com/file/qFarhYtLErHmVzhliImGdB/Mind-Spa?node-id=701%3A706) 
 
-## Hosted App Link
+## Hosted Web Link
    [Here](https://mindspang.github.io/mindspa_web/index.html) is the link to the Website(Beta) version
 
 ## Contribution Guide
