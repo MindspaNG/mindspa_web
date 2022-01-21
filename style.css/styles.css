@@ -290,8 +290,10 @@ padding-right: 5%;
  }
 
  .grid3 .img1 {
+  margin-top: 40px;
   width: 147px;
   height: 210.13px;
+  padding-bottom: 10px;
 }
 
 .grid3 .img2 {
@@ -300,8 +302,10 @@ padding-right: 5%;
 }
 
  .grid3 .img3 {
+   margin-top: 40px;
    width: 209px;
    height: 197.11px;
+   padding-bottom: 20px;
  }
 
 .info {
