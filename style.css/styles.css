@@ -253,6 +253,7 @@ padding-right: 5%;
 
 .bg2 {
   position: absolute;
+  height: 500px;
   top: 0%;
   left: 0px;
   z-index: -1;
@@ -260,9 +261,10 @@ padding-right: 5%;
 
 .bg3 {
   position: absolute;
-  bottom: 0%;
+  height: 510px;
+  top: 0%;
   right: 0px;
-  z-index: 2;
+  z-index: -1;
 }
 
 #whatWeOffer h2 {
@@ -300,6 +302,12 @@ padding-right: 5%;
   width: 305.89px;
   height: 258px;
 }
+
+.receive{
+     padding-left: 10px;
+     padding-right: 10px;
+     
+  }
 
  .grid3 .img3 {
    margin-top: 40px;
@@ -351,6 +359,13 @@ margin-left: 0%;
  padding-top: 2%;
  }
 
+ .grid4 .audios{
+       padding-right: 70px;
+   }
+
+   .grid4 .articles{
+        padding-right: 50px;
+   }
 
  /*#contact {
   padding-left: 10%;
@@ -459,7 +474,7 @@ max-height: 80%;
 .footer{
     height: 200px;
     width: 100%;
-    margin: 50px 0px; 
+    margin: 0px 0px; 
   }
   
   .footer-top {
