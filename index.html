@@ -11,21 +11,30 @@
 
     <title>Mind-Spa NG</title>
     <link rel="icon" type="image/x-icon" href="Assets\images\Mind-Spa-logo.png">
+
 </head>
 <body>
     
     <header class="header">
-    <nav class="nav">
+    <nav class="nav" >
         <img src="Assets\images\Mind-Spa-logo.png"  alt="Mind-Spa Logo" class="logo">
-        <ul class="nav-links">       
+        <ul class="nav-links">    
+          
             <li class="item"><a href="#about" class="nav-link">About Us</a></li>
 
             <li class="item"><a href="#whatWeOffer" class="nav-link">What We Offer</a></li>
+
             <li class="item"><a href="#resources" class="nav-link">Resources</a></li>
             <li class="item"><a href="#blog" class="nav-link">Blog</a></li>
-            <li class="item"><a href="#contact" class="nav-link">Contact Us</a></li>
+            <!--<li class="item"><a href="#contact" class="nav-link">Contact Us</a></li>-->
             <li class="item" id="download-item"><a href="#download" class="nav-link" id="download-app">Download App</a></li>
-        </ul>    
+            
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div> 
     </nav>
 </header>
 
@@ -49,7 +58,7 @@
     </div>
   </section>  
   <section id="about" class="grid2">
-      <div class="about=img">
+      <div class="about-img">
         <img src="Assets\images\AboutUs.png" alt="About Us">
       </div>
     <div class="leading2">
@@ -84,8 +93,9 @@
   <h2 class="info">Your personal information is safe with us</h2>
   <div class="privacy">
     <div>
-    <p>You can trust us with your private individual data. <br/>Mind-Spa NG guarantees 100% protection 
-      and <br/> uncompromising usage practices with our <br/>information security.
+
+    <p>You can trust us with your private individual data. <br/>Mind-Spa NG guarantees 100% protection  <br/>
+      and uncompromising usage practices with our <br/>information security.
     </p>
 
     <p class="privacyLink"><a href="https://mindspang.com/privacy-policy/">More about privacy & security</a></p>
@@ -245,6 +255,27 @@
       <hr/>
       <p>Copyright &copy Mindspa NG 2022. All rights reserved.</p>
     </div>
+    <script type="text/javascript">
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    }
+    
+    const navLink = document.querySelectorAll(".nav-link");
+    
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+    
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+    }
+    
+    </script>
   </div>
 </body>
 </html>
