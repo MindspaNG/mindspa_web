@@ -67,10 +67,10 @@ image-resolution: 300dpi;
 }
 
 .nav {
-    width: 100%;
+    width: 95%;
     margin: 0px;
     display: flex;
-    position: fixed;
+    position: relative;
     top: 0px;
     justify-content: space-between;
     left: 50%;
@@ -253,7 +253,7 @@ padding-right: 5%;
 #whatWeOffer {
   background-color: var(--colour6);
   position: relative;
-  
+  z-index: 1;
 }
 
 .bg2 {
@@ -275,7 +275,6 @@ padding-right: 5%;
 #whatWeOffer h2 {
   text-align: center;
   padding-top: 2%;
-  z-index: 1;
 }
  .grid3 {
    display: grid;
@@ -501,7 +500,7 @@ max-height: 80%;
     padding-top: 0px;
     margin-top: 0px;
     margin-bottom: 60px;
-    
+    position: static;
    
   }
   
@@ -599,9 +598,6 @@ max-height: 80%;
 }
 
 @media screen and (max-width: 1062px) {
-   #download-app{
-    margin-right: 10px;
-  }
   .grid3 .img3 {
 width: 85%;
 height: 45%;
@@ -621,27 +617,6 @@ p{
   width: 90%;
 }
 
- #welcome{
-  margin-top: 70px;
-  margin-right: -60px;
-}
-
-#about{
-  margin-right: -60px;
-}
-
-#whatWeOffer{
-  margin-right: -60px;
-}
-
-#resources{
-  margin-right: -60px;
-}
-
-#download{
-  margin-right: -60px;
-}
-  
 .button2 {
   width: 50%;
 }
@@ -701,13 +676,9 @@ p{
 }
 
 .footer {
-  padding-left: 40px;
-  padding-right: -10px;
+  padding-left: 3%;
+  padding-right: 3%;
 }
- .footer-top {
-  padding-right: 60px;
-
-}   
 }
 
 
@@ -816,7 +787,6 @@ p{
 .hamburger {
     display: block;
     cursor: pointer;
-    margin-right: 40px;
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
@@ -912,21 +882,7 @@ p{
   .item15 li {
     font-size: 18px;
   }
-  
-  .footer {
-  padding-left: 44px;
-  margin-left: -13px;
-  margin-right: -20px;
-  
-}
 
-  .footer-top{
-    font-size: 12px;
-  }
-
-  .social{
-    width: 20px;
-  }
   .footer-bottom p {
     font-size: 12px;
   }
