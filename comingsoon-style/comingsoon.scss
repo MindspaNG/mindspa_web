@@ -1,12 +1,39 @@
 $bgc: #ffffff;
 $orange: #df6f14;
 $green: #516d61;
+$tablet: 768px;
+$phone: 425px;
+
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+
+}
+
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
 
 body {
     //font-family: 'Poppins' , sans-serif;
     background-color: $bgc;
+    margin: 0%;
+
+    .logo {
+        position: absolute;
+        margin-top: 0%;
+        margin-left: 2%;
+        margin-bottom: 100%;
+        margin-right: 80%;
+    }
+
     #introducing {
-        padding: 65px 0;
+        padding-top: 50px ;
+        padding-bottom: 0%;
         align-items: center;
         text-align: center;
         font-family: 'Poppins', sans-serif;
@@ -28,6 +55,7 @@ body {
                 margin: 30px 0px;
             }
         
+
         
         }
 
@@ -61,7 +89,211 @@ body {
                } 
             }
         }
+
+    }
+
+    #mc_embed_signup {
+        
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 0%;
+        margin-left: 27%;
+        margin-right: 30%; 
+        width:650px;
+        
+        @include tablet {
+            margin-top: 2%;
+            width: 300px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        
+        @include phone {
+            margin-top: 2%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+            
+    }
+
+    form {
+
+    
+    .button {
+        width: 400px;
+    }
+        
+}
+
+
+    .circ1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: lighten($color: $green, $amount: 41%);
+        left: 0;
+        right: 0;
+        clip-path: circle(14.4% at 4% 4%);
+        z-index: -1;
+    
+        @include tablet {
+            clip-path: circle(11.8% at 8% 0);
+            background-color: #506C6190;
+            z-index: 0;
+        }
+    
+        @include phone {
+            clip-path: circle(11.8% at 8% 0);
+            background-color: #506C6190;
+            z-index: 0;  
+        }
+    
         
     }
+    .circ2 {
+        clip-path: circle(14.4% at 97% 98%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: lighten($color: $green, $amount: 41%);
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        @include tablet {
+            clip-path: circle(11.8% at 0 9%);
+            
+        }
+    
+        @include phone {
+            clip-path: circle(11.8% at 0 9%);
+        }
+    }
+    
+    .circ3 {
+        clip-path: circle(3.5% at 90% 14%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        @include tablet {
+            clip-path: circle(3.5% at 98% 98%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    
+        @include phone {
+            clip-path: circle(3.5% at 98% 98%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    }
+    
+    .circ4 {
+        clip-path: circle(2.0% at 93% 22%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        @include tablet {
+            clip-path: circle(2.0% at 95% 91%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    
+        @include phone {
+            clip-path: circle(2.0% at 95% 91%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    }
+    
+    .circ5 {
+        clip-path: circle(1.0% at 91% 26%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        @include tablet {
+            clip-path: circle(1.0% at 97% 87%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    
+        @include phone {
+            clip-path: circle(1.0% at 97% 87%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    }
+    
+    .circ6 {
+        clip-path: circle(3.5% at 5% 90%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        @include tablet {
+            visibility: hidden;
+        }
+    
+        @include phone {
+            visibility: hidden;
+        }
+    }
+    
+    .circ7 {
+        clip-path: circle(2.0% at 4% 80%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $orange;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        
+        @include tablet {
+            clip-path: circle(2.0% at 13% 21%);
+        }
+    
+        @include phone {
+            clip-path: circle(2.0% at 13% 21%);
+        }
+    }
+    
+    .circ8 {
+        clip-path: circle(1.0% at 7% 79%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        @include tablet {
+            clip-path: circle(1.0% at 12% 25%);
+        }
+    
+        @include phone {
+            clip-path: circle(1.0% at 12% 25%);
+        }
+    }
+
+    
+
+    
+    
+    
 
 }
