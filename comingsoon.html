@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comingsoon-style/comingsoon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Mind-Spa NG</title>
+</head>
+
+<body>
+    <section id="introducing">
+        <div class="launch">
+            <h1>Mind-Spa is a platform for the rejuvenation of the mind.
+                <br />
+                Heal, Mend, Renew
+            </h1>
+            <p>We are creating an avenue to provide access to holistic health and promote mental wellbeing<br /> towards the eradication of mental health problems in Africa by connecting users to the most<br/> relevant resources tailored to their mental health needs.</p>
+            <h1>We are launching soon, join the waitlist to get notified </h1>
+        </div>
+        <div class="launch-time">
+            <div>
+                <p class="circle" id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p class="circle" id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p class="circle" id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p class="circle" id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var countDownDate = new Date("Apr 1, 2022 00:00:00").getTime();
+        var x = setInterval (function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if(distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = 00;
+                document.getElementById("hours").innerHTML = 00;
+                document.getElementById("minutes").innerHTML = 00;
+                document.getElementById("seconds").innerHTML = 00;
+            }
+
+        }, 1000);
+
+    </script>
+</body>
