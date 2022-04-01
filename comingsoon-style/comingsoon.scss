@@ -1,12 +1,83 @@
 $bgc: #ffffff;
 $orange: #df6f14;
 $green: #516d61;
+$tablet1: 896px;
+$tablet2: 768px;
+$tablet3: 699px;
+$phone1: 590px;
+$phone: 425px;
+
+
+@mixin tablet1 {
+    @media (max-width: #{$tablet1}) {
+        @content;
+    }
+
+}
+
+@mixin tablet2 {
+    @media (max-width: #{$tablet2}) {
+        @content;
+    }
+
+}
+
+@mixin tablet3 {
+    @media (max-width: #{$tablet3}) {
+        @content;
+    }
+
+}
+
+@mixin phone1 {
+    @media (max-width: #{$phone1}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
 
 body {
     //font-family: 'Poppins' , sans-serif;
     background-color: $bgc;
+    margin: 0%;
+    height: 100%;
+
+    .logo {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        bottom: 530px;
+        right: 400px;
+        width: 10%;
+        height: 20%;
+
+        @include tablet1 {
+            height: 18%;
+        }
+
+        
+        @include tablet2 {
+           height: 15%;
+        }
+
+        @include tablet3 {
+           height: 12% ;
+        }
+
+        @include phone{
+            height: 11%;
+            width: 12%;
+        }
+    }
+
     #introducing {
-        padding: 65px 0;
+        padding-top: 50px ;
+        padding-bottom: 0%;
         align-items: center;
         text-align: center;
         font-family: 'Poppins', sans-serif;
@@ -27,7 +98,42 @@ body {
                 font-weight: 500;
                 margin: 30px 0px;
             }
+
+            @include tablet1 {
+                h1 {
+                    font-size: 20px;
+                }
+            }
         
+            @include tablet2 {
+                h1 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            @include tablet3 {
+                h1 {
+                    font-size: 15px;
+                }
+
+                p{
+                    font-size: 11px;
+                }
+            }
+
+            @include phone {
+                h1 {
+                    font-size: 10px;
+                }
+
+                p {
+                    font-size:8px ;
+                }
+            }
         
         }
 
@@ -60,8 +166,385 @@ body {
                    font-weight: 900;
                } 
             }
+
+            @include tablet3 {
+                .circle {
+                    width: 30px;
+                    line-height: 30px;
+                    font-size: 16px;
+                    padding: 5px;
+                    margin: 30px;
+                }
+
+                span {
+                    font-size: 12px;
+                    
+                }
+            }
+
+            @include phone1 {
+                .circle {
+                padding: 2px;
+                margin: 20px;
+                }
+
+                span {
+                font-size: 10px;
+               }
+            }
+
+            @include phone {
+                margin-right: 20%;
+                margin-left: 10%;
+                width: 200px;
+                padding: 0px;
+
+                .circle {
+                   
+                    line-height: 10px;
+                    font-size: 10px;
+                    padding: 1px;
+                    margin: 10px;
+                }
+                
+                .div {
+                    text-align: center;
+                    padding: 0px;
+                    width: 5px;
+                    height: 10px;
+                    
+                }
+
+                span {
+                    font-size: 8px;
+                    font-weight: 100;
+                    text-align: center;
+                }
+            }
+
         }
+
+    }
+    
+    /***** Form ******/
+
+     #mc_embed_signup {
+
+    #mc-embedded-subscribe-form {
+       /*  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row; */
+        margin-top: 2%;
+        margin-bottom: 0%;
+        margin-left: 30%;
+        margin-right: 30%; 
+
+    #mc-field-group {
+        width: 400px;
         
     }
+
+    .button {
+        width: 400px;
+         
+    }
+
+
+    
+    @include tablet2 {
+       
+        #mc-field-group {
+            width: 300px;
+        }
+
+        .button {
+            margin-top: 2%;
+            width: 300px;
+            padding-left: 5%;
+            padding-right: 5%;
+            }
+    }
+
+    @include tablet3 {
+        #mc-field-group {
+            width: 300px;
+            margin: 0%
+        }
+
+        .button {
+            width: 300px;
+        }
+    }
+
+    @include phone1 {
+        #mc-field-group {
+            width: 250px;
+            margin-right: 10%;
+        }
+
+        .button {
+            width: 250px;
+        }
+    }
+        
+        @include phone {
+            
+            margin-top: 2%;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            #mc-field-group {
+                width: 200px;
+            }
+
+            .button {
+                width: 200px;
+            }
+        }
+            
+    }
+
+
+} 
+
+    
+
+    
+/**** Circles ****/
+
+
+    .circ1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: lighten($color: $green, $amount: 41%);
+        left: 0;
+        right: 0;
+        clip-path: circle(14.4% at 4% 4%);
+        z-index: -1;
+    
+       /* @include tablet2 {
+            clip-path: circle(11.8% at 8% 0);
+            background-color: #506C6190;
+            z-index: 0;
+        }
+    
+        @include phone {
+            clip-path: circle(11.8% at 8% 0);
+            background-color: #506C6190;
+            z-index: 0;  
+        }*/
+    
+        
+    }
+    .circ2 {
+        clip-path: circle(14.4% at 97% 98%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: lighten($color: $green, $amount: 41%);
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+       /* @include tablet2 {
+            clip-path: circle(11.8% at 0 9%);
+            
+        }
+    
+        @include phone {
+            clip-path: circle(11.8% at 0 9%);
+        }*/
+    }
+    
+    .circ3 {
+        clip-path: circle(3.5% at 90% 14%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        /*@include tablet2 {
+            clip-path: circle(3.5% at 98% 98%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    
+        @include phone {
+            clip-path: circle(3.5% at 98% 98%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }*/
+
+        @include phone {
+            clip-path: circle(3.5% at 90% 10%);
+        }
+    }
+    
+    .circ4 {
+        clip-path: circle(2.0% at 93% 22%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        /*@include tablet2 {
+            clip-path: circle(2.0% at 95% 91%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    
+        @include phone {
+            clip-path: circle(2.0% at 95% 91%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }*/
+
+        @include phone {
+            clip-path: circle(2.0% at 95% 14%);
+        }
+    }
+    
+    .circ5 {
+        clip-path: circle(1.0% at 91% 26%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+       /* @include tablet2 {
+            clip-path: circle(1.0% at 97% 87%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }
+    
+        @include phone {
+            clip-path: circle(1.0% at 97% 87%);
+            background-color: lighten($color: $green, $amount: 35%);
+        }*/
+
+        @include phone {
+            clip-path: circle(1.0% at 91% 16%);
+        }
+    }
+    
+    .circ6 {
+        clip-path: circle(3.5% at 5% 90%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+       /* @include tablet2 {
+            visibility: hidden;
+        }
+    
+        @include phone {
+            visibility: hidden;
+        }*/
+
+        @include phone {
+            clip-path: circle(3.5% at 8% 90%);
+        }
+    }
+    
+    .circ7 {
+        clip-path: circle(2.0% at 4% 80%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        @include tablet1 {
+            clip-path: circle(2.0% at 4% 82%)
+        }
+        
+       /* @include tablet2 {
+            clip-path: circle(2.0% at 13% 21%);
+        }
+    
+        @include phone {
+            clip-path: circle(2.0% at 13% 21%);
+        }*/
+        
+        @include phone {
+            clip-path: circle(2.0% at 4% 85%);
+        }
+    }
+    
+    .circ8 {
+        clip-path: circle(1.0% at 7% 79%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $green;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    
+        /*@include tablet2 {
+            clip-path: circle(1.0% at 12% 25%);
+        }
+    
+        @include phone {
+            clip-path: circle(1.0% at 12% 25%);
+        }*/
+
+        @include phone {
+            clip-path: circle(1.0% at 8% 83%);
+        }
+    }
+
+    
+  /**** Social Media Icons ****/
+    .social {
+        position: absolute;
+        top: 555px;
+        right: 10px;
+        
+        text-align: center; 
+        
+
+        .fbIcon {
+            width: 30%;
+            height: 30%;
+            
+        }
+
+        @include tablet2 {
+            right: 5px;
+            top: 570px;
+
+            .fbIcon {
+                width: 20%;
+                height: 20%;
+            }
+        }
+
+        @include phone1 {
+            right: 0px;
+        }
+
+        @include phone {
+            left: 350px;
+            top: 575px;
+        }
+    }
+
+
+
+    
+    
+    
 
 }
