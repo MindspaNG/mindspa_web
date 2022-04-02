@@ -82,13 +82,19 @@ body {
         text-align: center;
         font-family: 'Poppins', sans-serif;
 
+
         .launch {
+            @include phone {
+                padding-top: 8px;
+            }
+    
             h1 {
                 font-size: 23px;
                 //padding: 0;
                 margin-top: 30px;
                 margin-bottom: 0;
                 font-weight: 600;
+                
             }
             
             p   {
@@ -128,10 +134,17 @@ body {
             @include phone {
                 h1 {
                     font-size: 10px;
+                    padding-top: 2px;
+                    padding-bottom: 0;
                 }
 
                 p {
-                    font-size:8px ;
+                    font-size: 9px ;
+                    padding-bottom: 0;
+                }
+
+                #soon {
+                    margin-top: 0;
                 }
             }
         
@@ -159,68 +172,57 @@ body {
                    margin: 35px;
                    margin-bottom: 10px;
                    //margin-bottom: 0;
-               }
+
+                    @include tablet3 {
+                    width: 32px;
+                    line-height: 32px;
+                    font-size: 16px;
+                    padding: 5px;
+                    margin: 30px;
+                    margin-bottom: 20px;
+                    }
+
+                    @include phone1 {
+                    padding: 2px;
+                    margin: 20px;
+                    }
+        
+                    @include phone {
+                    width: 30px;
+                    line-height: 30px;
+                    font-size: 13px;
+                    padding: 3px;
+                    margin: 15px;
+                    margin-bottom: 2px;
+                    }
+                }
 
                span {
                    font-size: 15px;
                    font-weight: 900;
-               } 
-            }
 
-            @include tablet3 {
-                .circle {
-                    width: 30px;
-                    line-height: 30px;
-                    font-size: 16px;
-                    padding: 5px;
-                    margin: 30px;
-                }
-
-                span {
+                   @include tablet3 {
                     font-size: 12px;
+                    }
+
+                    @include phone1 {
+                    font-size: 10px;
+                    }
                     
-                }
+                    @include phone {
+                    font-weight: 100;
+                    text-align: center;
+                    }
+                } 
             }
-
-            @include phone1 {
-                .circle {
-                padding: 2px;
-                margin: 20px;
-                }
-
-                span {
-                font-size: 10px;
-               }
-            }
-
-            @include phone {
+            
+            /*@include phone {
                 margin-right: 20%;
                 margin-left: 10%;
                 width: 200px;
                 padding: 0px;
 
-                .circle {
-                   
-                    line-height: 10px;
-                    font-size: 10px;
-                    padding: 1px;
-                    margin: 10px;
-                }
-                
-                .div {
-                    text-align: center;
-                    padding: 0px;
-                    width: 5px;
-                    height: 10px;
-                    
-                }
-
-                span {
-                    font-size: 8px;
-                    font-weight: 100;
-                    text-align: center;
-                }
-            }
+            }*/
 
         }
 
