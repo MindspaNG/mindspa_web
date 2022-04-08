@@ -77,7 +77,7 @@ $phone: 425px;
                 @include displayAlign;
                 justify-content: center;
                 justify-content: space-between;
-                padding: 1rem 1.5rem; 
+                padding: 16px 24px; 
 
                 
                 .nav-menu {
@@ -159,7 +159,7 @@ $phone: 425px;
                 .nav-menu {
                     position: fixed;
                     left: -100%;
-                    top: 7rem;
+                    top: 112px;
                     flex-direction: column;
                     background-color: $white;
                     width: 100%;
@@ -174,7 +174,7 @@ $phone: 425px;
                 }
 
                 .nav-item {
-                    margin: 2.0rem 0;
+                    margin: 32px 0;
                 }
 
                 #download-item {
