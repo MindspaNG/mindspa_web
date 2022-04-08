@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  background-color: #0e402d;
+  padding-bottom: 4 rem;
+}
+
+.footer {
+  width: 90%;
+  height: 50vh;
+  background-color: #0e402d;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 8rem;
+}
+
+.footer-heading h2 {
+  padding-bottom: 2rem;
+}
+
+.footer-heading p {
+  margin-bottom: 2rem;
+}
+
+.footer-heading a {
+  color: #ffffff;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.footer-heading a:hover {
+  color: #ec8d3b;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.footer-1 {
+  margin-top: 10px;
+}
+
+.footer-1 img {
+  height: 120px;
+  width: 120px;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+  margin: 2px;
+}
+
+.footer-1 .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.footer-2 {
+  margin-top: 40px;
+}
+
+.footer-3 {
+  margin-top: 40px;
+}
+
+.footer-email-form {
+  margin-top: 40px;
+}
+
+.footer-email-form h2 {
+  padding-bottom: 2rem;
+}
+
+.footer-email-form p {
+  padding-bottom: 2rem;
+}
+
+.footer-email-form #footer-email {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: #900e402d;
+  color: #ffffff;
+}
+
+.footer-email-form #footer-email::-webkit-input-placeholder {
+  color: lightgrey;
+  font-size: 12px;
+}
+
+.footer-email-form #footer-email:-ms-input-placeholder {
+  color: lightgrey;
+  font-size: 12px;
+}
+
+.footer-email-form #footer-email::-ms-input-placeholder {
+  color: lightgrey;
+  font-size: 12px;
+}
+
+.footer-email-form #footer-email::placeholder {
+  color: lightgrey;
+  font-size: 12px;
+}
+
+.footer-email-form #footer-email-btn {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ec8d3b;
+}
+/*# sourceMappingURL=style.css.map */
