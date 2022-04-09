@@ -1,24 +1,77 @@
+$green: #0e402d;
+$orange: #ec8d3b;
+$laptop: 1024px;
+$tablet: 768px;
+$mobileL: 425px;
+$mobileM: 375px;
+
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content
+    }
+}
+
+@mixin mobileL {
+    @media (max-width: #{$mobileL}) {
+        @content
+    }
+}
+
+@mixin mobileM {
+    @media (max-width: #{$mobileM}) {
+        @content
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: lightgray;
 }
 
 .footer-container {
-    background-color: #0e402d;
-    padding-bottom: 4 rem;
+    background-color: $green;
+    padding: 4rem 0 4rem 0;
+
+    @include mobileL {
+        padding: 0;
+        align-items:flex-start;
+    }
+
 }
 
 .footer {
     width: 90%;
-    height: 50vh;
-    background-color: #0e402d;
+    height: 40vh;
+    background-color: $green;
     color: #ffffff;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+
+    @include tablet {
+        height: 70vh;
+    }
+
+    @include tablet {
+        height: 90vh;
+    }
+
+    @include mobileL {
+        height: 160vh;
+        display: block;
+     
+    }
+
 }
 
 .footer-heading {
@@ -27,30 +80,39 @@
     margin-right: 8rem;
 
     h2 {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
+        color: #ffffff;
     }
 
     p {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     a {
-        color: #ffffff;
+        color: lightgray;
         padding-bottom: 0.5rem;
         text-decoration: none;
     }
 
     
     a:hover {
-        color: #ec8d3b;
+        color: $orange;
         transition: 0.3s ease-out;
+    }
+
+    @include laptop {
+        margin-right: 3rem;
+
+        h2 {
+            font-size: 20px;
+        }
     }
 
 }
 
 .footer-1 {
 
-    margin-top: 10px;
+    margin-top: 8px;
 
     img {
         height: 120px;
@@ -62,6 +124,10 @@
     .icons {
         display: flex;
         column-gap: 2rem;
+    }
+
+    @include laptop {
+        margin-top: 0;
     }
 }
 
@@ -79,11 +145,12 @@
     margin-top: 40px;
 
     h2 {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
+        color: #ffffff;
     }
 
     p {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 
     #footer-email {
@@ -109,6 +176,37 @@
         width: 100px;
         border: none;
         border-radius: 10px;
-        background-color: #ec8d3b;
+        background-color: $orange;
+        font-size: 12px;
+    }
+
+    @include laptop {
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        
+        br {
+            display: none;
+        }
+
+        #footer-email {
+            width: 80%;
+        }
+    }
+
+    @include mobileL {
+        #footer-email {
+            width: 70%
+        }
+    }
+
+    @include mobileM {
+        #footer-email {
+            width: 60%;
+        }
     }
 }

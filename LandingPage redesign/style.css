@@ -4,16 +4,26 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  color: lightgray;
 }
 
 .footer-container {
   background-color: #0e402d;
-  padding-bottom: 4 rem;
+  padding: 4rem 0 4rem 0;
+}
+
+@media (max-width: 425px) {
+  .footer-container {
+    padding: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .footer {
   width: 90%;
-  height: 50vh;
+  height: 40vh;
   background-color: #0e402d;
   color: #ffffff;
   display: -webkit-box;
@@ -25,6 +35,25 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer {
+    height: 160vh;
+    display: block;
+  }
 }
 
 .footer-heading {
@@ -39,15 +68,16 @@
 }
 
 .footer-heading h2 {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  color: #ffffff;
 }
 
 .footer-heading p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer-heading a {
-  color: #ffffff;
+  color: lightgray;
   padding-bottom: 0.5rem;
   text-decoration: none;
 }
@@ -58,8 +88,17 @@
   transition: 0.3s ease-out;
 }
 
+@media (max-width: 1024px) {
+  .footer-heading {
+    margin-right: 3rem;
+  }
+  .footer-heading h2 {
+    font-size: 20px;
+  }
+}
+
 .footer-1 {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .footer-1 img {
@@ -81,6 +120,12 @@
           column-gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+  .footer-1 {
+    margin-top: 0;
+  }
+}
+
 .footer-2 {
   margin-top: 40px;
 }
@@ -94,11 +139,12 @@
 }
 
 .footer-email-form h2 {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  color: #ffffff;
 }
 
 .footer-email-form p {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .footer-email-form #footer-email {
@@ -140,5 +186,36 @@
   border: none;
   border-radius: 10px;
   background-color: #ec8d3b;
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .footer-email-form h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-email-form {
+    width: 100%;
+  }
+  .footer-email-form br {
+    display: none;
+  }
+  .footer-email-form #footer-email {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-email-form #footer-email {
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-email-form #footer-email {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
