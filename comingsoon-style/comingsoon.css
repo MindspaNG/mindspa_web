@@ -46,10 +46,10 @@ body #introducing {
   padding-top: 50px;
   padding-bottom: 0%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 425px) {
@@ -116,11 +116,11 @@ body #introducing .launch-time {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   /*@include phone {
                 margin-right: 20%;
                 margin-left: 10%;
@@ -272,7 +272,7 @@ body .circ1 {
   left: 0;
   right: 0;
   -webkit-clip-path: circle(14.4% at 4% 4%);
-          clip-path: circle(14.4% at 4% 4%);
+  clip-path: circle(14.4% at 4% 4%);
   z-index: -1;
   /* @include tablet2 {
             clip-path: circle(11.8% at 8% 0);
@@ -289,7 +289,7 @@ body .circ1 {
 
 body .circ2 {
   -webkit-clip-path: circle(14.4% at 97% 98%);
-          clip-path: circle(14.4% at 97% 98%);
+  clip-path: circle(14.4% at 97% 98%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -309,7 +309,7 @@ body .circ2 {
 
 body .circ3 {
   -webkit-clip-path: circle(3.5% at 90% 14%);
-          clip-path: circle(3.5% at 90% 14%);
+  clip-path: circle(3.5% at 90% 14%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -331,13 +331,13 @@ body .circ3 {
 @media (max-width: 425px) {
   body .circ3 {
     -webkit-clip-path: circle(3.5% at 90% 10%);
-            clip-path: circle(3.5% at 90% 10%);
+    clip-path: circle(3.5% at 90% 10%);
   }
 }
 
 body .circ4 {
   -webkit-clip-path: circle(2% at 93% 22%);
-          clip-path: circle(2% at 93% 22%);
+  clip-path: circle(2% at 93% 22%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -359,13 +359,13 @@ body .circ4 {
 @media (max-width: 425px) {
   body .circ4 {
     -webkit-clip-path: circle(2% at 95% 14%);
-            clip-path: circle(2% at 95% 14%);
+    clip-path: circle(2% at 95% 14%);
   }
 }
 
 body .circ5 {
   -webkit-clip-path: circle(1% at 91% 26%);
-          clip-path: circle(1% at 91% 26%);
+  clip-path: circle(1% at 91% 26%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -387,13 +387,13 @@ body .circ5 {
 @media (max-width: 425px) {
   body .circ5 {
     -webkit-clip-path: circle(1% at 91% 16%);
-            clip-path: circle(1% at 91% 16%);
+    clip-path: circle(1% at 91% 16%);
   }
 }
 
 body .circ6 {
   -webkit-clip-path: circle(3.5% at 5% 90%);
-          clip-path: circle(3.5% at 5% 90%);
+  clip-path: circle(3.5% at 5% 90%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -413,13 +413,13 @@ body .circ6 {
 @media (max-width: 425px) {
   body .circ6 {
     -webkit-clip-path: circle(3.5% at 8% 90%);
-            clip-path: circle(3.5% at 8% 90%);
+    clip-path: circle(3.5% at 8% 90%);
   }
 }
 
 body .circ7 {
   -webkit-clip-path: circle(2% at 4% 80%);
-          clip-path: circle(2% at 4% 80%);
+  clip-path: circle(2% at 4% 80%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -439,20 +439,20 @@ body .circ7 {
 @media (max-width: 896px) {
   body .circ7 {
     -webkit-clip-path: circle(2% at 4% 82%);
-            clip-path: circle(2% at 4% 82%);
+    clip-path: circle(2% at 4% 82%);
   }
 }
 
 @media (max-width: 425px) {
   body .circ7 {
     -webkit-clip-path: circle(2% at 4% 85%);
-            clip-path: circle(2% at 4% 85%);
+    clip-path: circle(2% at 4% 85%);
   }
 }
 
 body .circ8 {
   -webkit-clip-path: circle(1% at 7% 79%);
-          clip-path: circle(1% at 7% 79%);
+  clip-path: circle(1% at 7% 79%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -472,7 +472,7 @@ body .circ8 {
 @media (max-width: 425px) {
   body .circ8 {
     -webkit-clip-path: circle(1% at 8% 83%);
-            clip-path: circle(1% at 8% 83%);
+    clip-path: circle(1% at 8% 83%);
   }
 }
 
@@ -511,4 +511,7 @@ body .social .fbIcon {
     top: 575px;
   }
 }
+
+/* form */
+
 /*# sourceMappingURL=comingsoon.css.map */
