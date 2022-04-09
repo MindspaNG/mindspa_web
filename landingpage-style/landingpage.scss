@@ -48,6 +48,11 @@ $phone: 425px;
         @content;
     }
 }
+
+@mixin displayAlign {
+    display: flex;
+    align-items: center;
+}
     
 * {
     margin: 0;
@@ -85,7 +90,7 @@ $phone: 425px;
                     justify-content: space-between;
 
                     .nav-item {
-                        margin-left: 40px;
+                        margin-left: 37px;
                         list-style-type: none;
 
                         .nav-link {
@@ -147,7 +152,7 @@ $phone: 425px;
            }
        } 
 
-        include tab {
+        @include tab {
             #download-app {
                 font-size: 12px;
             }
