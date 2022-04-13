@@ -1,12 +1,20 @@
 $white: #ffffff;
+$black: #000000;
 $orange: #df6f14;
 $green: #516d61;
+$tab: 985px;
 $tablet1: 896px;
 $tablet2: 768px;
 $tablet3: 699px;
 $phone1: 590px;
 $phone: 425px;
 
+@mixin tab {
+    @media (max-width: #{$tab}) {
+        @content;
+    }
+
+}
 
 @mixin tablet1 {
     @media (max-width: #{$tablet1}) {
@@ -40,6 +48,11 @@ $phone: 425px;
         @content;
     }
 }
+
+@mixin displayAlign {
+    display: flex;
+    align-items: center;
+}
     
 * {
     margin: 0;
@@ -52,86 +65,82 @@ $phone: 425px;
         width: 100%;
     
         header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0px 50px;
-            position: sticky;  
-            z-index: 999;
-            top: 0;
-            left: 0;
-            background-color: $white;
-            
             .logo {
                 height:auto;
                 //width: 170px;
                 // position: absolute;
                 width: 10%;
-                height: 20%;
+                height: 10%;
 
-                @include tablet2 {
+                @include tablet1 {
                     width: 100px;
                     image-resolution: 300dpi;
                 }
-
-
             }
-            .navbar {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                li{
-                    list-style: none;
-                    padding: 0 20px;
-                    position: relative;
-
-                    a{
-                        text-decoration: none;
-                        font-size: 16px;
-                        font-weight: 600;
-                        color: #1a1a1a;
-                        transition: 0.3s ease;
-                    }
-
-                    a:hover {
-                        color: $green;
-                    }
-                } 
-                #download-item {
-                    margin-top: 8px;
-                    margin-bottom: 10px;
-                }
-                
-                #download-app {
-                    background-color: $green;
-                    color: $white;
-                    padding: 16px 25px;
-                    border-radius: 35px;
-                }
-                
-            }
-
-            .hamburger {
-                display: none;
-
-                @include tablet2 {
-                    display: block;
-                    
-                }
             
-                .bar {
-                    display: block;
-                    width: 25px;
-                    height: 3px;
-                    margin: 5px auto;
-                    -webkit-transition: all 0.3s ease-in-out;
-                    transition: all 0.3s ease-in-out;
-                    background-color: #1a1a1a;
-                
-                }
+            .navbar {
+                @include displayAlign;
+                justify-content: center;
+                justify-content: space-between;
+                padding: 16px 24px; 
 
+                
+                .nav-menu {
+                    @include displayAlign;
+                    justify-content: space-between;
+
+                    .nav-item {
+                        margin-left: 37px;
+                        list-style-type: none;
+
+                        .nav-link {
+                            text-decoration: none;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $black;
+                            transition: 0.3s ease;
+                        }
+                        
+                        .nav-link:hover {
+                            color: $green;
+                        }
+                    }
+
+                    #download-item {
+                        margin-top: 8px;
+                        margin-bottom: 10px;
+                    }
+                    
+                    #download-app {
+                        background-color: $green;
+                        color: $white;
+                        padding: 16px 25px;
+                        border-radius: 35px;
+                    }
+                }
+                
+                .hamburger {
+                    display: none;
+                    
+                    @include tablet1 {
+                        display: block;
+                        cursor: pointer;
+                    }
+                    
+                    .bar {
+                        display: block;
+                        width: 25px;
+                        height: 3px;
+                        margin: 5px auto;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        background-color: #1a1a1a;
+                    
+                    }
+    
+                }
             }
+            
         }
         
        #sect-1 {
@@ -139,48 +148,60 @@ $phone: 425px;
             width: 100%;
             max-width: 1369px;
             min-width: 20px;
-            height: 79vh;
+            height: 74vh;
            }
        } 
 
+        @include tab {
+            #download-app {
+                font-size: 12px;
+            }
+        }
        
-       @include tablet2{
-            .navbar{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                position: fixed;
-                top: 0;
-                right: -300px;
-                height: 100vh;
-                width: 300px;
-                background-color: #e3e6f3;
-                box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-                padding: 80px 0 0 10px;
-                transition: 0.3s;
-
-                .active {
-                    right: 0px;
+       @include tablet1{
+            .navbar {
+               
+                .nav-menu {
+                    position: fixed;
+                    left: -100%;
+                    top: 112px;
+                    flex-direction: column;
+                    background-color: $white;
+                    width: 100%;
+                    border-radius: 10px;
+                    text-align: center;
+                    transition: 0.3s;
+                    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
                 }
 
-                li {
-                    //bottom: 25px;
-                    margin: 2.5rem 0;
+                .nav-menu.active {
+                    left: 0;
                 }
-            }
-            .hamburger.active .bar:nth-child(2) {
-            opacity: 0;
-            }
 
-            .hamburger.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-            }
+                .nav-item {
+                    margin: 32px 0;
+                }
 
-            .hamburger.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-            }
-    }
-    
+                #download-item {
+                    padding: 30px 0px 40px 0px;
+                }
+
+                #download-app{
+                    font-size: 16px;
+                }
+                
+                .hamburger.active .bar:nth-child(2) {
+                    opacity: 0;
+                    }
+        
+                .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+                }
+
+                .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+                }
+            }  
+        }
     }
 }

@@ -11,32 +11,13 @@
   width: 100%;
 }
 
-* body header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0px 50px;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-}
-
 * body header .logo {
   height: auto;
   width: 10%;
-  height: 20%;
+  height: 10%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 896px) {
   * body header .logo {
     width: 100px;
     image-resolution: 300dpi;
@@ -53,50 +34,66 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 24px;
 }
 
-* body header .navbar li {
-  list-style: none;
-  padding: 0 20px;
-  position: relative;
+* body header .navbar .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-* body header .navbar li a {
+* body header .navbar .nav-menu .nav-item {
+  margin-left: 37px;
+  list-style-type: none;
+}
+
+* body header .navbar .nav-menu .nav-item .nav-link {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #000000;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
-* body header .navbar li a:hover {
+* body header .navbar .nav-menu .nav-item .nav-link:hover {
   color: #516d61;
 }
 
-* body header .navbar #download-item {
+* body header .navbar .nav-menu #download-item {
   margin-top: 8px;
   margin-bottom: 10px;
 }
 
-* body header .navbar #download-app {
+* body header .navbar .nav-menu #download-app {
   background-color: #516d61;
   color: #ffffff;
   padding: 16px 25px;
   border-radius: 35px;
 }
 
-* body header .hamburger {
+* body header .navbar .hamburger {
   display: none;
 }
 
-@media (max-width: 768px) {
-  * body header .hamburger {
+@media (max-width: 896px) {
+  * body header .navbar .hamburger {
     display: block;
+    cursor: pointer;
   }
 }
 
-* body header .hamburger .bar {
+* body header .navbar .hamburger .bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -110,50 +107,53 @@
   width: 100%;
   max-width: 1369px;
   min-width: 20px;
-  height: 79vh;
+  height: 74vh;
 }
 
-@media (max-width: 768px) {
-  * body .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@media (max-width: 985px) {
+  * body #download-app {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 896px) {
+  * body .navbar .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 112px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    height: 100vh;
-    width: 300px;
-    background-color: #e3e6f3;
-    -webkit-box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 80px 0 0 10px;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
-  * body .navbar .active {
-    right: 0px;
+  * body .navbar .nav-menu.active {
+    left: 0;
   }
-  * body .navbar li {
-    margin: 2.5rem 0;
+  * body .navbar .nav-item {
+    margin: 32px 0;
   }
-  * body .hamburger.active .bar:nth-child(2) {
+  * body .navbar #download-item {
+    padding: 30px 0px 40px 0px;
+  }
+  * body .navbar #download-app {
+    font-size: 16px;
+  }
+  * body .navbar .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  * body .hamburger.active .bar:nth-child(1) {
+  * body .navbar .hamburger.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
             transform: translateY(8px) rotate(45deg);
   }
-  * body .hamburger.active .bar:nth-child(3) {
+  * body .navbar .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
   }
