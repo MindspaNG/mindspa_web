@@ -2,12 +2,22 @@ $white: #ffffff;
 $black: #000000;
 $orange: #df6f14;
 $green: #516d61;
+$grey: #e5e5e5;
+$lightGrey: #f9fafa;
+$desktop: 1300px;
 $tab: 985px;
 $tablet1: 896px;
 $tablet2: 768px;
 $tablet3: 699px;
 $phone1: 590px;
 $phone: 425px;
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+
+}
 
 @mixin tab {
     @media (max-width: #{$tab}) {
@@ -61,10 +71,11 @@ $phone: 425px;
 
     body {
         font-family: 'Poppins' , sans-serif;
-        background-color: $white;
+        background-color: $lightGrey;
         width: 100%;
     
         header {
+            background-color: $white;
             .logo {
                 height:auto;
                 //width: 170px;
@@ -143,18 +154,368 @@ $phone: 425px;
             
         }
         
-       #sect-1 {
-           .together {
+        //PERSONAL INFORMATION SECTION
+        .safe {
             width: 100%;
-            max-width: 1369px;
-            min-width: 20px;
-            height: 74vh;
-           }
-       } 
+            padding: 60px 200px;
+            padding-top: 80px;
+            margin: 0px auto;
+            background-image: url(/Assets/images/left-leaves.png);
+            background-repeat: no-repeat;
+            background-size: auto 500px; 
+            background-position-y: bottom;
+            /*.leaf {
+                width: 50px;
+                margin-left: -200px;
+
+            }*/
+            h6 {
+                font-size: 30px;
+                color: $green;
+                
+            }
+
+            .tphone {
+                display: flex;
+                justify-content: space-between;
+                margin-top: -100px;
+                .text {
+                    width: 70%;
+                    margin-top: 130px;
+
+                    p {
+                        padding-bottom: 50px;
+                        font-size: 14px;
+                    }
+                    span {
+                        color: $orange;
+                        text-decoration: underline;
+                        padding-top: 100px;
+                        
+                    }
+                }
+
+                .phone{
+                    width: 30%;
+                    margin-top: 0px;
+                    padding-top: 0px;
+
+                }
+            }
+        }
+
+       //GET STARTED SECTION
+       .started {
+        h5 {
+            @include displayAlign;
+            justify-content: center;
+            color: $green;
+            padding: 0px 0px 40px 0px;
+            margin-top: 0px;
+            font-size: 27px;
+            font-weight: 550;
+        }
+        .timeline{
+            background-color: $grey;
+            padding: 10px 0px 60px 0px;
+            margin: 0px 20px;
+            //max-width: 1080px;
+            // margin: 10px;
+            //padding: 0 20px 170px 0;
+            position: relative;
+            h6 {
+                font-size: 17px;
+            }
+
+            span {
+                font-size: 15px;
+            }
+
+            .get {
+                img {
+                width: 50px;  
+               // min-width: 20px;
+                padding: 10px 10px 0px 10px;
+                }
+            }
+           
+
+        }
+        
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: $green;
+            top: 103px;
+            bottom: 0;
+            left: 50%;
+            //margin-left: -1px;
+
+        }
+
+        .hand {
+            text-align: center;
+            top: 0px;
+            margin-bottom: 70px;
+            margin-left: 60px;
+        }
+
+        .row {
+            padding: 0px 40px 10px 40px;
+            position: relative;
+            //background-color: inherit;
+            width: 50%;
+        }
+
+        .row::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -15px;
+        background-color: $green;
+        border: 1px solid $green;
+        top: 55px;
+        border-radius: 50%;
+        z-index: 1;
+        }
+        
+        .row-1 {
+            left: 0;
+        } 
+
+        .row-2 {
+            left: 50%;
+        } 
+
+        .row-1::before {
+            content: " ";
+            //height: 0;
+            position: absolute;
+            top: 69px;
+            width: 27.5%;
+           // min-width: 170px;
+            z-index: 1;
+            right: 10px;
+            border-bottom: 4px dashed $green;
+            /*border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white; */
+        }
+
+        .row-2::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 87px;
+        //width: 0;
+        width: 27.5%;
+        min-width: 170px;
+        z-index: 1;
+        //left: 30px;
+        left: 10px;
+        border-bottom: 4px dashed $green;
+        /*border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent; */
+        }
+        .row-2::after {
+            left: -14px;
+            margin-top: 20px;
+        }
+
+        .row-4::before {
+            margin-top: 30px;
+        }
+
+        .row-4::after {
+            margin-top: 50px;
+            background-color: $white;
+            border: 4px solid $green;
+            width: 20px;
+            height: 20px;
+        }
+
+        .content {
+        padding: 20px 10px;
+        margin: 0px 150px;
+        background-color: $white;
+        position: relative;
+        border-radius: 6px;
+        text-align: center;
+        z-index: 4;
+        }
+
+        .num {
+            margin: 0px 120px;
+            text-align: center;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            color: $white;
+            background-color: $green;
+            border: 1px solid $green;
+            border-radius: 50%;
+        }
+    }
+
+    //EMAIL SECTION
+    .updates{
+       padding-bottom: 50px;
+        h6{
+            padding: 80px ;
+            font-size: 24px;
+            color: $green;
+            text-align: center;
+        }
+        .mail {
+            //align-items: center;
+            /*justify-content: center;
+            text-align: center;
+            align-self: center;
+            left: 0;
+            right: 50%;
+            border: 1px solid $black;
+            border-radius: 8px;
+            background-color: $white;
+            //margin: 0px 300px;
+            padding: 50px 0px;
+            //margin: 0px 400px;
+            width: 600px; */
+        
+            //@include displayAlign;
+            border: 1px solid $white;
+            border-radius: 8px;
+            width: 550px;
+            background-color: $white;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto; 
+            padding: 50px;
+            .text {
+                width: 350px;
+                //min-width: 500px; 
+                padding: 20px;
+                border: 1px solid $grey; 
+                border-radius: 7px; 
+                box-sizing: border-box; 
+                margin-top: 4px; 
+                margin-bottom: 16px; 
+                //resize: vertical;
+            }
+            
+                .sign {
+                background-color: $orange;
+                color: white;
+                padding: 18px 20px;
+                margin-top: 20px;
+                font-size: 17px;
+                border: none;
+                border-radius: 4px;
+                width: 350px;
+                cursor: pointer;
+            }
+            
+            .sign:hover {
+                background-color: $green;
+            }
+            
+        }
+    }
+    
+    //MEDIA QUERIES
+        @include desktop{
+             //PERSONAL INFORMATION SECTION
+             .safe {
+                h6{
+                    font-size: 20px;
+                }
+            }
+
+            //GET STARTED SECTION
+            .started {
+                .timeline {
+                    margin: 0px;
+                }
+
+                .content {
+                    padding: 20px;
+                    margin: 0px 80px;
+                }
+
+                .num {
+                    margin: 0px 61px;
+                }
+            }
+
+           
+        }
 
         @include tab {
             #download-app {
                 font-size: 12px;
+            }
+
+
+            //PERSONAL INFORMATION SECTION
+            .safe {
+                padding: 60px 100px;
+                background-image:none;
+                h6 {
+                    font-size: 20px;
+                }
+               .tphone {
+
+                   .text {
+                       width: 65%;
+                   }
+
+                   .phone {
+                       width: 40%;
+                   }
+               }
+            }
+            
+            //GET STARTED SECTION
+            .started {
+                h5 {
+                    margin-top: 8px;
+                }
+
+                .timeline{
+                    h6 {
+                        font-size: 15px;
+                    }
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+                .content {
+                    margin: 0px 30px;
+                    border: 1px solid $black;
+                    border-radius: 20px;
+                }
+
+                .num {
+                    margin: 40px 0px 0px 20px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+
+               
+            }
+            //EMAIL SECTION
+            .updates {
+                h6 {
+                    font-size: 20px;
+                }
+
+               
             }
         }
        
@@ -202,6 +563,299 @@ $phone: 425px;
                 transform: translateY(-8px) rotate(-45deg);
                 }
             }  
+
+             
         }
+
+        @include tablet2{
+            //PERSONAL INFORMATION SECTION
+            .safe {
+                padding-bottom: 0px;
+                .tphone {
+                    
+                   .phone {
+                    //   width: 20%;
+                    margin-right: 20px;
+                    margin-top: 60px;
+
+                   }
+                }
+            }
+            
+        }
+
+        @include tablet3{
+            //PERSONAL INFORMATION SECTION
+            .safe {
+                padding: 40px 70px 0px 70px ;
+                .tphone {
+                    .text {
+                        
+                        p {
+                            padding-bottom: 20px;
+                            font-size: 14px;
+                        }
+                        span {
+                            font-size: 13px;
+                            padding-top: 30px;
+                        }
+                    }
+                   .phone {
+                    width: 50%;
+                   }
+                }
+            }
+
+            //GET STARTED SECTION
+            .started {
+                margin: 0px;
+                
+                h5 {
+                    font-size: 25px;
+                }
+
+                .timeline::after {
+                    margin-left: 40px;
+                    left: 18px;
+                    
+                }
+
+                .hand {
+                    margin-right: 650px;
+                    margin-left: 40px;
+                    //left: 30%;
+                    
+                }
+        
+                .row {
+                   width: 100%;
+                   //padding-left: 90px;
+                   //padding-right: 55px;
+                }
+
+                .row-1 {
+                    left: 0%;
+                    //padding-left: 20px;
+                }
+
+                .row-2 {
+                    left: 0%;
+                }
+
+                .row-1::before {
+                    width: 70%;
+                    left: 50px;
+                }
+
+                .row-2::before {
+                    width: 20%;
+                    left: 70px;
+                }
+
+                .row-1::after {
+                    left: 45px;
+                }
+
+                .row-2::after {
+                    left:45px;
+                }
+
+                
+                .content {
+                    width: 60%;
+                    //padding-left: 10px;
+                    left: 100px;
+                }
+
+                .content::before {
+                    left: 60px;
+                }
+
+                .num {
+                   margin-left: 120px;
+                }
+            }
+        }
+
+        @include phone1{
+            //PERSONAL INFORMATION
+            .safe {
+                padding: 40px 10px 0px 50px;
+                h6 {
+                    font-size: 16px;
+                }
+                .tphone {
+                    .text {
+                       // width: 20%;
+                        p, span {
+                            font-size: 11px;
+                        }
+                    }
+                    .phone {
+                        padding-top: 20px;
+                        height: 400px;
+                        width: 300px;
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+            }
+
+            //GET STARTED SECTION
+            .started {
+                h5 {
+                    font-size: 23px;
+                }
+            }
+            //EMAIL SECTION
+            .updates {
+                h6 {
+                    font-size: 18px;
+                    padding: 50px;
+                }
+
+                .mail {
+                    width: 400px;
+                    //margin: auto;
+
+                    .text {
+                        width: 250px;
+                    }
+
+                    .sign {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+
+        @include phone{
+            //PERSONAL INFORMATION
+            .safe {
+                padding: 40px 10px 0px 20px;
+                h6 {
+                    font-size: 13px;
+                }
+                .tphone {
+                    .text {
+                        width: 100%;
+                        margin-top: 110px;
+                        p, span {
+                            font-size: 10px;
+                        }
+                    }
+                    .phone {
+                        padding-top: 20px;
+                        height: 400px;
+                        width: 300px;
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+            }
+            
+
+            //GET STARTED SECTION
+            .started {
+                h5 {
+                    font-size: 22px;
+                    margin-top: 0px;
+                }
+
+                .timeline {
+                    margin-left: 0;
+
+                    h6 {
+                        font-size: 14px;
+                    }
+                    p, span {
+                        font-size: 12px;
+                    }
+                    .get {
+                        img {
+                            width: 45px;
+                        }
+                    }
+                }
+
+                .timeline::after {
+                    margin-left: 10px;
+                    
+                }
+
+                .hand {
+                    margin-right: 850px;
+                    margin-left: 10px;
+                    //left: 30%;
+                    
+                }
+                .row-1::before {
+                    width: 20%;
+                    left: 30px;
+                }
+
+                .row-2::before {
+                    width: -2%;
+                    left: 40px;
+                }
+
+                .row-1::after {
+                    left: 15px;
+                }
+
+                .row-2::after {
+                    left:15px;
+                }
+
+                .content {
+                    //padding-left: 10px;
+                    width: 80%;
+                    left: 10px;
+                    padding: 15px 25px;
+                }
+
+                .num {
+                    margin-left: 30px;
+                }
+                
+                
+            }
+
+
+           //EMAIL SECTION
+           .updates {
+            h6 {
+                font-size: 18px;
+
+            }
+
+            .mail {
+                width: 280px;
+                //margin: auto;
+                border: 2px solid black;
+                border-radius: 20px;
+                padding: 25px 10px;
+
+                
+                .text {
+                    padding: 10px;
+                }
+
+                .sign {
+                    padding: 15px 17px;
+                    border-radius: 16px;
+                    font-size: 15px;
+                }
+               
+            }
+        }
+       }
+
     }
 }
