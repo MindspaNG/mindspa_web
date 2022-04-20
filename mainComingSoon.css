@@ -1,11 +1,12 @@
-.comingSoon {
-  background: url(./Assets/images/comingSoonDestop.jpg);
+html,
+body {
+  background: url("/Assets/images/comingSoonDestop.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: 100%;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  transition: all 0.8s;
+  transition: all 0.85s;
 }
 
 .launch-time {
@@ -44,8 +45,16 @@
   .logo-img {
     width: 150px;
   }
-
-  .comingSoon {
+  html,
+  body {
+    background: url("/Assets/images/ipadbackground.jpg") no-repeat center center
+      fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  /* .comingSoon {
     background: url(./Assets/images/ipadbackground.jpg);
     background-size: cover;
     background-position: center;
@@ -53,7 +62,7 @@
     height: 100vh;
     background-repeat: no-repeat;
     transition: all 0.85s;
-  }
+  } */
   .lead {
     font-size: 20px;
     text-align: center;
@@ -85,19 +94,18 @@
 
 /* ==============Phones===========*/
 
-@media only screen and (max-width: 600px) and (min-width: 200px) {
+@media only screen and (max-width: 600px) and (min-width: 360px) {
   .logo-img {
-    width: 120px;
+    width: 100px;
   }
-
-  .comingSoon {
-    background: url(/Assets/images/mobile-spa.jpg);
+  html,
+  body {
+    background: url("/Assets/images/mobile-spa.jpg") no-repeat center center
+      fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all 0.75s;
-    width: 100vw;
-    height: 100vh;
   }
   .lead {
     font-size: 14px;
