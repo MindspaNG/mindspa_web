@@ -71,7 +71,7 @@
 }
 
 * body header .navbar .nav-menu .nav-item .nav-link:hover {
-  color: #516d61;
+  color: #0e402d;
 }
 
 * body header .navbar .nav-menu #download-item {
@@ -80,10 +80,16 @@
 }
 
 * body header .navbar .nav-menu #download-app {
-  background-color: #516d61;
+  background-color: #0e402d;
   color: #ffffff;
   padding: 16px 25px;
   border-radius: 35px;
+}
+
+* body header .navbar .nav-menu #download-app:hover {
+  background-color: #ec8d3b;
+  -webkit-transition: ease;
+  transition: ease;
 }
 
 * body header .navbar .hamburger {
@@ -107,6 +113,295 @@
   background-color: #1a1a1a;
 }
 
+* body .hero {
+  width: 100%;
+  padding: 50px 100px;
+}
+
+* body .hero .heal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* body .hero .heal .mend {
+  padding-top: 70px;
+  padding-left: 80px;
+  width: 50%;
+}
+
+* body .hero .heal .mend h4 {
+  font-size: 43px;
+  color: #0e402d;
+  font-weight: 700;
+}
+
+* body .hero .heal .mend h4 span {
+  color: #ec8d3b;
+}
+
+* body .hero .heal .mend p {
+  font-size: 17px;
+}
+
+* body .hero .heal .mend .button {
+  margin-top: 80px;
+}
+
+* body .hero .heal .mend .button a {
+  padding: 20px 40px;
+  background-color: #ec8d3b;
+  border-radius: 50px;
+  border: 1px solid #ec8d3b;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+* body .hero .heal .mend .button a:hover {
+  background-color: #0e402d;
+  border-color: #0e402d;
+}
+
+* body .hero .heal .mind {
+  width: 48%;
+  height: 550px;
+}
+
+* body .hero .heal .mind img {
+  max-height: 100%;
+}
+
+* body .hero h6 {
+  font-size: 29px;
+  color: #0e402d;
+  text-align: center;
+  margin-top: 20px;
+}
+
+* body .resources {
+  width: 100%;
+}
+
+* body .resources .access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding: 20px 200px;
+  /*.screen {
+                    //height: 460px;
+                    //width: 100%;
+                    //padding-left: 100px;
+                    /*img {
+                        //max-height: 100%;
+                    }*/
+}
+
+* body .resources .access .bgresources1 {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+}
+
+* body .resources .access .bgresources2 {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+}
+
+* body .resources .access .help {
+  width: 70%;
+  padding-top: 100px;
+}
+
+* body .resources .access .help p {
+  font-size: 19px;
+  line-height: 35px;
+}
+
+* body .resources .access .help div {
+  border-bottom: 4px solid #516d61;
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 90px;
+}
+
+* body .about {
+  width: 100%;
+  padding: 40px 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* body .about .platform .text {
+  text-align: center;
+}
+
+* body .about .platform .text h4 {
+  font-size: 35px;
+  color: #0e402d;
+  margin-bottom: 50px;
+}
+
+* body .about .platform .text p {
+  line-height: 40px;
+  padding: 0px 70px;
+}
+
+* body .about .platform .statements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  padding: 0px 40px;
+}
+
+* body .about .platform .statements .statement {
+  background-color: #ffffff;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  padding: 30px 20px;
+}
+
+* body .about .platform .statements .statement img {
+  width: 25%;
+  min-width: 40px;
+}
+
+* body .about .platform .statements .statement h6 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+* body .about .platform .statements .statement p {
+  font-size: 14px;
+}
+
+* body .offer {
+  width: 100%;
+  padding: 50px 100px;
+  margin-top: 50px;
+  background-color: #e5e5e5;
+}
+
+* body .offer h4 {
+  font-size: 30px;
+  color: #0e402d;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+* body .offer .offers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0px;
+}
+
+* body .offer .offers .frame {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+* body .offer .offers .frame img {
+  width: 20%;
+  margin-right: 20px;
+}
+
+* body .information {
+  width: 100%;
+  background-color: #e5e5e5;
+  padding: 100px 160px 70px 160px;
+  position: relative;
+  z-index: 1;
+}
+
+* body .information .info {
+  text-align: center;
+}
+
+* body .information .info h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #0e402d;
+}
+
+* body .information .info p {
+  margin-bottom: 50px;
+}
+
+* body .information .bg-info1 {
+  position: absolute;
+  z-index: -1;
+  bottom: 100px;
+  left: 0;
+  width: 100px;
+}
+
+* body .information .bg-info2 {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+}
+
+* body .information .tips {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*.articles {
+                    }*/
+}
+
+* body .information .tips .tip {
+  background-color: #0e402d;
+  margin: 20px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px solid transparent;
+  border-radius: 40px;
+}
+
+* body .information .tips .tip img {
+  width: 100%;
+  height: 75%;
+  min-height: 80px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+* body .information .tips .tip p {
+  padding-top: 5px;
+  color: #ffffff;
+}
+
 * body .safe {
   width: 100%;
   padding: 60px 200px;
@@ -117,15 +412,15 @@
   background-size: auto 500px;
   background-position-y: bottom;
   /*.leaf {
-                width: 50px;
-                margin-left: -200px;
-
-            }*/
+                    width: 50px;
+                    margin-left: -200px;
+                    
+                }*/
 }
 
 * body .safe h6 {
   font-size: 30px;
-  color: #516d61;
+  color: #0e402d;
 }
 
 * body .safe .tphone {
@@ -148,10 +443,11 @@
   font-size: 14px;
 }
 
-* body .safe .tphone .text span {
-  color: #df6f14;
+* body .safe .tphone .text a {
+  color: #ec8d3b;
   text-decoration: underline;
   padding-top: 100px;
+  cursor: pointer;
 }
 
 * body .safe .tphone .phone {
@@ -170,7 +466,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #516d61;
+  color: #0e402d;
   padding: 0px 0px 40px 0px;
   margin-top: 0px;
   font-size: 27px;
@@ -201,7 +497,7 @@
   content: '';
   position: absolute;
   width: 2px;
-  background-color: #516d61;
+  background-color: #0e402d;
   top: 103px;
   bottom: 0;
   left: 50%;
@@ -226,8 +522,8 @@
   width: 25px;
   height: 25px;
   right: -15px;
-  background-color: #516d61;
-  border: 1px solid #516d61;
+  background-color: #0e402d;
+  border: 1px solid #0e402d;
   top: 55px;
   border-radius: 50%;
   z-index: 1;
@@ -248,9 +544,9 @@
   width: 27.5%;
   z-index: 1;
   right: 10px;
-  border-bottom: 4px dashed #516d61;
+  border-bottom: 4px dashed #0e402d;
   /*border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white; */
+                    border-color: transparent transparent transparent white; */
 }
 
 * body .started .row-2::before {
@@ -262,10 +558,10 @@
   min-width: 170px;
   z-index: 1;
   left: 10px;
-  border-bottom: 4px dashed #516d61;
+  border-bottom: 4px dashed #0e402d;
   /*border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent; */
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent; */
 }
 
 * body .started .row-2::after {
@@ -280,7 +576,7 @@
 * body .started .row-4::after {
   margin-top: 50px;
   background-color: #ffffff;
-  border: 4px solid #516d61;
+  border: 4px solid #0e402d;
   width: 20px;
   height: 20px;
 }
@@ -302,8 +598,8 @@
   height: 25px;
   line-height: 25px;
   color: #ffffff;
-  background-color: #516d61;
-  border: 1px solid #516d61;
+  background-color: #0e402d;
+  border: 1px solid #0e402d;
   border-radius: 50%;
 }
 
@@ -314,23 +610,23 @@
 * body .updates h6 {
   padding: 80px;
   font-size: 24px;
-  color: #516d61;
+  color: #0e402d;
   text-align: center;
 }
 
 * body .updates .mail {
   /*justify-content: center;
-            text-align: center;
-            align-self: center;
-            left: 0;
-            right: 50%;
-            border: 1px solid $black;
-            border-radius: 8px;
-            background-color: $white;
-            //margin: 0px 300px;
-            padding: 50px 0px;
-            //margin: 0px 400px;
-            width: 600px; */
+                    text-align: center;
+                    align-self: center;
+                    left: 0;
+                    right: 50%;
+                    border: 1px solid $black;
+                    border-radius: 8px;
+                    background-color: $white;
+                    //margin: 0px 300px;
+                    padding: 50px 0px;
+                    //margin: 0px 400px;
+                    width: 600px; */
   border: 1px solid #ffffff;
   border-radius: 8px;
   width: 550px;
@@ -364,7 +660,7 @@
 }
 
 * body .updates .mail .sign {
-  background-color: #df6f14;
+  background-color: #ec8d3b;
   color: white;
   padding: 18px 20px;
   margin-top: 20px;
@@ -376,10 +672,45 @@
 }
 
 * body .updates .mail .sign:hover {
-  background-color: #516d61;
+  background-color: #0e402d;
 }
 
 @media (max-width: 1300px) {
+  * body .hero {
+    padding: 40px 20px;
+  }
+  * body .hero .heal .mend {
+    padding-left: 90px;
+  }
+  * body .hero .heal .mend h4 {
+    font-size: 37px;
+  }
+  * body .hero .heal .mind {
+    width: 550px;
+    height: 450px;
+  }
+  * body .resources .access {
+    padding: 20px 130px;
+  }
+  * body .resources .access .bgresources1 {
+    width: 130px;
+  }
+  * body .resources .access .bgresources2 {
+    width: 120px;
+  }
+  * body .resources .access .help {
+    width: 100%;
+  }
+  * body .about {
+    padding: 40px 70px;
+  }
+  * body .offer {
+    width: 100%;
+    padding: 50px 50px;
+  }
+  * body .information {
+    padding: 100px 60px;
+  }
   * body .safe h6 {
     font-size: 20px;
   }
@@ -398,6 +729,47 @@
 @media (max-width: 985px) {
   * body #download-app {
     font-size: 12px;
+  }
+  * body .hero {
+    padding: 40px 20px;
+  }
+  * body .hero .heal .mend h4 {
+    font-size: 34px;
+  }
+  * body .hero .heal .mend p {
+    font-size: 16px;
+  }
+  * body .hero .heal .mind {
+    width: 450px;
+    height: 400px;
+  }
+  * body .resources .access {
+    padding: 20px 50px;
+  }
+  * body .resources .access .help p {
+    font-size: 17px;
+  }
+  * body .resources .access .help div {
+    width: 60px;
+  }
+  * body .about {
+    padding: 40px 40px;
+  }
+  * body .about .platform .text h4 {
+    font-size: 30px;
+  }
+  * body .about .platform .text p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  * body .about .platform .statements {
+    padding: 0px 30px;
+  }
+  * body .about .platform .statements .statement {
+    margin: 15px;
+  }
+  * body .information {
+    padding: 100px 30px;
   }
   * body .safe {
     padding: 60px 100px;
@@ -441,7 +813,7 @@
   * body .navbar .nav-menu {
     position: fixed;
     left: -100%;
-    top: 112px;
+    top: 110px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -459,7 +831,7 @@
     left: 0;
   }
   * body .navbar .nav-item {
-    margin: 32px 0;
+    margin: 25px 0;
   }
   * body .navbar #download-item {
     padding: 30px 0px 40px 0px;
@@ -478,9 +850,160 @@
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
   }
+  * body .hero .heal .mend {
+    padding-left: 30px;
+  }
+  * body .hero .heal .mend h4 {
+    font-size: 27px;
+  }
+  * body .hero .heal .mend p {
+    font-size: 15px;
+  }
+  * body .hero .heal .mend .button {
+    margin-top: 50px;
+  }
+  * body .hero .heal .mend .button a {
+    padding: 13px 30px;
+  }
+  * body .hero .heal .mind {
+    width: 410px;
+    height: 380px;
+  }
+  * body .hero h6 {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  * body .resources .access {
+    padding: 20px 40px;
+  }
+  * body .resources .access .help p {
+    font-size: 17px;
+  }
+  * body .resources .access .help div {
+    width: 60px;
+  }
+  * body .about {
+    padding-bottom: 90px;
+  }
+  * body .about .platform .text p {
+    line-height: 40px;
+  }
+  * body .about .platform .statements {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  * body .about .platform .statements .statement {
+    padding: 30px 40px;
+    margin: 30px 30px;
+  }
+  * body .about .platform .statements .statement h6 {
+    font-size: 16px;
+  }
+  * body .about .platform .statements .statement p {
+    font-size: 12px;
+  }
+  * body .about .platform .statements .goals {
+    grid-column: span 3;
+    padding: 35px 30px;
+    width: 42%;
+    margin: auto;
+  }
+  * body .about .platform .statements .goals img {
+    width: 20%;
+  }
+  * body .offer {
+    padding: 50px 10px;
+  }
+  * body .offer .offers .frame {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
+  * body .hero .heal .mend {
+    padding-left: 20px;
+  }
+  * body .hero .heal .mend h4 {
+    font-size: 27px;
+  }
+  * body .hero .heal .mend p {
+    font-size: 14px;
+  }
+  * body .hero .heal .mend .button a {
+    padding: 13px 27px;
+    font-size: 14px;
+  }
+  * body .hero .heal .mind {
+    width: 350px;
+    height: 320px;
+  }
+  * body .hero h6 {
+    font-size: 22px;
+  }
+  * body .resources .access {
+    padding: 20px 30px 20px 20px;
+  }
+  * body .resources .access .help p {
+    font-size: 13px;
+    line-height: 30px;
+  }
+  * body .resources .access .help div {
+    width: 45px;
+  }
+  * body .about {
+    padding: 40px 10px;
+    padding-bottom: 70px;
+  }
+  * body .about .platform .text h4 {
+    font-size: 26px;
+  }
+  * body .about .platform .text p {
+    padding: 0px 40px;
+    font-size: 14px;
+  }
+  * body .about .platform .statements {
+    margin-top: 30px;
+  }
+  * body .about .platform .statements .statement {
+    margin: 20px 19px;
+  }
+  * body .about .platform .statements .goals {
+    margin: auto;
+    margin-top: 10px;
+    padding: 35px 20px;
+  }
+  * body .offer .offers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  * body .offer .offers .frame {
+    padding: 15px;
+    width: 46%;
+    margin: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  * body .offer .offers .frame3 {
+    margin-top: 15px;
+  }
+  * body .offer .offers .frame2 p {
+    font-size: 13px;
+  }
   * body .safe {
     padding-bottom: 0px;
   }
@@ -491,6 +1014,86 @@
 }
 
 @media (max-width: 699px) {
+  * body .hero .heal .mend {
+    padding-left: 0px;
+  }
+  * body .hero .heal .mend h4 {
+    font-size: 24px;
+  }
+  * body .hero .heal .mend p {
+    font-size: 12px;
+  }
+  * body .hero .heal .mend .button a {
+    padding: 13px 27px;
+    font-size: 14px;
+  }
+  * body .hero .heal .mind {
+    width: 320px;
+    height: 300px;
+  }
+  * body .hero h6 {
+    font-size: 22px;
+  }
+  * body .resources .access {
+    padding: 20px 40px 20px 15px;
+  }
+  * body .resources .access .screen img {
+    width: 400px;
+  }
+  * body .information {
+    padding: 90px 20px;
+  }
+  * body .information .info h4 {
+    font-size: 26px;
+  }
+  * body .information .info p {
+    font-size: 14px;
+  }
+  * body .information .bg-info1 {
+    bottom: 0;
+    width: 87px;
+  }
+  * body .information .bg-info2 {
+    width: 165px;
+  }
+  * body .information .tips .tip img {
+    width: 100%;
+    height: auto;
+    image-resolution: 1000dpi;
+  }
+  * body .information {
+    padding: 80px 10px;
+  }
+  * body .information .info h4 {
+    font-size: 24px;
+  }
+  * body .information .info p {
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+  * body .information .info .tips .tip {
+    margin: 10px;
+  }
+  * body .information .info .tips .tip img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  * body .information .tips .tip {
+    margin: 10px;
+  }
+  * body .offer h4 {
+    font-size: 25px;
+  }
+  * body .offer .offers .frame p {
+    font-size: 13px;
+  }
+  * body .offer .offers .frame2 {
+    height: 89px;
+  }
+  * body .offer .offers .frame2 p {
+    font-size: 12px;
+  }
   * body .safe {
     padding: 40px 70px 0px 70px;
   }
@@ -555,6 +1158,160 @@
 }
 
 @media (max-width: 590px) {
+  * body .hero {
+    padding-top: 25px;
+  }
+  * body .hero .heal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  * body .hero .heal .mend {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+  }
+  * body .hero .heal .mend h4 {
+    font-size: 25px;
+  }
+  * body .hero .heal .mend p {
+    font-size: 13px;
+  }
+  * body .hero .heal .mend .button {
+    margin-top: 30px;
+  }
+  * body .hero .heal .mend .button a {
+    padding: 13px 27px;
+    font-size: 14px;
+  }
+  * body .hero .heal .mind {
+    width: 400px;
+    height: 350px;
+    text-align: center;
+  }
+  * body .hero h6 {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  * body .resources {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  * body .resources .access {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 20px 20px;
+    padding-top: 0px;
+  }
+  * body .resources .access .screen {
+    width: 100%;
+    text-align: center;
+  }
+  * body .resources .access .screen img {
+    height: auto;
+    width: 390px;
+    margin: auto;
+  }
+  * body .resources .access .bgresources1 {
+    width: 60px;
+  }
+  * body .resources .access .bgresources2 {
+    width: 50px;
+  }
+  * body .resources .access .help {
+    width: 100%;
+    padding: 0px 50px;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  * body .resources .access .help p {
+    margin-top: -30px;
+  }
+  * body .resources .access .help div {
+    width: 60px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  * body .about {
+    padding: 60px 0px;
+  }
+  * body .about .platform .text h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  * body .about .platform .text p {
+    font-size: 13px;
+    line-height: 30px;
+  }
+  * body .about .platform .statements {
+    padding: 0px 10px;
+  }
+  * body .about .platform .statements .statement {
+    margin: 10px 9px;
+    margin-top: 15px;
+    padding: 10px 10px;
+  }
+  * body .about .platform .statements .goals {
+    margin: auto;
+    width: 47%;
+  }
+  * body .offer {
+    padding: 50px 15px;
+  }
+  * body .offer .offers .frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  * body .offer .offers .frame img {
+    width: 40px;
+  }
+  * body .offer .offers .frame2 {
+    padding: 80px 20px;
+    height: 140px;
+  }
+  * body .offer .offers .frame2 img {
+    width: 45px;
+  }
+  * body .information .bg-info1 {
+    width: 40px;
+  }
+  * body .information .bg-info2 {
+    width: 90px;
+  }
+  * body .information .tips {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   * body .safe {
     padding: 40px 10px 0px 50px;
   }
@@ -592,11 +1349,98 @@
 }
 
 @media (max-width: 425px) {
+  * body .hero .heal .mend h4 {
+    font-size: 23px;
+  }
+  * body .hero .heal .mend p {
+    font-size: 12px;
+  }
+  * body .hero .heal .mend .button {
+    margin-top: 30px;
+  }
+  * body .hero .heal .mend .button a {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  * body .hero .heal .mind {
+    width: 300px;
+    height: 280px;
+  }
+  * body .hero h6 {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  * body .resources .access {
+    padding: 20px 0px;
+  }
+  * body .resources .access .screen img {
+    width: 90%;
+    min-width: 310px;
+    margin: 0;
+  }
+  * body .resources .access .bgresources1 {
+    width: 40px;
+  }
+  * body .resources .access .bgresources2 {
+    width: 40px;
+  }
+  * body .resources .access .help p {
+    font-size: 11px;
+  }
+  * body .resources .access .help div {
+    width: 60px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  * body .about .platform .text h4 {
+    font-size: 22px;
+  }
+  * body .about .platform .text p {
+    font-size: 12px;
+  }
+  * body .about .platform .statements .statement h6 {
+    font-size: 12px;
+  }
+  * body .about .platform .statements .statement p {
+    font-size: 11px;
+  }
+  * body .about .platform .statements .goals {
+    padding: 20px 10px;
+    margin-top: 15px;
+  }
+  * body .offer {
+    padding-bottom: 10px;
+  }
+  * body .offer .offers .frame img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  * body .offer .offers .frame2 {
+    padding: 94px 20px;
+  }
+  * body .offer .offers .frame2 p {
+    font-size: 11px;
+  }
+  * body .information {
+    padding-top: 20px;
+  }
+  * body .information .info h4 {
+    font-size: 18px;
+  }
+  * body .information .info p {
+    font-size: 11px;
+  }
+  * body .information .info .tips .tip {
+    margin: 60px;
+  }
+  * body .information .info .tips .tip p {
+    font-size: 11px;
+  }
   * body .safe {
     padding: 40px 10px 0px 20px;
   }
   * body .safe h6 {
-    font-size: 13px;
+    font-size: 17px;
   }
   * body .safe .tphone .text {
     width: 100%;
@@ -607,7 +1451,7 @@
   }
   * body .safe .tphone .phone {
     padding-top: 20px;
-    height: 400px;
+    height: 300px;
     width: 300px;
   }
   * body .safe .tphone .phone img {
