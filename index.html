@@ -4,30 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landingpage-style/landingpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="landingpage-style\landingpage.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Mind-Spa NG</title>
+    <link rel="icon" type="image/x-icon" href="Assets/images/mind-spa_logo_green_with_white_backgound.png">
 </head>
+
 <body>
-    <!--Footer-->
+    
+    <header>
+        <nav class="navbar">
+            <img src="Assets/images/Mind-Spa-Logo-Green.png"  alt="Mind-Spa Logo" class="logo">
+            <ul class="nav-menu">       
+                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#whatWeOffer" class="nav-link">What we Offer</a></li>
+                <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="https://blog.mindspang.com" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                <li class="nav-item" id="download-item"><a href="#download" class="nav-link" id="download-app">Download App</a></li>
+            </ul>  
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="safe">
+        <h6>Your personal information is safe with us.</h6>
+        <div class="tphone">
+            <div class="text">
+                <p>You can trust us with your private individual data. Mind-Spa NG guarantees 100% protection and uncompromising usage practices with our practices with our information security.</p>
+                <span>More about privacy and security</span>    
+            </div>
+            <div class="phone">
+                <img src="Assets/images/Screen.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section class="started">
+        <h5>Get Started</h5>
+        <div class="timeline">
+            <div class="hand">
+                <img src="Assets/images/phone-in-hand.png" alt="Phone in hand" >
+            </div>
+            <div class="row row-1">
+                <div class="num">1</div>
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details detail-1">
+                        <h6>Download App</h6>
+                        <span class="get">
+                        <img src="Assets/images/get-playstore.png" alt="">
+                        <img src="Assets/images/get-appstore.png" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-2">
+                <div class="num">2</div>
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details detail-2">
+                        <h6>Create an account</h6>
+                        <span>Quickly get started with just a username</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-1">
+                <div class="num">3</div>
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details detail-1" id="detail-3">
+                        <span>Begin your journey towards<br/> better health </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-2 row-4">
+                <div class="num">4</div>
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details detail-2" id="detail-4">
+                        <span >Access a variety of materials that have been meticulously organized to aid navigation and bring the most important features to your fingertips</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="updates">
+        <h6>Get the latest events, tips and job offers in your mail</h6>
+            <form class="mail">
+                <input type="text" id="name" name="fullname" placeholder="Your full name" class="text">
+                <input type="text" id="email" name="email" placeholder="Your email" class="text">
+                <input type="text" id="phone" name="phone" placeholder="Your phone number" class="text">
+                <input type="submit" value="Sign me in!" class="sign">
+            </form>
+    </section>
+  <!--Footer-->
 <div class="footer-container">
     <div class="footer">
         <div class="footer-heading footer-1">
             <a href="http://mindspang.com/"> 
-                <img src="Assets\images\mind-spaLogoWhite.svg" alt="Mind-Spa logo">
+                <img src="Assets/images/mind-spaLogoWhite.svg" alt="Mind-Spa logo">
             </a>
             <p>&copy; 2022 Mind-Spa NG.
                 <br> All rights reserved.
             </p>
             <nav class="icons">
                 <a href="https://web.facebook.com/MindSpaNG">
-                    <img class="imgIcon" src="Assets\images\facebookIcon.svg" alt="">
+                    <img class="imgIcon" src="Assets/images/facebookIcon.svg" alt="">
                 </a>
                 <a href="https://www.instagram.com/mindspa_ng/">
-                    <img class="imgIcon" src="Assets\images\instagramIcon.svg" alt="">
+                    <img class="imgIcon" src="Assets/images/instagramIcon.svg" alt="">
                 </a>
                 <!-- <a href="https://www.linkedin.com/company/mind-spa-ng/mycompany/">
                     <i class="bi bi-linkedin"></i>
@@ -57,5 +150,26 @@
     </div>
 </div>
 <!--end of footer-->
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+        
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
 </body>
-</html>
+
