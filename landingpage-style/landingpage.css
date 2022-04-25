@@ -675,6 +675,154 @@
   background-color: #0e402d;
 }
 
+* body .footer {
+  background-color: #0e402d;
+  margin: 0px;
+  padding: 50px 80px 40px 60px;
+  color: #ffffff;
+}
+
+* body .footer .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body .footer .top .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 70px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+* body .footer .top .first .logo {
+  width: 190px;
+  height: 50%;
+}
+
+* body .footer .top .first .company {
+  padding: 0px 70px;
+}
+
+* body .footer .top .first .company h6 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+* body .footer .top .first .company ul {
+  list-style-type: none;
+}
+
+* body .footer .top .first .company ul li {
+  padding: 10px 0px;
+}
+
+* body .footer .top .first .company ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+* body .footer .top .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+* body .footer .top .second .contact {
+  padding: 0px 70px;
+  padding-left: 0px;
+}
+
+* body .footer .top .second .contact h6 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+* body .footer .top .second .contact .gmail {
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* body .footer .top .second .contact .gmail img {
+  margin-top: 4px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+* body .footer .top .second .contact .gmail a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+* body .footer .top .second .contact .socials {
+  padding: 10px 0px;
+}
+
+* body .footer .top .second .contact .socials img {
+  width: 25px;
+}
+
+* body .footer .top .second .contact .socials .insta {
+  margin-right: 20px;
+}
+
+* body .footer .top .second .stay h6 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+* body .footer .top .second .stay .form {
+  padding: 18px 10px 8px 0px;
+}
+
+* body .footer .top .second .stay .form img {
+  vertical-align: middle;
+}
+
+* body .footer .top .second .stay .form .input {
+  padding: 10px 80px 10px 10px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background-image: url(/Assets/images/send.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 215px;
+  background-size: 32px auto;
+  cursor: pointer;
+}
+
+* body .footer .bottom {
+  margin-top: 20px;
+  text-align: center;
+}
+
+* body .footer .bottom hr {
+  border: 1px solid #ffffff;
+}
+
+* body .footer .bottom p {
+  margin-top: 30px;
+  padding: 14px;
+  font-size: 14px;
+}
+
 @media (max-width: 1300px) {
   * body .hero {
     padding: 40px 20px;
@@ -723,6 +871,23 @@
   }
   * body .started .num {
     margin: 0px 61px;
+  }
+  * body .footer {
+    padding: 50px 40px 40px 30px;
+  }
+  * body .footer .top .first {
+    padding: 0px;
+    margin-right: 40px;
+  }
+  * body .footer .top .first .logo {
+    height: 50%;
+  }
+  * body .footer .top .first .company {
+    padding: 0px 0px;
+    margin: 0px 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -806,6 +971,51 @@
   }
   * body .updates h6 {
     font-size: 20px;
+  }
+  * body .footer {
+    padding: 50px 20px 40px 20px;
+  }
+  * body .footer .top .logo {
+    width: 170px;
+  }
+  * body .footer .top .first {
+    margin: 0;
+  }
+  * body .footer .top .first .logo {
+    height: 120px;
+    width: 170px;
+  }
+  * body .footer .top .first .company h6 {
+    font-size: 14px;
+  }
+  * body .footer .top .first .company ul li a {
+    font-size: 12px;
+  }
+  * body .footer .top .second .contact {
+    padding: 0px;
+  }
+  * body .footer .top .second .contact h6 {
+    font-size: 14px;
+  }
+  * body .footer .top .second .contact .gmail a {
+    font-size: 12px;
+  }
+  * body .footer .top .second .contact .socials {
+    padding: 8px 0px;
+  }
+  * body .footer .top .second .contact .socials img {
+    width: 20px;
+  }
+  * body .footer .top .second .stay {
+    padding-left: 40px;
+  }
+  * body .footer .top .second .stay h6 {
+    font-size: 14px;
+  }
+  * body .footer .top .second .stay .form .input {
+    padding: 8px 50px 8px 10px;
+    background-position-x: 190px;
+    background-size: 29px auto;
   }
 }
 
@@ -919,6 +1129,46 @@
   * body .offer .offers .frame {
     font-size: 14px;
   }
+  * body .footer {
+    padding-right: 30px;
+  }
+  * body .footer .top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  * body .footer .top .first {
+    padding-right: 50px;
+  }
+  * body .footer .top .second {
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: end;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-left: 40px;
+  }
+  * body .footer .top .second .contact .gmail {
+    margin-left: 80px;
+  }
+  * body .footer .top .second .contact .gmail img {
+    margin-top: 0px;
+  }
+  * body .footer .top .second .stay {
+    padding: 0px;
+  }
+  * body .footer .top .second .stay h6 {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  * body .footer .top .second .stay .form {
+    padding-left: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1010,6 +1260,12 @@
   * body .safe .tphone .phone {
     margin-right: 20px;
     margin-top: 60px;
+  }
+  * body .footer .top .first {
+    padding-right: 20px;
+  }
+  * body .footer .top .second {
+    padding-left: 0px;
   }
 }
 
@@ -1154,6 +1410,101 @@
   }
   * body .started .num {
     margin-left: 120px;
+  }
+  * body .footer {
+    padding-top: 20px;
+  }
+  * body .footer .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  * body .footer .top .first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding-right: 0px;
+  }
+  * body .footer .top .first .logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: auto;
+    padding-bottom: 30px;
+  }
+  * body .footer .top .first .company h6 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  * body .footer .top .first .company ul li a {
+    font-size: 16px;
+  }
+  * body .footer .top .second {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  * body .footer .top .second .contact {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  * body .footer .top .second .contact h6 {
+    font-size: 18px;
+    padding-top: 30px;
+  }
+  * body .footer .top .second .contact .gmail {
+    margin-left: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  * body .footer .top .second .contact .gmail img {
+    margin-top: 0px;
+  }
+  * body .footer .top .second .contact .gmail a {
+    font-size: 16px;
+  }
+  * body .footer .top .second .contact .socials {
+    padding: 0px 0px;
+    padding-bottom: 35px;
+  }
+  * body .footer .top .second .stay {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+  }
+  * body .footer .top .second .stay h6 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px;
+  }
+  * body .footer .top .second .stay .form {
+    padding: 18px 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1519,6 +1870,18 @@
     padding: 15px 17px;
     border-radius: 16px;
     font-size: 15px;
+  }
+  * body .footer .top .first .company h6 {
+    font-size: 16px;
+  }
+  * body .footer .top .first .company ul li a {
+    font-size: 14px;
+  }
+  * body .footer .top .second .contact h6 {
+    font-size: 16px;
+  }
+  * body .footer .top .second .contact .gmail a {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=landingpage.css.map */

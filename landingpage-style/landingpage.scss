@@ -73,7 +73,7 @@ $phone: 425px;
     
     body {
         font-family: 'Poppins' , sans-serif;
-        background-color: $lightGrey;
+         background-color: $lightGrey;
         width: 100%;
         
         header {
@@ -710,6 +710,134 @@ $phone: 425px;
                 }
             }
             
+            //FOOTER
+            .footer {
+                background-color: $green;
+                margin: 0px;
+                padding: 50px 80px 40px 60px;
+                color: $white;
+                
+            
+                .top {
+                    width: 100%;
+                    display: flex;
+                    //justify-content: space-between;
+                    justify-content: center;
+                    
+                    .first {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0px 70px;
+                        padding-left: 20px;
+                        width: 100%;
+                        .logo {
+                            width: 190px;
+                            height: 50%;
+                        }
+                        .company {
+                            padding: 0px 70px;
+                            h6 {
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                            ul {
+                                list-style-type: none;
+                                li {
+                                    padding: 10px 0px;
+                                    a {
+                                        color: $white;
+                                        text-decoration: none;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .second {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        
+                        .contact {
+                        padding: 0px 70px;
+                        padding-left: 0px;
+                        h6 {
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                        .gmail {
+                            padding: 15px 0px;
+                            display: flex;
+                            img {
+                                margin-top: 4px;
+                                width: 20px;
+                                margin-right: 8px;
+                            }
+                            a {
+                                color: $white;
+                                text-decoration: none;
+                                font-size: 13px;
+                            }
+                        }
+                        .socials {
+                            padding: 10px 0px;
+                            img {
+                                width: 25px;
+                            }
+                            .insta {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+
+                    .stay {
+                        h6 {
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+
+                        .form {
+                            padding: 18px 10px 8px 0px;
+                            //display: table;
+                            //position: relative;
+
+                            img {
+                                vertical-align: middle;
+                            }
+                            .input {
+                                padding: 10px 80px 10px 10px;
+                                border-radius: 8px;
+                                border: 1px solid $white;
+                                background-image: url(/Assets/images/send.svg);
+                                background-repeat: no-repeat;
+                                background-position: right;
+                                background-position-x: 215px;
+                                background-size: 32px auto;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                    
+                }
+
+                .bottom {
+                    margin-top: 20px;
+                    text-align: center;
+
+                    hr {
+                        border: 1px solid $white;
+                    }
+
+                    p {
+                        margin-top: 30px;
+                        padding: 14px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
             //MEDIA QUERIES
             @include desktop{
                 //HERO SECTION
@@ -791,7 +919,25 @@ $phone: 425px;
                     }
                 }
                 
-                
+                //FOOTER
+                .footer {
+                    padding: 50px 40px 40px 30px;
+                    .top {
+                        .first {
+                            padding: 0px;
+                            margin-right: 40px;
+                            .logo {
+                                height: 50%;
+                            }
+
+                            .company {
+                               padding: 0px 0px;
+                                margin: 0px 50px;
+                                justify-content: flex-start;
+                            }
+                        }
+                    }
+                }
             }
             
             @include tab {
@@ -924,6 +1070,73 @@ $phone: 425px;
                 .updates {
                     h6 {
                         font-size: 20px;
+                    }
+                }
+
+                //FOOTER 
+                .footer {
+                    padding: 50px 20px 40px 20px ;
+                    .top {
+                        .logo {
+                            width: 170px;
+                        }
+                        .first {
+                            margin: 0;
+                            .logo {
+                                height: 120px;
+                                width: 170px;
+                            }
+                            .company {
+                                h6 {
+                                    font-size: 14px;
+                                }  
+                                ul {
+                                    li {
+                                        a {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .second {
+                            .contact {
+                                padding: 0px;
+                                h6 {
+                                    font-size: 14px;
+                                }  
+                                .gmail {
+                                    a {
+                                        font-size: 12px;
+                                    }
+                                }
+    
+                                .socials {
+                                    padding: 8px 0px;
+                                    img {
+                                        width: 20px;
+                                    }
+                                }
+                            }
+
+                            .stay {
+                                padding-left: 40px;
+                                h6 {
+                                    font-size: 14px;
+                                }  
+    
+                                .form {
+                                    .input {
+                                        padding: 8px 50px 8px 10px;
+                                        background-position-x: 190px; 
+                                        background-size: 29px auto; 
+                                    }
+                                }
+                            }
+                        }
+
+                        
                     }
                 }
             }
@@ -1078,6 +1291,49 @@ $phone: 425px;
                         }
                     }
                 }
+
+                //FOOTER
+                .footer {
+                    padding-right: 30px;
+                    .top {
+                        justify-content: space-between;
+
+                        .first {
+                            padding-right: 50px;
+                        }
+
+                       .second {
+                           width: auto;
+                           flex-direction: column;
+                           //align-items: flex-end;
+                           text-align: end;
+                           justify-content: right;
+                           padding-left: 40px;
+
+                           .contact {
+                                .gmail {
+                                    margin-left: 80px;
+                                    img {
+                                        margin-top: 0px;
+                                    }
+                                }
+                            }
+                           .stay {
+                                padding: 0px;
+                                //justify-content: right;
+                                h6 {
+                                    justify-content: right;
+                                }
+                                .form {
+                                    //margin: 0px 0px 0px 56px;
+                                    //text-align: right;
+                                    //position: absolute;
+                                    padding-left: 40px;
+                                }
+                            }
+                        }
+                    }   
+                }
             }
             
             
@@ -1213,6 +1469,18 @@ $phone: 425px;
                     }
                 }
                 
+                //FOOTER
+                .footer {
+                    .top {
+                        .first {
+                            padding-right: 20px;
+                            
+                        }
+                       .second {
+                            padding-left: 0px;
+                        }
+                    }   
+                }
             }
             
             @include tablet3{
@@ -1444,6 +1712,91 @@ $phone: 425px;
                     .num {
                         margin-left: 120px;
                     }
+                }
+
+                //FOOTER
+                .footer {
+                    padding-top: 20px;
+                   .top {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+
+                    .first {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: center;
+                        padding-right: 0px;
+
+                        .logo {
+                            align-self: center;
+                            //width: 150px;
+                            height: auto;
+                            padding-bottom: 30px;
+                        }
+                        .company {
+                            h6 {
+                                font-size: 18px;
+                                padding-bottom: 10px;
+                            }
+
+                            ul {
+                                li {
+                                    a {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }                        }
+                    }
+                    .second {
+                        justify-content: center;
+
+                        .contact {
+                            justify-content: center;
+                            text-align: center;
+
+                            h6 {
+                                font-size: 18px;
+                                padding-top: 30px;
+                            }
+                            .gmail {
+                               margin-left: 0px;
+                                justify-content: center;
+
+                                img {
+                                    margin-top: 0px;
+                                }
+
+                                a {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .socials {
+                                padding: 0px 0px;
+                                padding-bottom: 35px;
+                            }
+                        }
+                        .stay {
+                            justify-content: center;
+                            text-align: center;
+                            padding-bottom: 10px;
+                            padding-top: 20px;
+                        
+                            h6 {
+                                justify-content: center;
+                                font-size: 16px;
+                            }
+                            .form {
+                                //display: inline;
+                                padding: 18px 10px;
+                                justify-content: center;
+                            } 
+                        }
+                    }
+                   }
                 }
             }
             
@@ -1939,6 +2292,40 @@ $phone: 425px;
                         }
                         
                     }
+                }
+
+                //FOOTER 
+                .footer {
+                   .top {
+                       .first {
+                           .company {
+                               h6 {
+                                   font-size: 16px;
+                               }
+                               ul {
+                                   li {
+                                       a {
+                                           font-size: 14px;
+                                       }
+                                   }
+                               }
+                           }
+                        }
+
+                        .second {
+                            .contact {
+                                h6 {
+                                    font-size: 16px;
+                                }
+
+                                .gmail {
+                                    a {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                   } 
                 }
             }
             
