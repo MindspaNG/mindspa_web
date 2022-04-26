@@ -1,0 +1,32 @@
+name: coming_soon
+description: A new Flutter project.
+publish_to: none
+version: 1.0.0+1
+environment:
+    sdk: ">=2.16.0 <3.0.0"
+dependencies:
+    flutter:
+        sdk: flutter
+    cupertino_icons: ^1.0.2
+    logger: ^1.1.0
+    stacked: ^2.3.3
+    stacked_services: ^0.8.17
+    responsive_builder: ^0.4.2
+    equatable: ^2.0.3
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^1.0.0
+    build_runner: ^2.1.10
+    stacked_generator: ^0.6.2
+flutter:
+    uses-material-design: true
+
+
+    assets:
+        - assets/images/
+ 
+    fonts:
+    - family: Roboto
+      fonts:
+         - asset: assets/fonts/Roboto/Roboto-Regular.ttf
