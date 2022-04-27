@@ -1,6 +1,10 @@
 library coming_soon_view;
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:slide_countdown/slide_countdown.dart';
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'coming_soon_view_model.dart';
