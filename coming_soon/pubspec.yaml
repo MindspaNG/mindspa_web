@@ -13,6 +13,9 @@ dependencies:
     stacked_services: ^0.8.17
     responsive_builder: ^0.4.2
     equatable: ^2.0.3
+    flutter_svg: ^1.0.3
+    date_count_down: ^2.1.0
+    slide_countdown: ^0.2.3
 dev_dependencies:
     flutter_test:
         sdk: flutter
@@ -24,7 +27,8 @@ flutter:
 
 
     assets:
-        - assets/images/
+        - assets/images/png/
+        - assets/images/svg/
  
     fonts:
     - family: Roboto
