@@ -8,8 +8,14 @@ class _ComingSoonMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.green,
+      body: Center(
+        child: Container(
+          color: Colors.green,
+          child: ElevatedButton(
+            onPressed: viewModel.pingServer,
+            child: Text('Ping'),
+          ),
+        ),
       ),
     );
   }
