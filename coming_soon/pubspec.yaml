@@ -7,6 +7,8 @@ environment:
 dependencies:
     flutter:
         sdk: flutter
+    flutter_web_plugins:
+        sdk: flutter
     cupertino_icons: ^1.0.2
     logger: ^1.1.0
     stacked: ^2.3.3
@@ -14,8 +16,12 @@ dependencies:
     responsive_builder: ^0.4.2
     equatable: ^2.0.3
     flutter_svg: ^1.0.3
-    date_count_down: ^2.1.0
-    slide_countdown: ^0.2.3
+    dio: ^4.0.6
+    crypto: ^3.0.2
+    http: ^0.13.4
+    requests: ^4.1.0
+    universal_io: ^2.0.4
+    flutter_screenutil: ^5.5.1
 dev_dependencies:
     flutter_test:
         sdk: flutter

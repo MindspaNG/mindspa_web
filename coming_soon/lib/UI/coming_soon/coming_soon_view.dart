@@ -1,13 +1,12 @@
 library coming_soon_view;
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:slide_countdown/slide_countdown.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:stacked/stacked.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'coming_soon_view_model.dart';
+import '../../utilities/extensions/validation_extensions.dart';
 
 part 'coming_soon_mobile.dart';
 part 'coming_soon_tablet.dart';
@@ -19,6 +18,7 @@ class ComingSoonView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<ComingSoonViewModel>.reactive(
+      onModelReady: (model) => model.startTimer(),
       viewModelBuilder: () => ComingSoonViewModel(),
       builder: (
         BuildContext context,
