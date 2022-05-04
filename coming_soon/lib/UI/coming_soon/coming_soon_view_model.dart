@@ -4,7 +4,6 @@ import 'package:coming_soon/app/app.locator.dart';
 import 'package:coming_soon/app/app.logger.dart';
 import 'package:coming_soon/utilities/enums/app_enums.dart';
 import 'package:coming_soon/utilities/network/failure.dart';
-import 'package:flutter/painting.dart';
 
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -72,21 +71,23 @@ class ComingSoonViewModel extends BaseViewModel {
           await _networkService.subscribeToMailingList(email: email);
       if (isSucccessful) {
         _setSubScriptionSuccessfullStatus(isSucccessful);
-        await Future.delayed(const Duration(seconds: 2)).then(
-          (value) => _dialogService.showCustomDialog(
-            variant: DialogType.success,
-          ),
-        );
-        _dialogService.showCustomDialog(
-            variant: DialogType.success, barrierDismissible: true);
+
+        await _dialogService
+            .showCustomDialog(
+              variant: DialogType.success,
+              barrierDismissible: true,
+            )
+            .then((value) => redirectToBlogSite());
       }
     } on Failure catch (ex) {
+      _log.d(ex.message);
       _setSubScriptionSuccessfullStatus(false);
       _dialogService.showCustomDialog(
         variant: DialogType.error,
         title: ex.message,
       );
     } catch (err) {
+      _log.d(err);
       _setSubScriptionSuccessfullStatus(false);
       _dialogService.showCustomDialog(
         variant: DialogType.error,
@@ -106,6 +107,32 @@ class ComingSoonViewModel extends BaseViewModel {
       _log.e(ex.message);
     } finally {
       setBusy(false);
+    }
+  }
+
+  Future openWebUrlLink(String url) async {
+    try {
+      await _networkService.openlinkInNewTab(url: url);
+    } on Failure catch (ex) {
+      _dialogService.showCustomDialog(
+        variant: DialogType.error,
+        title: ex.message,
+      );
+      _log.e(ex);
+    }
+  }
+
+  Future redirectToBlogSite() async {
+    _log.i('Redirecting to blogsite');
+    try {
+      await _networkService.openLinkInSameTab(
+          url: 'https://www.blog.mindspang.com');
+    } on Failure catch (ex) {
+      _dialogService.showCustomDialog(
+        variant: DialogType.error,
+        title: ex.message,
+      );
+      _log.e(ex);
     }
   }
 }

@@ -1,4 +1,3 @@
-import 'package:coming_soon/services/http_network_service.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 

@@ -12,48 +12,30 @@ class _ComingSoonDesktop extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_) => Scaffold(
-        body: Stack(
+        body: Column(
           children: [
             const TopBar(),
             Column(
               children: [
-                // TopBar
-
-                // Heading Text
-                SelectableText(
-                  'Mind-Spa is a platform for the rejuvenation of the mind',
-                  textAlign: TextAlign.center,
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 36.sp),
-                ),
-                SizedBox(
-                  height: 58.h,
-                ),
-                // Sub Text
                 const SubLongText(),
                 SizedBox(
                   height: 72.h,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 300.w),
-                  child: SelectableText(
-                    'We are launching soon, join the waitlist to get notified',
-                    style:
-                        TextStyle(fontWeight: FontWeight.w600, fontSize: 36.sp),
-                  ),
-                ),
+                const LaunchingSoonWidget(),
                 SizedBox(
                   height: 72.h,
                 ),
                 const CountDownTimer(),
-
-                SizedBox(
-                  height: 56.97.h,
-                ),
-                TextFieldAndSubmitButton(viewModel: viewModel),
-                const BottomBar(),
               ],
             ),
+            Expanded(
+              child: Stack(
+                children: [
+                  TextFieldAndSubmitButton(viewModel: viewModel),
+                  const BottomBar(),
+                ],
+              ),
+            )
           ],
         ),
       ),
@@ -61,8 +43,84 @@ class _ComingSoonDesktop extends StatelessWidget {
   }
 }
 
+class LaunchingSoonWidget extends StatelessWidget {
+  const LaunchingSoonWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SelectableText(
+      'We are launching soon, join the waitlist to get notified',
+      textAlign: TextAlign.center,
+      style: TextStyle(fontWeight: FontWeight.w600, fontSize: 36.sp),
+    );
+  }
+}
+
+class TopBar extends StatelessWidget {
+  const TopBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.loose,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                SizedBox(
+                  height: 300.h,
+                  child: Image.asset(
+                    'assets/images/png/Ellipse 78.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 22.h, left: 41),
+                  child: Image.asset(
+                    'assets/images/png/Mind-Spa-Logo-Green.png',
+                    filterQuality: FilterQuality.high,
+                    fit: BoxFit.cover,
+                    height: 172.h,
+                    width: 196.67.h,
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 22.h, right: 74.46.w),
+              child: Image.asset(
+                'assets/images/png/Frame 665.png',
+                fit: BoxFit.contain,
+                width: 201.3.w,
+                height: 223.41.h,
+              ),
+            ),
+          ],
+        ),
+        Positioned(
+          top: 161.h,
+          left: 311.w,
+          right: 311.w,
+          child: SelectableText(
+            'Mind-Spa is a platform for the rejuvenation of the mind',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36.sp),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 class TextFieldAndSubmitButton extends StatefulWidget {
-  TextFieldAndSubmitButton({
+  const TextFieldAndSubmitButton({
     Key? key,
     required this.viewModel,
   }) : super(key: key);
@@ -77,96 +135,109 @@ class TextFieldAndSubmitButton extends StatefulWidget {
 class _TextFieldAndSubmitButtonState extends State<TextFieldAndSubmitButton> {
   final _formKey = GlobalKey<FormState>();
   final emailAddressController = TextEditingController();
+  final OutlineInputBorder textFieldStyling = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15.r),
+    borderSide: BorderSide(
+      color: const Color(0XFF516D61),
+      width: 2.0.w,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.60,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.blueGrey.shade100,
-              blurRadius: 20,
-              spreadRadius: 5,
-            ),
-          ],
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Expanded(
-              flex: 10,
-              child: AnimatedContainer(
-                duration: const Duration(seconds: 10),
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(
-                    color: const Color(0XFF516D61),
-                    width: 1.5,
-                  ),
-                ),
+    return Positioned(
+      left: 339.w,
+      right: 339.w,
+      top: 56.97.h,
+      child: Form(
+        key: _formKey,
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.60,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.blueGrey.shade100,
+                blurRadius: 20,
+                spreadRadius: 5,
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Expanded(
+                flex: 10,
                 child: TextFormField(
+                  showCursor: true,
                   validator: context.validateEmailAddress,
                   controller: emailAddressController,
-                  cursorHeight: 25,
                   cursorColor: const Color(0XFF516D61),
                   cursorRadius: const Radius.circular(10),
                   keyboardType: TextInputType.emailAddress,
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    border: textFieldStyling,
+                    enabledBorder: textFieldStyling.copyWith(
+                        borderSide: BorderSide(width: 1.w)),
+                    focusedBorder: textFieldStyling,
+                    errorBorder: textFieldStyling.copyWith(
+                        borderSide: const BorderSide(
+                      color: Colors.red,
+                    )),
+                    filled: true,
                     hintText: ' johndoe@gmail.com',
-                    hintStyle: TextStyle(fontSize: 18),
+                    hintStyle: const TextStyle(
+                        fontSize: 18,
+                        decorationStyle: TextDecorationStyle.wavy),
                     alignLabelWithHint: true,
-                    contentPadding: EdgeInsets.zero,
+                    contentPadding: EdgeInsets.only(left: 33.w),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              flex: 2,
-              child: GestureDetector(
-                onTap: () => widget.viewModel.subscribeUserToMailingList(
-                  email: emailAddressController.text,
-                ),
-                child: AnimatedContainer(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                  duration: const Duration(seconds: 10),
-                  decoration: BoxDecoration(
-                    color: const Color(0XFF516D61),
-                    borderRadius: BorderRadius.circular(15),
+              const SizedBox(width: 10),
+              Expanded(
+                flex: 2,
+                child: GestureDetector(
+                  onTap: () => widget.viewModel.subscribeUserToMailingList(
+                    email: emailAddressController.text,
                   ),
-                  constraints: BoxConstraints.tightFor(
-                    height: 50,
-                    width:
-                        MediaQuery.of(context).size.width.clamp(240.0, 560.0),
-                  ),
-                  child: FittedBox(
-                    child: widget.viewModel.isBusy
-                        ? const CircularProgressIndicator(
-                            color: Colors.white,
-                            valueColor: AlwaysStoppedAnimation(Colors.white),
-                          )
-                        : widget.viewModel.subscriptionSuccessful
-                            ? const Icon(
-                                Icons.check,
-                                color: Colors.white,
-                              )
-                            : const Text(
-                                'Join Waitlist',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 15),
-                              ),
+                  child: AnimatedContainer(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 10),
+                    duration: const Duration(seconds: 10),
+                    decoration: BoxDecoration(
+                      color: const Color(0XFF516D61),
+                      borderRadius: BorderRadius.circular(15.r),
+                    ),
+                    constraints: BoxConstraints.tightFor(
+                      height: 50,
+                      width: MediaQuery.of(context)
+                          .size
+                          .width
+                          .clamp(240.0.w, 560.0.w),
+                    ),
+                    child: FittedBox(
+                      child: widget.viewModel.isBusy
+                          ? const CircularProgressIndicator(
+                              color: Colors.white,
+                              valueColor: AlwaysStoppedAnimation(Colors.white),
+                            )
+                          : widget.viewModel.subscriptionSuccessful
+                              ? const Icon(
+                                  Icons.check,
+                                  color: Colors.white,
+                                )
+                              : const Text(
+                                  'Join Waitlist',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                ),
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -192,7 +263,7 @@ class CountDownTimer extends ViewModelWidget<ComingSoonViewModel> {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(vertical: 50.h, horizontal: 50.w),
-                margin: const EdgeInsets.symmetric(horizontal: 35),
+                margin: EdgeInsets.symmetric(horizontal: 35.w),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
@@ -203,7 +274,7 @@ class CountDownTimer extends ViewModelWidget<ComingSoonViewModel> {
                   countDownText[i] ?? '',
                   style: TextStyle(
                     fontSize: 28.22.sp,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w900,
                     color: const Color(0XFF516D61),
                   ),
                 ),
@@ -235,7 +306,7 @@ class SubLongText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: MediaQuery.of(context).size.width * 0.15.w,
+        horizontal: 257.w,
       ),
       child: SelectableText(
         'We are creating an avenue to provide access to holistic health and promote mental wellbeing towards the eradication of mental health problems in Africa by connecting users to the most relevant resources tailored to their mental health needs.',
@@ -243,77 +314,72 @@ class SubLongText extends StatelessWidget {
         style: TextStyle(
           fontSize: 24.sp,
           height: 2,
-          color: Color(0XFF516D61),
+          color: const Color(0XFF516D61),
         ),
       ),
     );
   }
 }
 
-class BottomBar extends StatelessWidget {
+class BottomBar extends ViewModelWidget<ComingSoonViewModel> {
   const BottomBar({
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(left: 50.w),
-            child: Image.asset(
-              'assets/images/png/Frame 662.png',
-              fit: BoxFit.cover,
-            ),
-          ),
-          SvgPicture.asset(
-            'assets/images/svg/Ellipse 77.svg',
+  Widget build(BuildContext context, ComingSoonViewModel viewModel) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Padding(
+          padding: EdgeInsets.only(left: 50.w),
+          child: Image.asset(
+            'assets/images/png/Frame 662.png',
             fit: BoxFit.cover,
-            height: 100.h,
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class TopBar extends StatelessWidget {
-  const TopBar({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(top: 22.h, left: 41),
-            child: Image.asset(
-              'assets/images/png/Mind-Spa-Logo-Green.png',
-              filterQuality: FilterQuality.high,
+          ),
+        ),
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            Image.asset(
+              'assets/images/png/Ellipse 77.png',
               fit: BoxFit.cover,
-              height: 172.h,
-              width: 172.h,
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 22.h, right: 74.46.w),
-            child: Image.asset(
-              'assets/images/png/Frame 665.png',
-              fit: BoxFit.contain,
-              width: 201.3.w,
-              height: 223.41.h,
-            ),
-          ),
-        ],
-      ),
+            Positioned.fill(
+              child: Align(
+                alignment: const Alignment(0, 0.30),
+                child: SizedBox(
+                  height: 37.97.h,
+                  width: 122.w,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      GestureDetector(
+                        onTap: () => viewModel.openWebUrlLink(
+                            'https://instagram.com/mindspa_ng?igshid=YmMyMTA2M2Y='),
+                        child: Image.asset(
+                          'assets/images/png/instagram 2.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () => viewModel.openWebUrlLink(
+                            'https://www.facebook.com/MindSpaNG'),
+                        child: Image.asset(
+                          'assets/images/png/facebook_logo.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
+        )
+      ],
     );
   }
 }

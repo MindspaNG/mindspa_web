@@ -1,10 +1,14 @@
-import 'dart:io';
 import 'dart:convert';
+import 'dart:html' as html;
+import 'dart:io';
+
+import 'package:crypto/crypto.dart';
+import 'package:dio/dio.dart';
+
 import 'package:coming_soon/app/app.logger.dart';
 import 'package:coming_soon/services/i_network_service.dart';
 import 'package:coming_soon/utilities/network/api_constants.dart';
-import 'package:crypto/crypto.dart';
-import 'package:dio/dio.dart';
+import 'package:coming_soon/utilities/network/api_credentials.dart';
 
 import '../utilities/network/failure.dart';
 
@@ -30,8 +34,7 @@ class NetworkService implements INetworkService {
         options: Options(
           headers: {
             "Access-Control-Allow-Origin": "*",
-            "Authorization":
-                "Basic YW55dGhpbmc6MDhmZTJiNWYyYzljNTMyZWFhMjM5MTE4Zjc4ZWFiMjQtdXMyMA==",
+            "Authorization": "Basic ${ApiCredentials.apiKeyBase64}",
           },
           method: 'GET',
           contentType: 'application/json; charset=utf-8',
@@ -64,8 +67,7 @@ class NetworkService implements INetworkService {
         options: Options(
           headers: {
             "Access-Control-Allow-Origin": "*",
-            "Authorization":
-                "Basic YW55dGhpbmc6MDhmZTJiNWYyYzljNTMyZWFhMjM5MTE4Zjc4ZWFiMjQtdXMyMA==",
+            "Authorization": "Basic ${ApiCredentials.apiKeyBase64}",
           },
           contentType: 'application/json; charset=utf-8',
         ),
@@ -85,20 +87,32 @@ class NetworkService implements INetworkService {
           'You are not connected to the internet.',
         );
       }
-      // _log.e(error.response!.data['detail']);
+      String errorMessage = error.response!.data['errors'][0]['message'] ??
+          error.response!.data['detail'];
+      customErrorMessage(errorMessage);
+      _log.e(error.response!.data['detail']);
       _log.e('${error.response!.data['errors'][0]['message']}');
-
-      throw Failure(error.response!.data['errors'][0]['message']);
-    } catch (error) {
-      _log.e(error);
-      throw Failure(error.toString());
     }
   }
 
   @override
-  Future openlink({required String url}) {
-    // TODO: implement openlink
-    throw UnimplementedError();
+  Future openlinkInNewTab({required String url}) async {
+    try {
+      html.window.open(url, '_blank');
+    } catch (e) {
+      _log.e(e);
+      throw const Failure('Something went wrong');
+    }
+  }
+
+  @override
+  Future openLinkInSameTab({required String url}) async {
+    try {
+      html.window.open(url, '_self');
+    } catch (e) {
+      _log.e(e);
+      throw const Failure('Something went wrong');
+    }
   }
 
   @override
@@ -143,5 +157,24 @@ class NetworkService implements INetworkService {
       ApiConstants.pingserverUris,
     );
     return isWorking;
+  }
+
+  void customErrorMessage(String message) {
+    if (message.contains('blank')) {
+      throw const Failure(
+          'Input field is blank, pls input your email address and try again');
+    }
+    if (message.contains('is already a list member')) {
+      throw const Failure(
+        'Your email already exists, try again with another email',
+      );
+    }
+    if (message.contains('please enter a real email address')) {
+      throw const Failure(
+        'Sorry we can\'t use this email, try again with another email',
+      );
+    } else {
+      throw const Failure('Something went wrong, pls try again');
+    }
   }
 }

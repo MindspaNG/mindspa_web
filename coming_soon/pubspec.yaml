@@ -7,6 +7,8 @@ environment:
 dependencies:
     flutter:
         sdk: flutter
+    flutter_web_plugins:
+        sdk: flutter
     cupertino_icons: ^1.0.2
     logger: ^1.1.0
     stacked: ^2.3.3

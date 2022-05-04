@@ -1,5 +1,6 @@
 abstract class INetworkService {
-  Future openlink({required String url});
+  Future openlinkInNewTab({required String url});
+  Future openLinkInSameTab({required String url});
   Future<bool> subscribeToMailingList({required String email});
   Future<bool> addToBetaTesterMailingList(
       {required String subscribedUserEmail});
