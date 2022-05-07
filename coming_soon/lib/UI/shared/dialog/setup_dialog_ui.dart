@@ -52,7 +52,7 @@ class _SuccessDialogState extends State<SuccessDialog> {
       backgroundColor: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 237, 255, 248),
+            color: const Color.fromARGB(255, 237, 255, 248),
             borderRadius: BorderRadius.all(
               Radius.circular(24.r),
             )),
@@ -124,7 +124,7 @@ class ErrorDialog extends StatelessWidget {
               Icon(
                 Icons.error_outline_outlined,
                 size: 150.h,
-                color: Color(0XFF516D61),
+                color: const Color(0XFF516D61),
               ),
               Text(
                 request.title ?? 'Something went wrong, pls try again',

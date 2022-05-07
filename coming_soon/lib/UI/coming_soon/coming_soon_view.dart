@@ -1,5 +1,6 @@
 library coming_soon_view;
 
+import 'package:coming_soon/UI/shared/statusBar/statusbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

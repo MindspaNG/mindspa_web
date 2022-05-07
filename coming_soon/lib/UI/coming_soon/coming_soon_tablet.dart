@@ -7,31 +7,38 @@ class _ComingSoonTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(834, 1194),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_) => OverflowBox(
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Column(
-            children: [
-              const TabletTopBar(),
-              Column(
-                children: [
-                  const TabletSubLongText(),
-                  SizedBox(
-                    height: 45.h,
-                  ),
-                  const TabletCountDownTimer(),
-                  SizedBox(
-                    height: 45.h,
-                  ),
-                  TabletTextFieldAndSubmitButton(viewModel: viewModel),
-                ],
-              ),
-              const TabletBottomBar(),
-            ],
+    return Statusbar(
+      child: ScreenUtilInit(
+        designSize: const Size(834, 1194),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_) => OverflowBox(
+          child: Scaffold(
+            resizeToAvoidBottomInset: false,
+            body: ListView(
+              shrinkWrap: true,
+              children: [
+                Column(
+                  children: [
+                    const TabletTopBar(),
+                    Column(
+                      children: [
+                        const TabletSubLongText(),
+                        SizedBox(
+                          height: 45.h,
+                        ),
+                        const TabletCountDownTimer(),
+                        SizedBox(
+                          height: 45.h,
+                        ),
+                        TabletTextFieldAndSubmitButton(viewModel: viewModel),
+                      ],
+                    ),
+                    const TabletBottomBar(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -274,17 +281,15 @@ class TabletBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Image.asset(
-            'assets/images/png/Group 667.png',
-            fit: BoxFit.cover,
-          )
-        ],
-      ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Image.asset(
+          'assets/images/png/Group 667.png',
+          fit: BoxFit.cover,
+        )
+      ],
     );
   }
 }

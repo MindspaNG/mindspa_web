@@ -7,36 +7,42 @@ class _ComingSoonDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(1512, 1075.2),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_) => Scaffold(
-        body: Column(
-          children: [
-            const TopBar(),
-            Column(
-              children: [
-                const SubLongText(),
-                SizedBox(
-                  height: 72.h,
-                ),
-                const LaunchingSoonWidget(),
-                SizedBox(
-                  height: 72.h,
-                ),
-                const CountDownTimer(),
-              ],
-            ),
-            Expanded(
-              child: Stack(
+    return Statusbar(
+      child: ScreenUtilInit(
+        designSize: const Size(1512, 1075.2),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_) => Scaffold(
+          body: ListView(
+            shrinkWrap: true,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  TextFieldAndSubmitButton(viewModel: viewModel),
-                  const BottomBar(),
+                  const TopBar(),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const SubLongText(),
+                      SizedBox(
+                        height: 72.h,
+                      ),
+                      const LaunchingSoonWidget(),
+                      SizedBox(
+                        height: 72.h,
+                      ),
+                      const CountDownTimer(),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                      TextFieldAndSubmitButton(viewModel: viewModel),
+                    ],
+                  ),
                 ],
               ),
-            )
-          ],
+              const BottomBar(),
+            ],
+          ),
         ),
       ),
     );
@@ -145,99 +151,93 @@ class _TextFieldAndSubmitButtonState extends State<TextFieldAndSubmitButton> {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      left: 339.w,
-      right: 339.w,
-      top: 56.97.h,
-      child: Form(
-        key: _formKey,
-        child: Container(
-          width: MediaQuery.of(context).size.width * 0.60,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.blueGrey.shade100,
-                blurRadius: 20,
-                spreadRadius: 5,
+    return Form(
+      key: _formKey,
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.60,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.blueGrey.shade100,
+              blurRadius: 20,
+              spreadRadius: 5,
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Expanded(
+              flex: 10,
+              child: TextFormField(
+                showCursor: true,
+                validator: context.validateEmailAddress,
+                controller: emailAddressController,
+                cursorColor: const Color(0XFF516D61),
+                cursorRadius: const Radius.circular(10),
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  border: textFieldStyling,
+                  enabledBorder: textFieldStyling.copyWith(
+                      borderSide: BorderSide(width: 1.w)),
+                  focusedBorder: textFieldStyling,
+                  errorBorder: textFieldStyling.copyWith(
+                      borderSide: const BorderSide(
+                    color: Colors.red,
+                  )),
+                  filled: true,
+                  hintText: ' johndoe@gmail.com',
+                  hintStyle: const TextStyle(
+                      fontSize: 18, decorationStyle: TextDecorationStyle.wavy),
+                  alignLabelWithHint: true,
+                  contentPadding: EdgeInsets.only(left: 33.w),
+                ),
               ),
-            ],
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Expanded(
-                flex: 10,
-                child: TextFormField(
-                  showCursor: true,
-                  validator: context.validateEmailAddress,
-                  controller: emailAddressController,
-                  cursorColor: const Color(0XFF516D61),
-                  cursorRadius: const Radius.circular(10),
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    fillColor: Colors.white,
-                    border: textFieldStyling,
-                    enabledBorder: textFieldStyling.copyWith(
-                        borderSide: BorderSide(width: 1.w)),
-                    focusedBorder: textFieldStyling,
-                    errorBorder: textFieldStyling.copyWith(
-                        borderSide: const BorderSide(
-                      color: Colors.red,
-                    )),
-                    filled: true,
-                    hintText: ' johndoe@gmail.com',
-                    hintStyle: const TextStyle(
-                        fontSize: 18,
-                        decorationStyle: TextDecorationStyle.wavy),
-                    alignLabelWithHint: true,
-                    contentPadding: EdgeInsets.only(left: 33.w),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              flex: 2,
+              child: GestureDetector(
+                onTap: () => widget.viewModel.subscribeUserToMailingList(
+                  email: emailAddressController.text,
+                ),
+                child: AnimatedContainer(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  duration: const Duration(seconds: 10),
+                  decoration: BoxDecoration(
+                    color: const Color(0XFF516D61),
+                    borderRadius: BorderRadius.circular(15.r),
+                  ),
+                  constraints: BoxConstraints.tightFor(
+                    height: 50,
+                    width: MediaQuery.of(context)
+                        .size
+                        .width
+                        .clamp(240.0.w, 560.0.w),
+                  ),
+                  child: FittedBox(
+                    child: widget.viewModel.isBusy
+                        ? const CircularProgressIndicator(
+                            color: Colors.white,
+                            valueColor: AlwaysStoppedAnimation(Colors.white),
+                          )
+                        : widget.viewModel.subscriptionSuccessful
+                            ? const Icon(
+                                Icons.check,
+                                color: Colors.white,
+                              )
+                            : const Text(
+                                'Join Waitlist',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15),
+                              ),
                   ),
                 ),
               ),
-              const SizedBox(width: 10),
-              Expanded(
-                flex: 2,
-                child: GestureDetector(
-                  onTap: () => widget.viewModel.subscribeUserToMailingList(
-                    email: emailAddressController.text,
-                  ),
-                  child: AnimatedContainer(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 10),
-                    duration: const Duration(seconds: 10),
-                    decoration: BoxDecoration(
-                      color: const Color(0XFF516D61),
-                      borderRadius: BorderRadius.circular(15.r),
-                    ),
-                    constraints: BoxConstraints.tightFor(
-                      height: 50,
-                      width: MediaQuery.of(context)
-                          .size
-                          .width
-                          .clamp(240.0.w, 560.0.w),
-                    ),
-                    child: FittedBox(
-                      child: widget.viewModel.isBusy
-                          ? const CircularProgressIndicator(
-                              color: Colors.white,
-                              valueColor: AlwaysStoppedAnimation(Colors.white),
-                            )
-                          : widget.viewModel.subscriptionSuccessful
-                              ? const Icon(
-                                  Icons.check,
-                                  color: Colors.white,
-                                )
-                              : const Text(
-                                  'Join Waitlist',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 15),
-                                ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -350,7 +350,7 @@ class BottomBar extends ViewModelWidget<ComingSoonViewModel> {
               child: Align(
                 alignment: const Alignment(0, 0.30),
                 child: SizedBox(
-                  height: 37.97.h,
+                  height: 50.97.h,
                   width: 122.w,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,

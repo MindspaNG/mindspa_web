@@ -7,34 +7,41 @@ class _ComingSoonMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(428, 926),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_) => OverflowBox(
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Column(
-            children: [
-              const MobileTopBar(),
-              Column(
-                children: [
-                  SizedBox(
-                    height: 45.h,
-                  ),
-                  const MobileSubLongText(),
-                  SizedBox(
-                    height: 45.h,
-                  ),
-                  const MobileCountDownTimer(),
-                  SizedBox(
-                    height: 45.h,
-                  ),
-                  MobileTextFieldAndSubmitButton(viewModel: viewModel),
-                ],
-              ),
-              const MobileBottomBar(),
-            ],
+    return Statusbar(
+      child: ScreenUtilInit(
+        designSize: const Size(428, 926),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_) => OverflowBox(
+          child: Scaffold(
+            resizeToAvoidBottomInset: false,
+            body: ListView(
+              shrinkWrap: true,
+              children: [
+                Column(
+                  children: [
+                    const MobileTopBar(),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 45.h,
+                        ),
+                        const MobileSubLongText(),
+                        SizedBox(
+                          height: 45.h,
+                        ),
+                        const MobileCountDownTimer(),
+                        SizedBox(
+                          height: 45.h,
+                        ),
+                        MobileTextFieldAndSubmitButton(viewModel: viewModel),
+                      ],
+                    ),
+                    const MobileBottomBar(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -282,17 +289,15 @@ class MobileBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Image.asset(
-            'assets/images/png/Group mobile 3.png',
-            fit: BoxFit.cover,
-          )
-        ],
-      ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Image.asset(
+          'assets/images/png/Group mobile 3.png',
+          fit: BoxFit.cover,
+        )
+      ],
     );
   }
 }

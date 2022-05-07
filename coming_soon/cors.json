@@ -1,0 +1,9 @@
+[
+    {
+      "origin": ["https://mindspa-29fbe.web.app"],
+      "responseHeader": ["Content-Type"],
+      "method": ["POST"],
+      "maxAgeSeconds": 3600
+    }
+]
+
