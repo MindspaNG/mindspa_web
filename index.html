@@ -18,7 +18,7 @@
         <nav class="navbar">
             <img src="Assets/images/Mind-Spa-Logo-Green.png"  alt="Mind-Spa Logo" class="logo">
             <ul class="nav-menu">       
-                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="#whatWeOffer" class="nav-link">What we Offer</a></li>
                 <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
                 <li class="nav-item"><a href="https://blog.mindspang.com" class="nav-link">Blog</a></li>
@@ -66,7 +66,7 @@
     </div>
     
     <!-- ABOUT US SECTION --> 
-    <div class="about">
+    <div class="about" id="about-us">
         <div class="platform">
             <div class="text">
                 <h4>About us</h4>
@@ -93,7 +93,7 @@
     </div>
     
     <!-- WHAT WE OFFER SECTION--> 
-    <div class="offer">
+    <div class="offer" id="whatWeOffer">
         <h4>What we offer</h4>
         <div class="offers">
             <div class="frame frame1">
@@ -112,7 +112,7 @@
     </div> 
     
     <!-- INFORMATION SECTION--> 
-    <div class="information">
+    <div class="information" id="resources">
         <img src="Assets/images/bg-info1.svg" alt="" class="bg-info1">
         <div class="info">
             <h4>Information at your fingertips</h4>
@@ -204,16 +204,58 @@
     <!-- EMAIL SECTION -->
     <section class="updates">
         <h6>Get the latest events, tips and job offers in your mail</h6>
-            <form class="mail">
-                <input type="text" id="name" name="fullname" placeholder="Your full name" class="text">
-                <input type="text" id="email" name="email" placeholder="Your email" class="text">
-                <input type="text" id="phone" name="phone" placeholder="Your phone number" class="text">
+            <form class="mail" id="form">
+                <input type="email" id="email" name="email" placeholder="Your email" class="text">
                 <input type="submit" value="Sign me in!" class="sign">
             </form>
     </section>
 
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="top">
+           <div class="first">
+                <img src="Assets/images/Mind-Spa Logo design.png" alt="" class="logo">
+                <div class="company">
+                    <h6>Company</h6>
+                    <ul>
+                        <li><a href="#about-us" class="footer-link">About us</a></li>
+                        <li><a href="#whatWeOffer" class="footer-link">What we offer</a></li>
+                        <li><a href="https://blog.mindspang.com" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Privacy policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and conditions</a></li>
+                    </ul>
+                </div>
+           </div>
+           <div class="second">
+                <div class="contact" id="contact">
+                    <h6>Contact us</h6>
+                    <div class="gmail">
+                        <a href=""><img src="Assets/images/email.svg" alt=""></a>
+                        <a href="mailto:mindspang@gmail.com"><p>themindspang@gmail.com</p></a>
+                        
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/mindspa_ng"><img src="Assets/images/instagram.svg" alt="" class="insta"></a>
+                        <a href="https://facebook.com/MindSpaNG"><img src="Assets/images/facebook.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="stay">
+                    <h6>Stay up to date</h6>
+                    <form class="form" id="form">
+                        <input type="email" id="email" name="email" placeholder="Submit email address" class="input">
+                        <input type="submit" id="submit">
+                    </form>
+                </div>
+           </div>
+        </div>
+        <div class="bottom">
+            <hr/>
+            <p>Copyright &copy Mind-Spa NG 2022. All rights reserved.</p>
+        </div>
+    </div>
 
     <script>
+        //HAMBURGER MENU
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
@@ -232,5 +274,38 @@
             hamburger.classList.remove("active");
             navMenu.classList.remove("active");
         }
+
+
+        //FORM 
+        var form = document.getElementById('form');
+        form.addEventListener('submit',function(e){
+            //prevent auto submission of the form
+            e.preventDefault()
+
+            var email = document.getElementById('email').value;
+
+            fetch('https://us20.api.mailchimp.com/3.0/lists/b95731553c/members', {
+                method:'POST',
+                body:JSON.stringify({
+                    'email_address': email,
+                    'status': 'Subscribed'
+                }),
+                headers: {
+                    'authorization': 'Basic YW55dGhpbmc6MDhmZTJiNwYyYzljNTMyZWFhMjM5MTE4Zjc4ZWFiMjQtdXMyMA=='
+                },
+            })
+            .then(function(response){
+               console.log(response);
+            })
+
+            .catch(function (error) { 
+                console.log(error);
+            })
+
+            .then(function(data){
+                alert('Thank you for subscribing');
+            })
+        })
+        
     </script>
 </body>
