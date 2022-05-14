@@ -305,6 +305,26 @@
             .then(function(data){
                 alert('Thank you for subscribing');
             })
+
+            fetch('https://us20.api.mailchimp.com/3.0/lists/b95731553c/members/e9e2721579cfb6d12ff7a04e344c6/tags', {
+                method:'POST',
+                body:JSON.stringify({
+                    tags:[{
+                        'name': 'News Letter',
+                        'status': 'active'
+                    }]
+                }),
+                headers: {
+                    'authorization': 'Basic YW55dGhpbmc6MDhmZTJiNwYyYzljNTMyZWFhMjM5MTE4Zjc4ZWFiMjQtdXMyMA=='
+                },
+            })
+            .then(function(response){
+               console.log(response);
+            })
+
+            .catch(function (error) { 
+                console.log(error);
+            })
         })
         
     </script>
