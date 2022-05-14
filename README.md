@@ -1,8 +1,8 @@
 # Mind Spa 🩺
   ## Overview 
-  This is the **Mind Spa** Landing page roject repository which redirects users to the mobile app handled by **_TEAM 11_**, written with pure [Flutter](https://flutter.dev/).
+  This is the **Mind Spa** Landing page roject repository which redirects users to the mobile app handled by MindSpa Engineering team 
   
-  NB: Always check the [Trello Board](https://trello.com/b/PfAdYRVB/mind-spa-ng-dev-team) before attempting any task.
+  NB: Always check the [Linear Board](https://linear.app/elva/team/ELV/active) before attempting any task.
   
   - _All team members/contributors must adhere to the following instructions while working on this project._
   - _Make sure you understand the project structure before proceeding with any task._
