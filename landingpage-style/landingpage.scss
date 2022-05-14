@@ -814,7 +814,10 @@ $phone: 425px;
                                 background-position: right;
                                 //background-position-x: 215px;
                                 background-size: 32px auto;
-                                cursor: pointer;
+                                //cursor: pointer;
+                            }
+                            #submit {
+                                visibility: hidden;
                             }
                         }
                     }

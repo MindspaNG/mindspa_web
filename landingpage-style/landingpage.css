@@ -804,7 +804,10 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: 32px auto;
-  cursor: pointer;
+}
+
+* body .footer .top .second .stay .form #submit {
+  visibility: hidden;
 }
 
 * body .footer .bottom {

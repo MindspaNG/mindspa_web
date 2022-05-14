@@ -204,10 +204,8 @@
     <!-- EMAIL SECTION -->
     <section class="updates">
         <h6>Get the latest events, tips and job offers in your mail</h6>
-            <form class="mail">
-                <input type="text" id="name" name="fullname" placeholder="Your full name" class="text">
-                <input type="text" id="email" name="email" placeholder="Your email" class="text">
-                <input type="text" id="phone" name="phone" placeholder="Your phone number" class="text">
+            <form class="mail" id="form">
+                <input type="email" id="email" name="email" placeholder="Your email" class="text">
                 <input type="submit" value="Sign me in!" class="sign">
             </form>
     </section>
@@ -243,9 +241,10 @@
                 </div>
                 <div class="stay">
                     <h6>Stay up to date</h6>
-                    <div class="form">
-                        <input type="text" id="email" name="email" placeholder="Submit email address" class="input">
-                    </div>
+                    <form class="form" id="form">
+                        <input type="email" id="email" name="email" placeholder="Submit email address" class="input">
+                        <input type="submit" id="submit">
+                    </form>
                 </div>
            </div>
         </div>
@@ -256,6 +255,7 @@
     </div>
 
     <script>
+        //HAMBURGER MENU
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
@@ -274,5 +274,38 @@
             hamburger.classList.remove("active");
             navMenu.classList.remove("active");
         }
+
+
+        //FORM
+        var form = document.getElementById('form');
+        form.addEventListener('submit',function(e){
+            //prevent auto submission of the form
+            e.preventDefault()
+
+            var email = document.getElementById('email').value;
+
+            fetch('https://us20.api.mailchimp.com/3.0/lists/b95731553c/members', {
+                method:'POST',
+                body:JSON.stringify({
+                    'email_address': email,
+                    'status': 'Subscribed'
+                }),
+                headers: {
+                    'authorization': 'Basic YW55dGhpbmc6MDhmZTJiNwYyYzljNTMyZWFhMjM5MTE4Zjc4ZWFiMjQtdXMyMA=='
+                },
+            })
+            .then(function(response){
+               console.log(response);
+            })
+
+            .catch(function (error) { 
+                console.log(error);
+            })
+
+            .then(function(data){
+                alert('Thank you for subscribing');
+            })
+        })
+        
     </script>
 </body>
