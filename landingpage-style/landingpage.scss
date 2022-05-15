@@ -1,0 +1,2336 @@
+$white: #ffffff;
+$black: #000000;
+//$orange: #df6f14; 
+$orange: #ec8d3b;
+$lightGreen: #516d61;
+$green: #0e402d; 
+$grey: #e5e5e5;
+$lightGrey: #f9fafa;
+$desktop: 1300px;
+$tab: 985px;
+$tablet1: 896px;
+$tablet2: 768px;
+$tablet3: 699px;
+$phone1: 590px;
+$phone: 425px;
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+    
+}
+
+@mixin tab {
+    @media (max-width: #{$tab}) {
+        @content;
+    }
+    
+}
+
+@mixin tablet1 {
+    @media (max-width: #{$tablet1}) {
+        @content;
+    }
+    
+}
+
+@mixin tablet2 {
+    @media (max-width: #{$tablet2}) {
+        @content;
+    }
+    
+}
+
+@mixin tablet3 {
+    @media (max-width: #{$tablet3}) {
+        @content;
+    }
+    
+}
+
+@mixin phone1 {
+    @media (max-width: #{$phone1}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+@mixin displayAlign {
+    display: flex;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    body {
+        font-family: 'Poppins' , sans-serif;
+         background-color: $lightGrey;
+        width: 100%;
+        
+        header {
+            background-color: $white;
+            .logo {
+                height:auto;
+                //width: 170px;
+                // position: absolute;
+                width: 10%;
+                height: 10%;
+                
+                @include tablet1 {
+                    width: 100px;
+                    image-resolution: 300dpi;
+                }
+            }
+            
+            .navbar {
+                @include displayAlign;
+                justify-content: center;
+                justify-content: space-between;
+                padding: 16px 24px; 
+                
+                
+                .nav-menu {
+                    @include displayAlign;
+                    justify-content: space-between;
+                    
+                    .nav-item {
+                        margin-left: 37px;
+                        list-style-type: none;
+                        
+                        .nav-link {
+                            text-decoration: none;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $black;
+                            transition: 0.3s ease;
+                        }
+                        
+                        .nav-link:hover {
+                            color: $green;
+                        }
+                    }
+                    
+                    #download-item {
+                        margin-top: 8px;
+                        margin-bottom: 10px;
+                    }
+                    
+                    #download-app {
+                        background-color: $green;
+                        color: $white;
+                        padding: 16px 25px;
+                        border-radius: 35px;
+                    }
+                    
+                    #download-app:hover {
+                        background-color: $orange;
+                        transition: ease;
+                    } 
+                }
+                
+                .hamburger {
+                    display: none;
+                    
+                    @include tablet1 {
+                        display: block;
+                        cursor: pointer;
+                    }
+                    
+                    .bar {
+                        display: block;
+                        width: 25px;
+                        height: 3px;
+                        margin: 5px auto;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        background-color: #1a1a1a;
+                        
+                    }
+                    
+                }
+            }
+            
+        }
+        
+        //HERO SECTION
+        .hero {
+            width: 100%;
+            //padding: 50px 100px 50px 120px;
+            //padding: 50px 100px;
+            padding: 50px 100px;
+            // margin: auto;
+            
+            .heal {
+                display: flex;
+                justify-content: space-between;
+                
+                .mend {
+                    padding-top: 70px;
+                    padding-left: 80px;
+                    width: 50%;
+                    //margin: 0px 1px;
+                    
+                    h4 {
+                        font-size: 43px;
+                        color: $green;
+                        font-weight: 700;
+                        
+                        span {
+                            color: $orange;
+                        }
+                    }
+                    
+                    p {
+                        font-size: 17px;
+                    }
+                    
+                    .button {
+                        margin-top: 80px;
+                        a {
+                            padding: 20px 40px;
+                            background-color: $orange;
+                            border-radius: 50px;
+                            border: 1px solid $orange;
+                            color: $white;
+                            text-decoration: none;
+                        }
+                        
+                        a:hover {
+                            background-color: $green;
+                            border-color: $green;
+                        }
+                    }
+                }
+                
+                .mind {
+                    //width: 600px;
+                    width: 48%;
+                    height: 550px;
+                    //padding-left: 50px;
+                    //margin: 0px 0px 0px 10px;
+                    
+                    img {
+                        max-height: 100%;
+                    }
+                }
+            }
+            
+            h6 {
+                font-size: 29px;
+                color: $green;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+        
+        //RESOURCES SECTION
+        .resources {
+            width: 100%;
+            //padding: 60px 180px;
+            
+            .access {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                z-index: 1;
+                padding: 20px 200px;
+                
+                .bgresources1 {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    left: 0;
+                    width: 150px;
+                }
+                
+                .bgresources2 {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    right: 0;
+                    width: 140px;
+                }
+                
+                /*.screen {
+                    //height: 460px;
+                    //width: 100%;
+                    //padding-left: 100px;
+                    /*img {
+                        //max-height: 100%;
+                    }*/
+                    
+                    .help {
+                        width: 70%;
+                        padding-top: 100px;
+                        //padding-right: 100px;
+                        p {
+                            //text-align: center;
+                            font-size: 19px;
+                            line-height: 35px;
+                        }
+                        
+                        div {
+                            border-bottom: 4px solid $lightGreen;
+                            border-radius: 10px;
+                            margin-top: 15px;
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+            
+            
+            //ABOUT US SECTION
+            .about {
+                width: 100%;
+                padding: 40px 130px;
+                display: flex;
+                justify-content: space-between;
+                .platform {
+                    .text {
+                        text-align: center;
+                        h4 {
+                            font-size: 35px;
+                            color: $green;
+                            margin-bottom: 50px;
+                        }
+                        
+                        p {
+                            // font-size: 14px;
+                            line-height: 40px;
+                            padding: 0px 70px;
+                        }
+                    }
+                    
+                    .statements {
+                        display: flex;
+                        margin-top: 50px;
+                        padding: 0px 40px;
+                        .statement {
+                            background-color: $white;
+                            margin: 20px;
+                            text-align: center;
+                            border: 1px solid $white;
+                            border-radius: 25px;
+                            padding: 30px 20px;
+                            img {
+                                width: 25%;
+                                min-width: 40px;
+                            }
+                            h6 {
+                                font-size: 18px;
+                                margin-top: 10px;
+                                margin-bottom: 20px;
+                            }
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //WHAT WE OFFER SECTION
+            .offer {
+                width: 100%;
+                padding: 50px 100px;
+                margin-top: 50px;
+                background-color: $grey;
+                h4 {
+                    font-size: 30px;
+                    color: $green;
+                    text-align: center;
+                    margin-bottom: 60px;
+                }
+                
+                .offers {
+                    display: flex;
+                    margin: 40px 0px;
+                    .frame {
+                        width: 100%;
+                        display: flex;
+                        //margin: 10px 19px;
+                        margin: auto;
+                        
+                        img {
+                            width: 20%;
+                            //min-width: 50px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+            
+            //INFORMATION SECTION
+            .information {
+                width: 100%;
+                background-color: $grey;
+                padding: 100px 160px 70px 160px;
+                position: relative;
+                z-index: 1;
+                .info {
+                    text-align: center;
+                    h4 {
+                        font-size: 30px;
+                        margin-bottom: 20px;
+                        color: $green;
+                    }
+                    
+                    p {
+                        margin-bottom: 50px;
+                    }
+                }
+                .bg-info1 {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 100px;
+                    left: 0;
+                    width: 100px;
+                }
+                
+                .bg-info2 {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    right: 0;
+                    width: 200px;
+                }
+                .tips {
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    
+                    .tip {
+                        //width: 100%;
+                        background-color: $green;
+                        margin: 20px 40px;
+                        align-items: center;
+                        //padding: 30px 20px;
+                        border: 0px solid transparent;
+                        border-radius: 40px;
+                        
+                        img {
+                            width: 100%;
+                            height: 75%;
+                            min-height: 80px;
+                            border-top-left-radius: 40px;
+                            border-top-right-radius: 40px;
+                        }
+                        
+                        p {
+                            padding-top: 5px;
+                            color: $white;
+                        }
+                    }
+                    
+                    /*.articles {
+                    }*/
+                }
+            }
+            
+            //PERSONAL INFORMATION SECTION
+            .safe {
+                width: 100%;
+                padding: 60px 200px;
+                padding-top: 80px;
+                margin: 0px auto;
+                background-image: url(/Assets/images/left-leaves.png);
+                background-repeat: no-repeat;
+                background-size: auto 500px; 
+                background-position-y: bottom;
+                /*.leaf {
+                    width: 50px;
+                    margin-left: -200px;
+                    
+                }*/
+                h6 {
+                    font-size: 30px;
+                    color: $green;
+                    
+                }
+                
+                .tphone {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: -100px;
+                    .text {
+                        width: 70%;
+                        margin-top: 130px;
+                        
+                        p {
+                            padding-bottom: 50px;
+                            font-size: 14px;
+                        }
+                        a {
+                            color: $orange;
+                            text-decoration: underline;
+                            padding-top: 100px;
+                            cursor: pointer;
+                            
+                        }
+                    }
+                    
+                    .phone{
+                        width: 30%;
+                        margin-top: 0px;
+                        padding-top: 0px;
+                        
+                    }
+                }
+            }
+            
+            //GET STARTED SECTION
+            .started {
+                h5 {
+                    @include displayAlign;
+                    justify-content: center;
+                    color: $green;
+                    padding: 0px 0px 40px 0px;
+                    margin-top: 0px;
+                    font-size: 27px;
+                    font-weight: 550;
+                }
+                .timeline{
+                    background-color: $grey;
+                    padding: 10px 0px 60px 0px;
+                    margin: 0px 20px;
+                    //max-width: 1080px;
+                    // margin: 10px;
+                    //padding: 0 20px 170px 0;
+                    position: relative;
+                    h6 {
+                        font-size: 17px;
+                    }
+                    
+                    span {
+                        font-size: 15px;
+                    }
+                    
+                    .get {
+                        img {
+                            width: 50px;  
+                            // min-width: 20px;
+                            padding: 10px 10px 0px 10px;
+                        }
+                    }
+                    
+                    
+                }
+                
+                
+                .timeline::after {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    background-color: $green;
+                    top: 103px;
+                    bottom: 0;
+                    left: 50%;
+                    //margin-left: -1px;
+                    
+                }
+                
+                .hand {
+                    text-align: center;
+                    top: 0px;
+                    margin-bottom: 70px;
+                    margin-left: 60px;
+                }
+                
+                .row {
+                    padding: 0px 40px 10px 40px;
+                    position: relative;
+                    //background-color: inherit;
+                    width: 50%;
+                }
+                
+                .row::after {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    right: -15px;
+                    background-color: $green;
+                    border: 1px solid $green;
+                    top: 55px;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                
+                .row-1 {
+                    left: 0;
+                } 
+                
+                .row-2 {
+                    left: 50%;
+                } 
+                
+                .row-1::before {
+                    content: " ";
+                    //height: 0;
+                    position: absolute;
+                    top: 69px;
+                    width: 27.5%;
+                    // min-width: 170px;
+                    z-index: 1;
+                    right: 10px;
+                    border-bottom: 4px dashed $green;
+                    /*border-width: 10px 0 10px 10px;
+                    border-color: transparent transparent transparent white; */
+                }
+                
+                .row-2::before {
+                    content: " ";
+                    height: 0;
+                    position: absolute;
+                    top: 87px;
+                    //width: 0;
+                    width: 27.5%;
+                    min-width: 170px;
+                    z-index: 1;
+                    //left: 30px;
+                    left: 10px;
+                    border-bottom: 4px dashed $green;
+                    /*border: medium solid white;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent; */
+                }
+                .row-2::after {
+                    left: -14px;
+                    margin-top: 20px;
+                }
+                
+                .row-4::before {
+                    margin-top: 30px;
+                }
+                
+                .row-4::after {
+                    margin-top: 50px;
+                    background-color: $white;
+                    border: 4px solid $green;
+                    width: 20px;
+                    height: 20px;
+                }
+                
+                .content {
+                    padding: 20px 10px;
+                    margin: 0px 150px;
+                    background-color: $white;
+                    position: relative;
+                    border-radius: 6px;
+                    text-align: center;
+                    z-index: 4;
+                }
+                
+                .num {
+                    margin: 0px 120px;
+                    text-align: center;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    color: $white;
+                    background-color: $green;
+                    border: 1px solid $green;
+                    border-radius: 50%;
+                }
+            }
+            
+            //EMAIL SECTION
+            .updates{
+                padding-bottom: 50px;
+                h6{
+                    padding: 80px ;
+                    font-size: 24px;
+                    color: $green;
+                    text-align: center;
+                }
+                .mail {
+                    //align-items: center;
+                    /*justify-content: center;
+                    text-align: center;
+                    align-self: center;
+                    left: 0;
+                    right: 50%;
+                    border: 1px solid $black;
+                    border-radius: 8px;
+                    background-color: $white;
+                    //margin: 0px 300px;
+                    padding: 50px 0px;
+                    //margin: 0px 400px;
+                    width: 600px; */
+                    
+                    //@include displayAlign;
+                    border: 1px solid $white;
+                    border-radius: 8px;
+                    width: 550px;
+                    background-color: $white;
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: auto; 
+                    padding: 50px;
+                    .text {
+                        width: 350px;
+                        //min-width: 500px; 
+                        padding: 20px;
+                        border: 1px solid $grey; 
+                        border-radius: 7px; 
+                        box-sizing: border-box; 
+                        margin-top: 4px; 
+                        margin-bottom: 16px; 
+                        //resize: vertical;
+                    }
+                    
+                    .sign {
+                        background-color: $orange;
+                        color: white;
+                        padding: 18px 20px;
+                        margin-top: 20px;
+                        font-size: 17px;
+                        border: none;
+                        border-radius: 4px;
+                        width: 350px;
+                        cursor: pointer;
+                    }
+                    
+                    .sign:hover {
+                        background-color: $green;
+                    }
+                    
+                }
+            }
+            
+            //FOOTER
+            .footer {
+                background-color: $green;
+                margin: 0px;
+                padding: 50px 80px 40px 60px;
+                color: $white;
+                
+            
+                .top {
+                    width: 100%;
+                    display: flex;
+                    //justify-content: space-between;
+                    justify-content: center;
+                    
+                    .first {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0px 70px;
+                        padding-left: 20px;
+                        width: 100%;
+                        .logo {
+                            width: 190px;
+                            height: 50%;
+                        }
+                        .company {
+                            padding: 0px 70px;
+                            h6 {
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                            ul {
+                                list-style-type: none;
+                                li {
+                                    padding: 10px 0px;
+                                    a {
+                                        color: $white;
+                                        text-decoration: none;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .second {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        
+                        .contact {
+                        padding: 0px 70px;
+                        padding-left: 0px;
+                        h6 {
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                        .gmail {
+                            padding: 15px 0px;
+                            display: flex;
+                            img {
+                                margin-top: 4px;
+                                width: 20px;
+                                margin-right: 8px;
+                            }
+                            a {
+                                color: $white;
+                                text-decoration: none;
+                                font-size: 13px;
+                            }
+                        }
+                        .socials {
+                            padding: 10px 0px;
+                            img {
+                                width: 25px;
+                            }
+                            .insta {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+
+                    .stay {
+                        h6 {
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+
+                        .form {
+                            padding: 18px 10px 8px 0px;
+                            //display: table;
+                            //position: relative;
+
+                            img {
+                                vertical-align: middle;
+                            }
+                            .input {
+                                padding: 10px 80px 10px 10px;
+                                border-radius: 8px;
+                                border: 1px solid $white;
+                                background-image: url(/Assets/images/send.svg);
+                                background-repeat: no-repeat;
+                                background-position: right;
+                                //background-position-x: 215px;
+                                background-size: 32px auto;
+                                //cursor: pointer;
+                            }
+                            #submit {
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+                    
+                }
+
+                .bottom {
+                    margin-top: 20px;
+                    text-align: center;
+
+                    hr {
+                        border: 1px solid $white;
+                    }
+
+                    p {
+                        margin-top: 30px;
+                        padding: 14px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            //MEDIA QUERIES
+            @include desktop{
+                //HERO SECTION
+                .hero {
+                    padding: 40px 20px;
+                    .heal {
+                        .mend {
+                            padding-left: 90px;   
+                            h4 {
+                                font-size: 37px;
+                            }
+                            
+                        }
+                        
+                        .mind {
+                            width: 550px;
+                            height: 450px;
+                        }
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    .access {
+                        padding: 20px 130px;
+                        .bgresources1 {
+                            width: 130px;
+                        }
+                        
+                        .bgresources2 {
+                            width: 120px;
+                        }
+                        
+                        .help {
+                            width: 100%;
+                            
+                            
+                        }
+                    }
+                }
+                
+                
+                //ABOUT US SECTION
+                .about {
+                    padding: 40px 70px;
+                }
+                
+                // WHAT WE OFFER
+                .offer {
+                    width: 100%;
+                    padding: 50px 50px;
+                }
+                
+                //INFORMATION SECTION
+                .information {
+                    padding: 100px 60px;
+                }
+                
+                //PERSONAL INFORMATION SECTION
+                .safe {
+                    h6{
+                        font-size: 20px;
+                    }
+                }
+                
+                //GET STARTED SECTION
+                .started {
+                    .timeline {
+                        margin: 0px;
+                    }
+                    
+                    .content {
+                        padding: 20px;
+                        margin: 0px 80px;
+                    }
+                    
+                    .num {
+                        margin: 0px 61px;
+                    }
+                }
+                
+                //FOOTER
+                .footer {
+                    padding: 50px 40px 40px 30px;
+                    .top {
+                        .first {
+                            padding: 0px;
+                            margin-right: 40px;
+                            .logo {
+                                height: 50%;
+                            }
+
+                            .company {
+                               padding: 0px 0px;
+                                margin: 0px 50px;
+                                justify-content: flex-start;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @include tab {
+                #download-app {
+                    font-size: 12px;
+                }
+                
+                //HERO SECTION
+                .hero {
+                    padding: 40px 20px;
+                    .heal {
+                        .mend {
+                            
+                            h4 {
+                                font-size: 34px;
+                            }
+                            
+                            p{
+                                font-size: 16px;
+                            }
+                            
+                        }
+                        
+                        .mind {
+                            width: 450px;
+                            height: 400px; 
+                        }
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    .access {
+                        padding: 20px 50px;
+                        
+                        .help {
+                            p {
+                                font-size: 17px;
+                            }
+                            
+                            div {
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+                
+                //ABOUT US SECTION
+                .about {
+                    padding: 40px 40px;
+                    
+                    .platform {
+                        .text {
+                            h4 {
+                                font-size: 30px;
+                            }
+                            p {
+                                font-size: 15px;
+                                line-height: 30px;
+                            }
+                        }
+                        
+                        .statements {
+                            padding: 0px 30px;
+                            
+                            .statement {
+                                margin: 15px;
+                            }
+                        }
+                    }
+                }
+                
+                //WHAT WE OFFER SECTION 
+                
+                //INFORMATION SECTION
+                .information {
+                    padding: 100px 30px;
+                }
+                
+                //PERSONAL INFORMATION SECTION
+                .safe {
+                    padding: 60px 100px;
+                    background-image:none;
+                    h6 {
+                        font-size: 20px;
+                    }
+                    .tphone {
+                        
+                        .text {
+                            width: 65%;
+                        }
+                        
+                        .phone {
+                            width: 40%;
+                        }
+                    }
+                }
+                
+                //GET STARTED SECTION
+                .started {
+                    h5 {
+                        margin-top: 8px;
+                    }
+                    
+                    .timeline{
+                        h6 {
+                            font-size: 15px;
+                        }
+                        
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                    .content {
+                        margin: 0px 30px;
+                        border: 1px solid $black;
+                        border-radius: 20px;
+                    }
+                    
+                    .num {
+                        margin: 40px 0px 0px 20px;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                    }
+                    
+                    
+                }
+                //EMAIL SECTION
+                .updates {
+                    h6 {
+                        font-size: 20px;
+                    }
+                }
+
+                //FOOTER 
+                .footer {
+                    padding: 50px 20px 40px 20px ;
+                    .top {
+                        .logo {
+                            width: 170px;
+                        }
+                        .first {
+                            margin: 0;
+                            .logo {
+                                height: 120px;
+                                width: 170px;
+                            }
+                            .company {
+                                h6 {
+                                    font-size: 14px;
+                                }  
+                                ul {
+                                    li {
+                                        a {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .second {
+                            .contact {
+                                padding: 0px;
+                                h6 {
+                                    font-size: 14px;
+                                }  
+                                .gmail {
+                                    a {
+                                        font-size: 12px;
+                                    }
+                                }
+    
+                                .socials {
+                                    padding: 8px 0px;
+                                    img {
+                                        width: 20px;
+                                    }
+                                }
+                            }
+
+                            .stay {
+                                padding-left: 40px;
+                                h6 {
+                                    font-size: 14px;
+                                }  
+    
+                                .form {
+                                    .input {
+                                        padding: 8px 50px 8px 10px;
+                                        //background-position-x: 190px; 
+                                        background-size: 29px auto; 
+                                    }
+                                }
+                            }
+                        }
+
+                        
+                    }
+                }
+            }
+            
+            @include tablet1{
+                .navbar {
+                    .nav-menu {
+                        position: fixed;
+                        left: -100%;
+                        top: 110px;
+                        flex-direction: column;
+                        background-color: $white;
+                        width: 100%;
+                        border-radius: 10px;
+                        text-align: center;
+                        transition: 0.3s;
+                        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                    }
+                    
+                    .nav-menu.active {
+                        left: 0;
+                    }
+                    
+                    .nav-item {
+                        margin: 25px 0;
+                    }
+                    
+                    #download-item {
+                        padding: 30px 0px 40px 0px;
+                    }
+                    
+                    #download-app{
+                        font-size: 16px;
+                    }
+                    
+                    .hamburger.active .bar:nth-child(2) {
+                        opacity: 0;
+                    }
+                    
+                    .hamburger.active .bar:nth-child(1) {
+                        transform: translateY(8px) rotate(45deg);
+                    }
+                    
+                    .hamburger.active .bar:nth-child(3) {
+                        transform: translateY(-8px) rotate(-45deg);
+                    }
+                }  
+                
+                //HERO SECTION
+                .hero {
+                    
+                    .heal {
+                        .mend {
+                            padding-left: 30px;
+                            h4 {
+                                font-size: 27px;
+                            }
+                            
+                            p{
+                                font-size: 15px;
+                            }
+                            
+                            .button {
+                                margin-top: 50px;
+                                a {
+                                    padding: 13px 30px;
+                                    
+                                }
+                            }
+                        }
+                        
+                        .mind {
+                            width: 410px;
+                            height: 380px; 
+                        }
+                    }
+                    
+                    h6 {
+                        font-size: 25px;
+                        margin-top: 20px;
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    .access {
+                        padding: 20px 40px;
+                        
+                        .help {
+                            p {
+                                font-size: 17px;
+                            }
+                            
+                            div {
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+                
+                
+                //ABOUT US SECTION
+                .about {
+                    padding-bottom: 90px;
+                    .platform {
+                        .text {
+                            p {
+                                line-height: 40px;
+                            }
+                        }
+                        .statements {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            .statement {
+                                padding: 30px 40px;
+                                margin: 30px 30px;
+                                
+                                h6 {
+                                    font-size: 16px;
+                                }
+                                
+                                p {
+                                    font-size: 12px;
+                                }
+                            }
+                            
+                            .goals {
+                                grid-column: span 3;
+                                padding: 35px 30px;
+                                //width: 318px;
+                                width: 42%;
+                                margin: auto;
+                                
+                                img {
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                //WHAT WE OFFER 
+                .offer {
+                    padding: 50px 10px;
+                    
+                    .offers {
+                        //flex-wrap: wrap;
+                        .frame {
+                            //margin: 40px 10px;
+                            
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                //FOOTER
+                .footer {
+                    padding-right: 30px;
+                    .top {
+                        justify-content: space-between;
+
+                        .first {
+                            padding-right: 50px;
+                        }
+
+                       .second {
+                           width: auto;
+                           flex-direction: column;
+                           //align-items: flex-end;
+                           text-align: end;
+                           justify-content: right;
+                           padding-left: 40px;
+
+                           .contact {
+                                .gmail {
+                                    margin-left: 80px;
+                                    img {
+                                        margin-top: 0px;
+                                    }
+                                }
+                            }
+                           .stay {
+                                padding: 0px;
+                                //justify-content: right;
+                                h6 {
+                                    justify-content: right;
+                                }
+                                .form {
+                                    //margin: 0px 0px 0px 56px;
+                                    //text-align: right;
+                                    //position: absolute;
+                                    padding-left: 40px;
+                                }
+                            }
+                        }
+                    }   
+                }
+            }
+            
+            
+            
+            
+            @include tablet2{
+                //HERO SECTION
+                .hero {
+                    
+                    .heal {
+                        .mend {
+                            padding-left: 20px;
+                            h4 {
+                                font-size: 27px;
+                            }
+                            
+                            p{
+                                font-size: 14px;
+                            }
+                            
+                            .button {
+                                a {
+                                    padding: 13px 27px;
+                                    font-size: 14px;
+                                    
+                                }
+                            }
+                        }
+                        
+                        .mind {
+                            width: 350px;
+                            height: 320px; 
+                        }
+                    }
+                    
+                    h6 {
+                        font-size: 22px;
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    .access {
+                        padding: 20px 30px 20px 20px;
+                        
+                        .help {
+                            p {
+                                font-size: 13px;
+                                line-height: 30px;
+                            }
+                            
+                            div {
+                                width: 45px;
+                            }
+                        }
+                    }
+                }
+                
+                //ABOUT US SECTION 
+                .about {
+                    padding: 40px 10px;
+                    padding-bottom: 70px;
+                    .platform {
+                        .text {
+                            h4 {
+                                font-size: 26px;
+                            }
+                            
+                            p {
+                                padding: 0px 40px;
+                                font-size: 14px;
+                            }
+                        }
+                        
+                        .statements {
+                            margin-top: 30px;
+                            .statement {
+                                margin: 20px 19px;
+                                
+                            }
+                            
+                            .goals {
+                                margin: auto;
+                                margin-top: 10px;
+                                padding: 35px 20px;
+                            }
+                        }
+                    }
+                }
+                
+                
+                //WHAT WE OFFER 
+                .offer {
+                    //display: flex;
+                    .offers {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        .frame {
+                            padding: 15px;
+                            //margin: 50px;
+                            width: 46%;
+                            margin: auto;
+                            //margin: 10px;
+                            justify-content: space-between;
+                            border-radius: 8px;
+                            background-color: $white;
+                        }
+                        .frame3 {
+                            margin-top: 15px;
+                        }
+                        .frame2 {
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                        
+                    }
+                }
+                
+                //PERSONAL INFORMATION SECTION
+                .safe {
+                    padding-bottom: 0px;
+                    .tphone {
+                        
+                        .phone {
+                            //   width: 20%;
+                            margin-right: 20px;
+                            margin-top: 60px;
+                            
+                        }
+                    }
+                }
+                
+                //FOOTER
+                .footer {
+                    .top {
+                        .first {
+                            padding-right: 20px;
+                            
+                        }
+                       .second {
+                            padding-left: 0px;
+                        }
+                    }   
+                }
+            }
+            
+            @include tablet3{
+                //HERO SECTION
+                .hero {
+                    
+                    .heal {
+                        .mend {
+                            padding-left: 0px;
+                            h4 {
+                                font-size: 24px;
+                            }
+                            
+                            p{
+                                font-size: 12px;
+                            }
+                            
+                            .button {
+                                a {
+                                    padding: 13px 27px;
+                                    font-size: 14px;
+                                    
+                                }
+                            }
+                        }
+                        
+                        .mind {
+                            width: 320px;
+                            height: 300px; 
+                        }
+                    }
+                    
+                    h6 {
+                        font-size: 22px;
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    .access {
+                        padding: 20px 40px 20px 15px;
+                        
+                        .screen {
+                            img {
+                                width: 400px;
+                            }
+                        }
+                        
+                    }
+                }
+                
+                //INFORMATION SECTION
+                .information {
+                    padding: 90px 20px;
+                    .info {
+                        h4 {
+                            font-size: 26px;
+                        }
+                        
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                    
+                    .bg-info1 {
+                        bottom: 0;
+                        width: 87px;
+                    }
+                    
+                    .bg-info2 {
+                        width: 165px;
+                    }
+                    
+                    .tips {
+                        .tip {
+                            img {
+                                width: 100%;
+                                height: auto;
+                                image-resolution: 1000dpi;
+                            }
+                        }
+                    }
+                }
+                
+                //INFORMATION SECTION
+                .information {
+                    padding: 80px 10px;
+                    .info {
+                        h4 {
+                            font-size: 24px;
+                        }
+                        
+                        p {
+                            font-size: 14px;
+                            padding: 0px 20px;
+                        }
+                        .tips {
+                            .tip {
+                                margin: 10px;
+                                
+                                img {
+                                    width: 100%;
+                                    border-top-left-radius: 20px;
+                                    border-top-right-radius: 20px;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                
+                //INFORMATION SECTION
+                .information {
+                    .tips {
+                        .tip {
+                            margin: 10px;
+                        }
+                    }
+                }
+                
+                //WHAT WE OFFER 
+                .offer {
+                    
+                    h4 {
+                        font-size: 25px;
+                    }
+                    
+                    .offers {
+                        .frame {
+                            p {
+                                font-size: 13px;
+                            }
+                        }
+                        .frame2 {
+                            height: 89px;
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    
+                }
+                //PERSONAL INFORMATION SECTION
+                .safe {
+                    padding: 40px 70px 0px 70px ;
+                    .tphone {
+                        .text {
+                            
+                            p {
+                                padding-bottom: 20px;
+                                font-size: 14px;
+                            }
+                            span {
+                                font-size: 13px;
+                                padding-top: 30px;
+                            }
+                        }
+                        .phone {
+                            width: 50%;
+                        }
+                    }
+                }
+                
+                //GET STARTED SECTION
+                .started {
+                    margin: 0px;
+                    
+                    h5 {
+                        font-size: 25px;
+                    }
+                    
+                    .timeline::after {
+                        margin-left: 40px;
+                        left: 18px;
+                        
+                    }
+                    
+                    .hand {
+                        margin-right: 650px;
+                        margin-left: 40px;
+                        //left: 30%;
+                        
+                    }
+                    
+                    .row {
+                        width: 100%;
+                        //padding-left: 90px;
+                        //padding-right: 55px;
+                    }
+                    
+                    .row-1 {
+                        left: 0%;
+                        //padding-left: 20px;
+                    }
+                    
+                    .row-2 {
+                        left: 0%;
+                    }
+                    
+                    .row-1::before {
+                        width: 70%;
+                        left: 50px;
+                    }
+                    
+                    .row-2::before {
+                        width: 20%;
+                        left: 70px;
+                    }
+                    
+                    .row-1::after {
+                        left: 45px;
+                    }
+                    
+                    .row-2::after {
+                        left:45px;
+                    }
+                    
+                    
+                    .content {
+                        width: 60%;
+                        //padding-left: 10px;
+                        left: 100px;
+                    }
+                    
+                    .content::before {
+                        left: 60px;
+                    }
+                    
+                    .num {
+                        margin-left: 120px;
+                    }
+                }
+
+                //FOOTER
+                .footer {
+                    padding-top: 20px;
+                   .top {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+
+                    .first {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: center;
+                        padding-right: 0px;
+
+                        .logo {
+                            align-self: center;
+                            //width: 150px;
+                            height: auto;
+                            padding-bottom: 30px;
+                        }
+                        .company {
+                            h6 {
+                                font-size: 18px;
+                                padding-bottom: 10px;
+                            }
+
+                            ul {
+                                li {
+                                    a {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }                        }
+                    }
+                    .second {
+                        justify-content: center;
+
+                        .contact {
+                            justify-content: center;
+                            text-align: center;
+
+                            h6 {
+                                font-size: 18px;
+                                padding-top: 30px;
+                            }
+                            .gmail {
+                               margin-left: 0px;
+                                justify-content: center;
+
+                                img {
+                                    margin-top: 0px;
+                                }
+
+                                a {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .socials {
+                                padding: 0px 0px;
+                                padding-bottom: 35px;
+                            }
+                        }
+                        .stay {
+                            justify-content: center;
+                            text-align: center;
+                            padding-bottom: 10px;
+                            padding-top: 20px;
+                        
+                            h6 {
+                                justify-content: center;
+                                font-size: 16px;
+                            }
+                            .form {
+                                //display: inline;
+                                padding: 18px 10px;
+                                justify-content: center;
+                            } 
+                        }
+                    }
+                   }
+                }
+            }
+            
+            @include phone1{
+                //HERO SECTION
+                .hero {
+                    padding-top: 25px;
+                    .heal {
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        .mend {
+                            width: 100%;
+                            text-align: center;
+                            padding-top: 10px;
+                            h4 {
+                                font-size: 25px;
+                            }
+                            
+                            p{
+                                font-size: 13px;
+                            }
+                            
+                            .button {
+                                margin-top: 30px;
+                                a {
+                                    padding: 13px 27px;
+                                    font-size: 14px;
+                                    
+                                }
+                            }
+                        }
+                        
+                        .mind {
+                            width: 400px;
+                            height: 350px; 
+                            text-align: center;
+                            //margin: 0px 50px;
+                        }
+                    }
+                    
+                    h6 {
+                        margin-top: 50px;
+                        font-size: 20px;
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    text-align: center;
+                    justify-content: center;
+                    
+                    .access {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: center;
+                        padding: 20px 20px;
+                        padding-top: 0px;
+                        .screen {
+                            width: 100%;
+                            text-align: center;
+                            img {
+                                //max-width: 100%;
+                                height: auto;
+                                width: 390px;
+                                margin: auto;
+                                //image-resolution: 300dpi;
+                            }
+                        }
+                        
+                        .bgresources1 {
+                            width: 60px;
+                        }
+                        
+                        .bgresources2 {
+                            width: 50px;
+                        }
+                        
+                        .help {
+                            width: 100%;
+                            padding: 0px 50px;
+                            margin: auto;
+                            justify-content: center;
+                            //padding-right: 100px;
+                            p {
+                                margin-top: -30px;
+                            }
+                            
+                            div {
+                                width: 60px;
+                                margin: auto;
+                                margin-top: 10px;
+                                
+                            }
+                        }
+                    }
+                }
+                
+                //ABOUT US SECTION
+                .about {
+                    padding: 60px 0px;
+                    
+                    .platform {
+                        .text {
+                            h4 {
+                                font-size: 24px;
+                                margin-bottom: 20px;
+                            }
+                            
+                            p {
+                                font-size: 13px;
+                                line-height: 30px;
+                            }
+                            
+                        }
+                        
+                        .statements {
+                            padding: 0px 10px;
+                            
+                            .statement {
+                                margin: 10px 9px;
+                                margin-top: 15px;
+                                padding: 10px 10px;
+                            }
+                            
+                            .goals {
+                                margin: auto;
+                                width: 47%;
+                            }
+                        }
+                    }
+                } 
+                
+                //WHAT WE OFFER SECTION
+                .offer {
+                    padding: 50px 15px;
+                    .offers {
+                        .frame {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            padding: 30px 20px;
+                            
+                            img {
+                                width: 40px;
+                            }
+                        }
+                        
+                        .frame2 {
+                            padding: 80px 20px;
+                            height: 140px;
+                            img {
+                                width: 45px;
+                            }
+                        }
+                    }
+                }
+                
+                //INFORMATION SECTION
+                .information {
+                    .bg-info1 {
+                        width: 40px;
+                    }
+                    
+                    .bg-info2 {
+                        width: 90px;
+                    }
+                    
+                    .tips {
+                        flex-wrap: wrap;
+                    }
+                }
+                //PERSONAL INFORMATION SECTION
+                .safe {
+                    padding: 40px 10px 0px 50px;
+                    h6 {
+                        font-size: 16px;
+                    }
+                    .tphone {
+                        .text {
+                            // width: 20%;
+                            p, span {
+                                font-size: 11px;
+                            }
+                        }
+                        .phone {
+                            padding-top: 20px;
+                            height: 400px;
+                            width: 300px;
+                            
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                            }
+                        }
+                    }
+                }
+                
+                //GET STARTED SECTION
+                .started {
+                    h5 {
+                        font-size: 23px;
+                    }
+                }
+                //EMAIL SECTION
+                .updates {
+                    h6 {
+                        font-size: 18px;
+                        padding: 50px;
+                    }
+                    
+                    .mail {
+                        width: 400px;
+                        //margin: auto;
+                        
+                        .text {
+                            width: 250px;
+                        }
+                        
+                        .sign {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+            
+            @include phone{
+                //HERO SECTION
+                .hero {
+                    .heal {
+                        .mend {
+                            h4 {
+                                font-size: 23px;
+                            }
+                            
+                            p{
+                                font-size: 12px;
+                            }
+                            
+                            .button {
+                                margin-top: 30px;
+                                a {
+                                    padding: 10px 20px;
+                                    font-size: 12px;
+                                    
+                                }
+                            }
+                        }
+                        
+                        .mind {
+                            width: 300px;
+                            height: 280px; 
+                            //margin: 0px 50px;
+                        }
+                    }
+                    
+                    h6 {
+                        margin-top: 40px;
+                        font-size: 18px;
+                    }
+                }
+                
+                //RESOURCES SECTION
+                .resources {
+                    .access {
+                        padding: 20px 0px;
+                        .screen {
+                            img {
+                                width: 90%;
+                                min-width: 310px;
+                                margin: 0;
+                            }
+                        }
+                        
+                        .bgresources1 {
+                            width: 40px;
+                        }
+                        
+                        .bgresources2 {
+                            width: 40px;
+                        }
+                        
+                        .help {
+                            p {
+                                font-size: 11px;
+                            }
+                            div {
+                                width: 60px;
+                                margin: auto;
+                                margin-top: 10px;
+                                
+                            }
+                        }
+                    }
+                }
+                
+                //ABOUT US SECTION
+                .about {
+                    .platform {
+                        .text {
+                            h4 {
+                                font-size: 22px;
+                            }
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                        
+                        .statements {
+                            .statement {
+                                h6 {
+                                    font-size: 12px;
+                                }
+                                
+                                p {
+                                    font-size: 11px;
+                                }
+                            }
+                            
+                            .goals {
+                                padding: 20px 10px;
+                                margin-top: 15px;
+                            }
+                            
+                            
+                        }
+                    }
+                }
+                
+                ////WHAT WE OFFER SECTION
+                .offer {
+                    padding-bottom: 10px;
+                    .offers {
+                        
+                        .frame {
+                            img {
+                                justify-self: center ;
+                            }
+                        }
+                        .frame2 {
+                            padding: 94px 20px;
+                            //height: 140px;
+                            p{
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+                //INFORMATION SECTION
+                .information {
+                    padding-top: 20px;
+                    .info {
+                        h4 {
+                            font-size: 18px;
+                        }
+                        
+                        p {
+                            font-size: 11px;
+                        }
+                        
+                        .tips {
+                            .tip {
+                                margin: 60px;
+                                
+                                p {
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                //PERSONAL INFORMATION SECTION
+                .safe {
+                    padding: 40px 10px 0px 20px;
+                    h6 {
+                        font-size: 17px;
+                    }
+                    .tphone {
+                        .text {
+                            width: 100%;
+                            margin-top: 110px;
+                            p, span {
+                                font-size: 10px;
+                            }
+                        }
+                        .phone {
+                            padding-top: 20px;
+                            height: 300px;
+                            width: 300px;
+                            
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                            }
+                        }
+                    }
+                }
+                
+                
+                //GET STARTED SECTION
+                .started {
+                    h5 {
+                        font-size: 22px;
+                        margin-top: 0px;
+                    }
+                    
+                    .timeline {
+                        margin-left: 0;
+                        
+                        h6 {
+                            font-size: 14px;
+                        }
+                        p, span {
+                            font-size: 12px;
+                        }
+                        .get {
+                            img {
+                                width: 45px;
+                            }
+                        }
+                    }
+                    
+                    .timeline::after {
+                        margin-left: 10px;
+                        
+                    }
+                    
+                    .hand {
+                        margin-right: 850px;
+                        margin-left: 10px;
+                        //left: 30%;
+                        
+                    }
+                    .row-1::before {
+                        width: 20%;
+                        left: 30px;
+                    }
+                    
+                    .row-2::before {
+                        width: -2%;
+                        left: 40px;
+                    }
+                    
+                    .row-1::after {
+                        left: 15px;
+                    }
+                    
+                    .row-2::after {
+                        left:15px;
+                    }
+                    
+                    .content {
+                        //padding-left: 10px;
+                        width: 80%;
+                        left: 10px;
+                        padding: 15px 25px;
+                    }
+                    
+                    .num {
+                        margin-left: 30px;
+                    }
+                    
+                    
+                }
+                
+                
+                //EMAIL SECTION
+                .updates {
+                    h6 {
+                        font-size: 18px;
+                        
+                    }
+                    
+                    .mail {
+                        width: 280px;
+                        //margin: auto;
+                        border: 2px solid black;
+                        border-radius: 20px;
+                        padding: 25px 10px;
+                        
+                        
+                        .text {
+                            padding: 10px;
+                        }
+                        
+                        .sign {
+                            padding: 15px 17px;
+                            border-radius: 16px;
+                            font-size: 15px;
+                        }
+                        
+                    }
+                }
+
+                //FOOTER 
+                .footer {
+                   .top {
+                       .first {
+                           .company {
+                               h6 {
+                                   font-size: 16px;
+                               }
+                               ul {
+                                   li {
+                                       a {
+                                           font-size: 14px;
+                                       }
+                                   }
+                               }
+                           }
+                        }
+
+                        .second {
+                            .contact {
+                                h6 {
+                                    font-size: 16px;
+                                }
+
+                                .gmail {
+                                    a {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                   } 
+                }
+            }
+            
+        }
+    }
