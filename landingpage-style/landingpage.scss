@@ -13,6 +13,7 @@ $tablet2: 768px;
 $tablet3: 699px;
 $phone1: 590px;
 $phone: 425px;
+// $sPhone: 400px;
 
 @mixin desktop {
     @media (max-width: #{$desktop}) {
@@ -61,6 +62,13 @@ $phone: 425px;
     }
 }
 
+// @mixin sPhone {
+//     @media (max-width: #{$sPhone}) {
+//         @content;
+//     }
+    
+// }
+
 @mixin displayAlign {
     display: flex;
     align-items: center;
@@ -73,7 +81,7 @@ $phone: 425px;
     
     body {
         font-family: 'Poppins' , sans-serif;
-         background-color: $lightGrey;
+        background-color: $lightGrey;
         width: 100%;
         
         header {
@@ -84,6 +92,7 @@ $phone: 425px;
                 // position: absolute;
                 width: 10%;
                 height: 10%;
+                // padding: 10px 0px;
                 
                 @include tablet1 {
                     width: 100px;
@@ -95,12 +104,20 @@ $phone: 425px;
                 @include displayAlign;
                 justify-content: center;
                 justify-content: space-between;
-                padding: 16px 24px; 
-                
-                
+                padding: 0px 24px;
+                position: fixed; 
+                top: 0;
+                background-color: $white;
+                width: 100%;
+                z-index: 999;
+
                 .nav-menu {
                     @include displayAlign;
                     justify-content: space-between;
+                    // float: left;
+                    // float: right;
+                    // padding-right: 40px;
+
                     
                     .nav-item {
                         margin-left: 37px;
@@ -168,6 +185,7 @@ $phone: 425px;
             //padding: 50px 100px;
             padding: 50px 100px;
             // margin: auto;
+            margin-top: 150px;
             
             .heal {
                 display: flex;
@@ -267,7 +285,12 @@ $phone: 425px;
                     /*img {
                         //max-height: 100%;
                     }*/
-                    
+                    .screen {
+                        
+                        img {
+                            width: 100%;
+                        }
+                    }
                     .help {
                         width: 70%;
                         padding-top: 100px;
@@ -293,6 +316,8 @@ $phone: 425px;
             .about {
                 width: 100%;
                 padding: 40px 130px;
+                padding-top: 90px;
+                // scroll-padding-top: 170px;
                 display: flex;
                 justify-content: space-between;
                 .platform {
@@ -343,6 +368,7 @@ $phone: 425px;
             .offer {
                 width: 100%;
                 padding: 50px 100px;
+                padding-top: 100px;
                 margin-top: 50px;
                 background-color: $grey;
                 h4 {
@@ -649,9 +675,17 @@ $phone: 425px;
                 padding-bottom: 50px;
                 h6{
                     padding: 80px ;
+                    padding-bottom: 0px;
                     font-size: 24px;
                     color: $green;
                     text-align: center;
+                }
+
+                .share {
+                    color: $black;
+                    font-size: 14px;
+                    padding: 40px 0px 40px 0px;
+                    font-weight: lighter;
                 }
                 .mail {
                     //align-items: center;
@@ -788,6 +822,10 @@ $phone: 425px;
                             .insta {
                                 margin-right: 20px;
                             }
+
+                            .facebook {
+                                margin-right: 20px;
+                            }
                         }
                     }
 
@@ -798,9 +836,12 @@ $phone: 425px;
                         }
 
                         .form {
-                            padding: 18px 10px 8px 0px;
+                            padding: 18px 0px 8px 0px;
                             //display: table;
                             //position: relative;
+                            width: 100%;
+                            justify-content: center;
+                            align-items: center;
 
                             img {
                                 vertical-align: middle;
@@ -1122,19 +1163,19 @@ $phone: 425px;
                                     }
                                 }
                             }
+                        }
 
-                            .stay {
-                                padding-left: 40px;
-                                h6 {
-                                    font-size: 14px;
-                                }  
-    
-                                .form {
-                                    .input {
-                                        padding: 8px 50px 8px 10px;
-                                        //background-position-x: 190px; 
-                                        background-size: 29px auto; 
-                                    }
+                        .stay {
+                            padding-left: 40px;
+                            h6 {
+                                font-size: 14px;
+                            }  
+
+                            .form {
+                                .input {
+                                    padding: 8px 50px 8px 10px;
+                                    //background-position-x: 190px; 
+                                    background-size: 29px auto; 
                                 }
                             }
                         }
@@ -1149,8 +1190,10 @@ $phone: 425px;
                     .nav-menu {
                         position: fixed;
                         left: -100%;
-                        top: 110px;
+                        top: 100px;
                         flex-direction: column;
+                        justify-content: center;
+                        padding-right: 25px;
                         background-color: $white;
                         width: 100%;
                         border-radius: 10px;
@@ -1190,7 +1233,7 @@ $phone: 425px;
                 
                 //HERO SECTION
                 .hero {
-                    
+                    margin-top: 100px;
                     .heal {
                         .mend {
                             padding-left: 30px;
@@ -1321,18 +1364,20 @@ $phone: 425px;
                                     }
                                 }
                             }
-                           .stay {
-                                padding: 0px;
-                                //justify-content: right;
-                                h6 {
-                                    justify-content: right;
-                                }
-                                .form {
-                                    //margin: 0px 0px 0px 56px;
-                                    //text-align: right;
-                                    //position: absolute;
-                                    padding-left: 40px;
-                                }
+                           
+                        }
+
+                        .stay {
+                            padding: 0px;
+                            //justify-content: right;
+                            h6 {
+                                justify-content: right;
+                            }
+                            .form {
+                                //margin: 0px 0px 0px 56px;
+                                //text-align: right;
+                                //position: absolute;
+                                // padding-left: 40px;
                             }
                         }
                     }   
@@ -1382,6 +1427,11 @@ $phone: 425px;
                     .access {
                         padding: 20px 30px 20px 20px;
                         
+                        .screen {
+                            img {
+                                width: 400px;
+                            }
+                        }
                         .help {
                             p {
                                 font-size: 13px;
@@ -1782,22 +1832,38 @@ $phone: 425px;
                                 padding-bottom: 35px;
                             }
                         }
-                        .stay {
-                            justify-content: center;
-                            text-align: center;
-                            padding-bottom: 10px;
-                            padding-top: 20px;
                         
-                            h6 {
-                                justify-content: center;
-                                font-size: 16px;
-                            }
-                            .form {
-                                //display: inline;
-                                padding: 18px 10px;
-                                justify-content: center;
-                            } 
+                    }
+
+                    .stay {
+                        justify-content: center;
+                        text-align: center;
+                        padding-bottom: 10px;
+                        padding-top: 20px;
+                    
+                        h6 {
+                            justify-content: center;
+                            font-size: 16px;
                         }
+                        .form {
+                            //display: inline;
+                            padding: 18px 10px;
+                            // padding-right: 10px;
+                            // padding-left: 20px;
+                            justify-content: center;
+                            //  margin-left: 20px;
+                            //  margin-right: 20px;
+                            // padding-left: 170px;
+                            // width: 50%;
+                            display: flex;
+                            flex-direction: column;
+
+
+                            .button {
+                                padding-right: 0px;
+                                // display: none;
+                            }
+                        } 
                     }
                    }
                 }
@@ -1864,7 +1930,7 @@ $phone: 425px;
                             img {
                                 //max-width: 100%;
                                 height: auto;
-                                width: 390px;
+                                width: 440px;
                                 margin: auto;
                                 //image-resolution: 300dpi;
                             }
@@ -2009,8 +2075,14 @@ $phone: 425px;
                 //EMAIL SECTION
                 .updates {
                     h6 {
-                        font-size: 18px;
+                        font-size: 19px;
                         padding: 50px;
+                        padding-bottom: 0px;
+                    }
+
+                    .share {
+                        font-size: 13px;
+                        padding-top: 30px;
                     }
                     
                     .mail {
@@ -2026,6 +2098,17 @@ $phone: 425px;
                         }
                     }
                 }
+
+                // .footer {
+                //     .top {
+                //         .stay {
+                //             .form {
+                //                 padding-left: 0px;
+
+                //             }
+                //         }
+                //     }
+                // }
             }
             
             @include phone{
@@ -2147,6 +2230,11 @@ $phone: 425px;
                             p{
                                 font-size: 11px;
                             }
+                        }
+
+                        .frame3 {
+                            padding: 30px 7px;
+                            width: 50%;
                         }
                     }
                 }
@@ -2275,6 +2363,11 @@ $phone: 425px;
                         font-size: 18px;
                         
                     }
+
+                    .share {
+                        font-size: 12px;
+                        padding-top: 30px;
+                    }
                     
                     .mail {
                         width: 280px;
@@ -2328,9 +2421,32 @@ $phone: 425px;
                                 }
                             }
                         }
+
+                        // .stay {
+                        //     .form {
+                        //         // padding-right: 50px;
+                        //         padding-left: 0px;
+                        //     }
+                        // }
                    } 
                 }
             }
             
+            // @include sPhone{
+            //     //FOOTER
+            //     .footer {
+            //         .top {
+            //             .second {
+            //                 .stay {
+            //                     .form{
+            //                         margin-left: 30px;
+            //                         margin-right: 10px;
+            //                         width: 100%;
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
         }
     }

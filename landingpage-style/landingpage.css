@@ -41,7 +41,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 16px 24px;
+  padding: 0px 24px;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 999;
 }
 
 * body header .navbar .nav-menu {
@@ -116,6 +121,7 @@
 * body .hero {
   width: 100%;
   padding: 50px 100px;
+  margin-top: 150px;
 }
 
 * body .hero .heal {
@@ -220,6 +226,10 @@
   width: 140px;
 }
 
+* body .resources .access .screen img {
+  width: 100%;
+}
+
 * body .resources .access .help {
   width: 70%;
   padding-top: 100px;
@@ -240,6 +250,7 @@
 * body .about {
   width: 100%;
   padding: 40px 130px;
+  padding-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,6 +309,7 @@
 * body .offer {
   width: 100%;
   padding: 50px 100px;
+  padding-top: 100px;
   margin-top: 50px;
   background-color: #e5e5e5;
 }
@@ -609,9 +621,17 @@
 
 * body .updates h6 {
   padding: 80px;
+  padding-bottom: 0px;
   font-size: 24px;
   color: #0e402d;
   text-align: center;
+}
+
+* body .updates .share {
+  color: #000000;
+  font-size: 14px;
+  padding: 40px 0px 40px 0px;
+  font-weight: lighter;
 }
 
 * body .updates .mail {
@@ -783,13 +803,24 @@
   margin-right: 20px;
 }
 
+* body .footer .top .second .contact .socials .facebook {
+  margin-right: 20px;
+}
+
 * body .footer .top .second .stay h6 {
   font-size: 16px;
   font-weight: 300;
 }
 
 * body .footer .top .second .stay .form {
-  padding: 18px 10px 8px 0px;
+  padding: 18px 0px 8px 0px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 * body .footer .top .second .stay .form img {
@@ -1008,13 +1039,13 @@
   * body .footer .top .second .contact .socials img {
     width: 20px;
   }
-  * body .footer .top .second .stay {
+  * body .footer .top .stay {
     padding-left: 40px;
   }
-  * body .footer .top .second .stay h6 {
+  * body .footer .top .stay h6 {
     font-size: 14px;
   }
-  * body .footer .top .second .stay .form .input {
+  * body .footer .top .stay .form .input {
     padding: 8px 50px 8px 10px;
     background-size: 29px auto;
   }
@@ -1024,11 +1055,15 @@
   * body .navbar .nav-menu {
     position: fixed;
     left: -100%;
-    top: 110px;
+    top: 100px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 25px;
     background-color: #ffffff;
     width: 100%;
     border-radius: 10px;
@@ -1060,6 +1095,9 @@
   * body .navbar .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
+  }
+  * body .hero {
+    margin-top: 100px;
   }
   * body .hero .heal .mend {
     padding-left: 30px;
@@ -1159,16 +1197,13 @@
   * body .footer .top .second .contact .gmail img {
     margin-top: 0px;
   }
-  * body .footer .top .second .stay {
+  * body .footer .top .stay {
     padding: 0px;
   }
-  * body .footer .top .second .stay h6 {
+  * body .footer .top .stay h6 {
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
-  }
-  * body .footer .top .second .stay .form {
-    padding-left: 40px;
   }
 }
 
@@ -1195,6 +1230,9 @@
   }
   * body .resources .access {
     padding: 20px 30px 20px 20px;
+  }
+  * body .resources .access .screen img {
+    width: 400px;
   }
   * body .resources .access .help p {
     font-size: 13px;
@@ -1487,7 +1525,7 @@
     padding: 0px 0px;
     padding-bottom: 35px;
   }
-  * body .footer .top .second .stay {
+  * body .footer .top .stay {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1495,17 +1533,27 @@
     padding-bottom: 10px;
     padding-top: 20px;
   }
-  * body .footer .top .second .stay h6 {
+  * body .footer .top .stay h6 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 16px;
   }
-  * body .footer .top .second .stay .form {
+  * body .footer .top .stay .form {
     padding: 18px 10px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  * body .footer .top .stay .form .button {
+    padding-right: 0px;
   }
 }
 
@@ -1576,7 +1624,7 @@
   }
   * body .resources .access .screen img {
     height: auto;
-    width: 390px;
+    width: 440px;
     margin: auto;
   }
   * body .resources .access .bgresources1 {
@@ -1686,8 +1734,13 @@
     font-size: 23px;
   }
   * body .updates h6 {
-    font-size: 18px;
+    font-size: 19px;
     padding: 50px;
+    padding-bottom: 0px;
+  }
+  * body .updates .share {
+    font-size: 13px;
+    padding-top: 30px;
   }
   * body .updates .mail {
     width: 400px;
@@ -1773,6 +1826,10 @@
   * body .offer .offers .frame2 p {
     font-size: 11px;
   }
+  * body .offer .offers .frame3 {
+    padding: 30px 7px;
+    width: 50%;
+  }
   * body .information {
     padding-top: 20px;
   }
@@ -1857,6 +1914,10 @@
   }
   * body .updates h6 {
     font-size: 18px;
+  }
+  * body .updates .share {
+    font-size: 12px;
+    padding-top: 30px;
   }
   * body .updates .mail {
     width: 280px;
