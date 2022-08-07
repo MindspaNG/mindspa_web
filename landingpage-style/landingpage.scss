@@ -1,9 +1,9 @@
 $white: #ffffff;
 $black: #000000;
-//$orange: #df6f14; 
+//$orange: #df6f14;
 $orange: #ec8d3b;
 $lightGreen: #516d61;
-$green: #0e402d; 
+$green: #0e402d;
 $grey: #e5e5e5;
 $lightGrey: #f9fafa;
 $desktop: 1300px;
@@ -19,35 +19,35 @@ $phone: 425px;
     @media (max-width: #{$desktop}) {
         @content;
     }
-    
+
 }
 
 @mixin tab {
     @media (max-width: #{$tab}) {
         @content;
     }
-    
+
 }
 
 @mixin tablet1 {
     @media (max-width: #{$tablet1}) {
         @content;
     }
-    
+
 }
 
 @mixin tablet2 {
     @media (max-width: #{$tablet2}) {
         @content;
     }
-    
+
 }
 
 @mixin tablet3 {
     @media (max-width: #{$tablet3}) {
         @content;
     }
-    
+
 }
 
 @mixin phone1 {
@@ -66,7 +66,7 @@ $phone: 425px;
 //     @media (max-width: #{$sPhone}) {
 //         @content;
 //     }
-    
+
 // }
 
 @mixin displayAlign {
@@ -78,12 +78,12 @@ $phone: 425px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
     body {
         font-family: 'Poppins' , sans-serif;
         background-color: $lightGrey;
         width: 100%;
-        
+
         header {
             background-color: $white;
             .logo {
@@ -93,19 +93,19 @@ $phone: 425px;
                 width: 10%;
                 height: 10%;
                 // padding: 10px 0px;
-                
+
                 @include tablet1 {
                     width: 100px;
                     image-resolution: 300dpi;
                 }
             }
-            
+
             .navbar {
                 @include displayAlign;
                 justify-content: center;
                 justify-content: space-between;
                 padding: 0px 24px;
-                position: fixed; 
+                position: fixed;
                 top: 0;
                 background-color: $white;
                 width: 100%;
@@ -118,11 +118,11 @@ $phone: 425px;
                     // float: right;
                     // padding-right: 40px;
 
-                    
+
                     .nav-item {
                         margin-left: 37px;
                         list-style-type: none;
-                        
+
                         .nav-link {
                             text-decoration: none;
                             font-size: 16px;
@@ -130,38 +130,38 @@ $phone: 425px;
                             color: $black;
                             transition: 0.3s ease;
                         }
-                        
+
                         .nav-link:hover {
                             color: $green;
                         }
                     }
-                    
+
                     #download-item {
                         margin-top: 8px;
                         margin-bottom: 10px;
                     }
-                    
+
                     #download-app {
                         background-color: $green;
                         color: $white;
                         padding: 16px 25px;
                         border-radius: 35px;
                     }
-                    
+
                     #download-app:hover {
                         background-color: $orange;
                         transition: ease;
-                    } 
+                    }
                 }
-                
+
                 .hamburger {
                     display: none;
-                    
+
                     @include tablet1 {
                         display: block;
                         cursor: pointer;
                     }
-                    
+
                     .bar {
                         display: block;
                         width: 25px;
@@ -170,14 +170,14 @@ $phone: 425px;
                         -webkit-transition: all 0.3s ease-in-out;
                         transition: all 0.3s ease-in-out;
                         background-color: #1a1a1a;
-                        
+
                     }
-                    
+
                 }
             }
-            
+
         }
-        
+
         //HERO SECTION
         .hero {
             width: 100%;
@@ -186,31 +186,31 @@ $phone: 425px;
             padding: 50px 100px;
             // margin: auto;
             margin-top: 150px;
-            
+
             .heal {
                 display: flex;
                 justify-content: space-between;
-                
+
                 .mend {
                     padding-top: 70px;
                     padding-left: 80px;
                     width: 50%;
                     //margin: 0px 1px;
-                    
+
                     h4 {
                         font-size: 43px;
                         color: $green;
                         font-weight: 700;
-                        
+
                         span {
                             color: $orange;
                         }
                     }
-                    
+
                     p {
                         font-size: 17px;
                     }
-                    
+
                     .button {
                         margin-top: 80px;
                         a {
@@ -221,27 +221,27 @@ $phone: 425px;
                             color: $white;
                             text-decoration: none;
                         }
-                        
+
                         a:hover {
                             background-color: $green;
                             border-color: $green;
                         }
                     }
                 }
-                
+
                 .mind {
                     //width: 600px;
                     width: 48%;
                     height: 550px;
                     //padding-left: 50px;
                     //margin: 0px 0px 0px 10px;
-                    
+
                     img {
                         max-height: 100%;
                     }
                 }
             }
-            
+
             h6 {
                 font-size: 29px;
                 color: $green;
@@ -249,19 +249,19 @@ $phone: 425px;
                 margin-top: 20px;
             }
         }
-        
+
         //RESOURCES SECTION
         .resources {
             width: 100%;
             //padding: 60px 180px;
-            
+
             .access {
                 display: flex;
                 justify-content: space-between;
                 position: relative;
                 z-index: 1;
                 padding: 20px 200px;
-                
+
                 .bgresources1 {
                     position: absolute;
                     z-index: -1;
@@ -269,7 +269,7 @@ $phone: 425px;
                     left: 0;
                     width: 150px;
                 }
-                
+
                 .bgresources2 {
                     position: absolute;
                     z-index: -1;
@@ -277,7 +277,7 @@ $phone: 425px;
                     right: 0;
                     width: 140px;
                 }
-                
+
                 /*.screen {
                     //height: 460px;
                     //width: 100%;
@@ -286,7 +286,7 @@ $phone: 425px;
                         //max-height: 100%;
                     }*/
                     .screen {
-                        
+
                         img {
                             width: 100%;
                         }
@@ -300,7 +300,7 @@ $phone: 425px;
                             font-size: 19px;
                             line-height: 35px;
                         }
-                        
+
                         div {
                             border-bottom: 4px solid $lightGreen;
                             border-radius: 10px;
@@ -310,8 +310,8 @@ $phone: 425px;
                     }
                 }
             }
-            
-            
+
+
             //ABOUT US SECTION
             .about {
                 width: 100%;
@@ -328,14 +328,14 @@ $phone: 425px;
                             color: $green;
                             margin-bottom: 50px;
                         }
-                        
+
                         p {
                             // font-size: 14px;
                             line-height: 40px;
                             padding: 0px 70px;
                         }
                     }
-                    
+
                     .statements {
                         display: flex;
                         margin-top: 50px;
@@ -363,7 +363,7 @@ $phone: 425px;
                     }
                 }
             }
-            
+
             //WHAT WE OFFER SECTION
             .offer {
                 width: 100%;
@@ -377,7 +377,7 @@ $phone: 425px;
                     text-align: center;
                     margin-bottom: 60px;
                 }
-                
+
                 .offers {
                     display: flex;
                     margin: 40px 0px;
@@ -386,7 +386,7 @@ $phone: 425px;
                         display: flex;
                         //margin: 10px 19px;
                         margin: auto;
-                        
+
                         img {
                             width: 20%;
                             //min-width: 50px;
@@ -395,7 +395,7 @@ $phone: 425px;
                     }
                 }
             }
-            
+
             //INFORMATION SECTION
             .information {
                 width: 100%;
@@ -410,7 +410,7 @@ $phone: 425px;
                         margin-bottom: 20px;
                         color: $green;
                     }
-                    
+
                     p {
                         margin-bottom: 50px;
                     }
@@ -422,7 +422,7 @@ $phone: 425px;
                     left: 0;
                     width: 100px;
                 }
-                
+
                 .bg-info2 {
                     position: absolute;
                     z-index: -1;
@@ -434,7 +434,7 @@ $phone: 425px;
                     display: flex;
                     text-align: center;
                     justify-content: center;
-                    
+
                     .tip {
                         //width: 100%;
                         background-color: $green;
@@ -443,7 +443,7 @@ $phone: 425px;
                         //padding: 30px 20px;
                         border: 0px solid transparent;
                         border-radius: 40px;
-                        
+
                         img {
                             width: 100%;
                             height: 75%;
@@ -451,18 +451,18 @@ $phone: 425px;
                             border-top-left-radius: 40px;
                             border-top-right-radius: 40px;
                         }
-                        
+
                         p {
                             padding-top: 5px;
                             color: $white;
                         }
                     }
-                    
+
                     /*.articles {
                     }*/
                 }
             }
-            
+
             //PERSONAL INFORMATION SECTION
             .safe {
                 width: 100%;
@@ -471,19 +471,19 @@ $phone: 425px;
                 margin: 0px auto;
                 background-image: url(/Assets/images/left-leaves.png);
                 background-repeat: no-repeat;
-                background-size: auto 500px; 
+                background-size: auto 500px;
                 background-position-y: bottom;
                 /*.leaf {
                     width: 50px;
                     margin-left: -200px;
-                    
+
                 }*/
                 h6 {
                     font-size: 30px;
                     color: $green;
-                    
+
                 }
-                
+
                 .tphone {
                     display: flex;
                     justify-content: space-between;
@@ -491,7 +491,7 @@ $phone: 425px;
                     .text {
                         width: 70%;
                         margin-top: 130px;
-                        
+
                         p {
                             padding-bottom: 50px;
                             font-size: 14px;
@@ -501,19 +501,19 @@ $phone: 425px;
                             text-decoration: underline;
                             padding-top: 100px;
                             cursor: pointer;
-                            
+
                         }
                     }
-                    
+
                     .phone{
                         width: 30%;
                         margin-top: 0px;
                         padding-top: 0px;
-                        
+
                     }
                 }
             }
-            
+
             //GET STARTED SECTION
             .started {
                 h5 {
@@ -536,23 +536,23 @@ $phone: 425px;
                     h6 {
                         font-size: 17px;
                     }
-                    
+
                     span {
                         font-size: 15px;
                     }
-                    
+
                     .get {
                         img {
-                            width: 50px;  
+                            width: 50px;
                             // min-width: 20px;
                             padding: 10px 10px 0px 10px;
                         }
                     }
-                    
-                    
+
+
                 }
-                
-                
+
+
                 .timeline::after {
                     content: '';
                     position: absolute;
@@ -562,23 +562,23 @@ $phone: 425px;
                     bottom: 0;
                     left: 50%;
                     //margin-left: -1px;
-                    
+
                 }
-                
+
                 .hand {
                     text-align: center;
                     top: 0px;
                     margin-bottom: 70px;
                     margin-left: 60px;
                 }
-                
+
                 .row {
                     padding: 0px 40px 10px 40px;
                     position: relative;
                     //background-color: inherit;
                     width: 50%;
                 }
-                
+
                 .row::after {
                     content: '';
                     position: absolute;
@@ -591,15 +591,15 @@ $phone: 425px;
                     border-radius: 50%;
                     z-index: 1;
                 }
-                
+
                 .row-1 {
                     left: 0;
-                } 
-                
+                }
+
                 .row-2 {
                     left: 50%;
-                } 
-                
+                }
+
                 .row-1::before {
                     content: " ";
                     //height: 0;
@@ -613,7 +613,7 @@ $phone: 425px;
                     /*border-width: 10px 0 10px 10px;
                     border-color: transparent transparent transparent white; */
                 }
-                
+
                 .row-2::before {
                     content: " ";
                     height: 0;
@@ -634,11 +634,11 @@ $phone: 425px;
                     left: -14px;
                     margin-top: 20px;
                 }
-                
+
                 .row-4::before {
                     margin-top: 30px;
                 }
-                
+
                 .row-4::after {
                     margin-top: 50px;
                     background-color: $white;
@@ -646,7 +646,7 @@ $phone: 425px;
                     width: 20px;
                     height: 20px;
                 }
-                
+
                 .content {
                     padding: 20px 10px;
                     margin: 0px 150px;
@@ -656,7 +656,7 @@ $phone: 425px;
                     text-align: center;
                     z-index: 4;
                 }
-                
+
                 .num {
                     margin: 0px 120px;
                     text-align: center;
@@ -669,7 +669,7 @@ $phone: 425px;
                     border-radius: 50%;
                 }
             }
-            
+
             //EMAIL SECTION
             .updates{
                 padding-bottom: 50px;
@@ -701,7 +701,7 @@ $phone: 425px;
                     padding: 50px 0px;
                     //margin: 0px 400px;
                     width: 600px; */
-                    
+
                     //@include displayAlign;
                     border: 1px solid $white;
                     border-radius: 8px;
@@ -711,20 +711,20 @@ $phone: 425px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: auto; 
+                    margin: auto;
                     padding: 50px;
                     .text {
                         width: 350px;
-                        //min-width: 500px; 
+                        //min-width: 500px;
                         padding: 20px;
-                        border: 1px solid $grey; 
-                        border-radius: 7px; 
-                        box-sizing: border-box; 
-                        margin-top: 4px; 
-                        margin-bottom: 16px; 
+                        border: 1px solid $grey;
+                        border-radius: 7px;
+                        box-sizing: border-box;
+                        margin-top: 4px;
+                        margin-bottom: 16px;
                         //resize: vertical;
                     }
-                    
+
                     .sign {
                         background-color: $orange;
                         color: white;
@@ -736,28 +736,28 @@ $phone: 425px;
                         width: 350px;
                         cursor: pointer;
                     }
-                    
+
                     .sign:hover {
                         background-color: $green;
                     }
-                    
+
                 }
             }
-            
+
             //FOOTER
             .footer {
                 background-color: $green;
                 margin: 0px;
                 padding: 50px 80px 40px 60px;
                 color: $white;
-                
-            
+
+
                 .top {
                     width: 100%;
                     display: flex;
                     //justify-content: space-between;
                     justify-content: center;
-                    
+
                     .first {
                         display: flex;
                         justify-content: space-between;
@@ -792,7 +792,7 @@ $phone: 425px;
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
-                        
+
                         .contact {
                         padding: 0px 70px;
                         padding-left: 0px;
@@ -863,7 +863,7 @@ $phone: 425px;
                         }
                     }
                 }
-                    
+
                 }
 
                 .bottom {
@@ -889,20 +889,20 @@ $phone: 425px;
                     padding: 40px 20px;
                     .heal {
                         .mend {
-                            padding-left: 90px;   
+                            padding-left: 90px;
                             h4 {
                                 font-size: 37px;
                             }
-                            
+
                         }
-                        
+
                         .mind {
                             width: 550px;
                             height: 450px;
                         }
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     .access {
@@ -910,59 +910,59 @@ $phone: 425px;
                         .bgresources1 {
                             width: 130px;
                         }
-                        
+
                         .bgresources2 {
                             width: 120px;
                         }
-                        
+
                         .help {
                             width: 100%;
-                            
-                            
+
+
                         }
                     }
                 }
-                
-                
+
+
                 //ABOUT US SECTION
                 .about {
                     padding: 40px 70px;
                 }
-                
+
                 // WHAT WE OFFER
                 .offer {
                     width: 100%;
                     padding: 50px 50px;
                 }
-                
+
                 //INFORMATION SECTION
                 .information {
                     padding: 100px 60px;
                 }
-                
+
                 //PERSONAL INFORMATION SECTION
                 .safe {
                     h6{
                         font-size: 20px;
                     }
                 }
-                
+
                 //GET STARTED SECTION
                 .started {
                     .timeline {
                         margin: 0px;
                     }
-                    
+
                     .content {
                         padding: 20px;
                         margin: 0px 80px;
                     }
-                    
+
                     .num {
                         margin: 0px 61px;
                     }
                 }
-                
+
                 //FOOTER
                 .footer {
                     padding: 50px 40px 40px 30px;
@@ -983,56 +983,56 @@ $phone: 425px;
                     }
                 }
             }
-            
+
             @include tab {
                 #download-app {
                     font-size: 12px;
                 }
-                
+
                 //HERO SECTION
                 .hero {
                     padding: 40px 20px;
                     .heal {
                         .mend {
-                            
+
                             h4 {
                                 font-size: 34px;
                             }
-                            
+
                             p{
                                 font-size: 16px;
                             }
-                            
+
                         }
-                        
+
                         .mind {
                             width: 450px;
-                            height: 400px; 
+                            height: 400px;
                         }
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     .access {
                         padding: 20px 50px;
-                        
+
                         .help {
                             p {
                                 font-size: 17px;
                             }
-                            
+
                             div {
                                 width: 60px;
                             }
                         }
                     }
                 }
-                
+
                 //ABOUT US SECTION
                 .about {
                     padding: 40px 40px;
-                    
+
                     .platform {
                         .text {
                             h4 {
@@ -1043,24 +1043,24 @@ $phone: 425px;
                                 line-height: 30px;
                             }
                         }
-                        
+
                         .statements {
                             padding: 0px 30px;
-                            
+
                             .statement {
                                 margin: 15px;
                             }
                         }
                     }
                 }
-                
-                //WHAT WE OFFER SECTION 
-                
+
+                //WHAT WE OFFER SECTION
+
                 //INFORMATION SECTION
                 .information {
                     padding: 100px 30px;
                 }
-                
+
                 //PERSONAL INFORMATION SECTION
                 .safe {
                     padding: 60px 100px;
@@ -1069,28 +1069,28 @@ $phone: 425px;
                         font-size: 20px;
                     }
                     .tphone {
-                        
+
                         .text {
                             width: 65%;
                         }
-                        
+
                         .phone {
                             width: 40%;
                         }
                     }
                 }
-                
+
                 //GET STARTED SECTION
                 .started {
                     h5 {
                         margin-top: 8px;
                     }
-                    
+
                     .timeline{
                         h6 {
                             font-size: 15px;
                         }
-                        
+
                         span {
                             font-size: 13px;
                         }
@@ -1100,15 +1100,15 @@ $phone: 425px;
                         border: 1px solid $black;
                         border-radius: 20px;
                     }
-                    
+
                     .num {
                         margin: 40px 0px 0px 20px;
                         width: 30px;
                         height: 30px;
                         line-height: 30px;
                     }
-                    
-                    
+
+
                 }
                 //EMAIL SECTION
                 .updates {
@@ -1117,7 +1117,7 @@ $phone: 425px;
                     }
                 }
 
-                //FOOTER 
+                //FOOTER
                 .footer {
                     padding: 50px 20px 40px 20px ;
                     .top {
@@ -1133,7 +1133,7 @@ $phone: 425px;
                             .company {
                                 h6 {
                                     font-size: 14px;
-                                }  
+                                }
                                 ul {
                                     li {
                                         a {
@@ -1149,13 +1149,13 @@ $phone: 425px;
                                 padding: 0px;
                                 h6 {
                                     font-size: 14px;
-                                }  
+                                }
                                 .gmail {
                                     a {
                                         font-size: 12px;
                                     }
                                 }
-    
+
                                 .socials {
                                     padding: 8px 0px;
                                     img {
@@ -1169,22 +1169,22 @@ $phone: 425px;
                             padding-left: 40px;
                             h6 {
                                 font-size: 14px;
-                            }  
+                            }
 
                             .form {
                                 .input {
                                     padding: 8px 50px 8px 10px;
-                                    //background-position-x: 190px; 
-                                    background-size: 29px auto; 
+                                    //background-position-x: 190px;
+                                    background-size: 29px auto;
                                 }
                             }
                         }
 
-                        
+
                     }
                 }
             }
-            
+
             @include tablet1{
                 .navbar {
                     .nav-menu {
@@ -1201,36 +1201,36 @@ $phone: 425px;
                         transition: 0.3s;
                         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
                     }
-                    
+
                     .nav-menu.active {
                         left: 0;
                     }
-                    
+
                     .nav-item {
                         margin: 25px 0;
                     }
-                    
+
                     #download-item {
                         padding: 30px 0px 40px 0px;
                     }
-                    
+
                     #download-app{
                         font-size: 16px;
                     }
-                    
+
                     .hamburger.active .bar:nth-child(2) {
                         opacity: 0;
                     }
-                    
+
                     .hamburger.active .bar:nth-child(1) {
                         transform: translateY(8px) rotate(45deg);
                     }
-                    
+
                     .hamburger.active .bar:nth-child(3) {
                         transform: translateY(-8px) rotate(-45deg);
                     }
-                }  
-                
+                }
+
                 //HERO SECTION
                 .hero {
                     margin-top: 100px;
@@ -1240,50 +1240,50 @@ $phone: 425px;
                             h4 {
                                 font-size: 27px;
                             }
-                            
+
                             p{
                                 font-size: 15px;
                             }
-                            
+
                             .button {
                                 margin-top: 50px;
                                 a {
                                     padding: 13px 30px;
-                                    
+
                                 }
                             }
                         }
-                        
+
                         .mind {
                             width: 410px;
-                            height: 380px; 
+                            height: 380px;
                         }
                     }
-                    
+
                     h6 {
                         font-size: 25px;
                         margin-top: 20px;
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     .access {
                         padding: 20px 40px;
-                        
+
                         .help {
                             p {
                                 font-size: 17px;
                             }
-                            
+
                             div {
                                 width: 60px;
                             }
                         }
                     }
                 }
-                
-                
+
+
                 //ABOUT US SECTION
                 .about {
                     padding-bottom: 90px;
@@ -1299,23 +1299,23 @@ $phone: 425px;
                             .statement {
                                 padding: 30px 40px;
                                 margin: 30px 30px;
-                                
+
                                 h6 {
                                     font-size: 16px;
                                 }
-                                
+
                                 p {
                                     font-size: 12px;
                                 }
                             }
-                            
+
                             .goals {
                                 grid-column: span 3;
                                 padding: 35px 30px;
                                 //width: 318px;
                                 width: 42%;
                                 margin: auto;
-                                
+
                                 img {
                                     width: 20%;
                                 }
@@ -1323,16 +1323,16 @@ $phone: 425px;
                         }
                     }
                 }
-                
-                //WHAT WE OFFER 
+
+                //WHAT WE OFFER
                 .offer {
                     padding: 50px 10px;
-                    
+
                     .offers {
                         //flex-wrap: wrap;
                         .frame {
                             //margin: 40px 10px;
-                            
+
                             font-size: 14px;
                         }
                     }
@@ -1364,7 +1364,7 @@ $phone: 425px;
                                     }
                                 }
                             }
-                           
+
                         }
 
                         .stay {
@@ -1380,53 +1380,53 @@ $phone: 425px;
                                 // padding-left: 40px;
                             }
                         }
-                    }   
+                    }
                 }
             }
-            
-            
-            
-            
+
+
+
+
             @include tablet2{
                 //HERO SECTION
                 .hero {
-                    
+
                     .heal {
                         .mend {
                             padding-left: 20px;
                             h4 {
                                 font-size: 27px;
                             }
-                            
+
                             p{
                                 font-size: 14px;
                             }
-                            
+
                             .button {
                                 a {
                                     padding: 13px 27px;
                                     font-size: 14px;
-                                    
+
                                 }
                             }
                         }
-                        
+
                         .mind {
                             width: 350px;
-                            height: 320px; 
+                            height: 320px;
                         }
                     }
-                    
+
                     h6 {
                         font-size: 22px;
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     .access {
                         padding: 20px 30px 20px 20px;
-                        
+
                         .screen {
                             img {
                                 width: 400px;
@@ -1437,15 +1437,15 @@ $phone: 425px;
                                 font-size: 13px;
                                 line-height: 30px;
                             }
-                            
+
                             div {
                                 width: 45px;
                             }
                         }
                     }
                 }
-                
-                //ABOUT US SECTION 
+
+                //ABOUT US SECTION
                 .about {
                     padding: 40px 10px;
                     padding-bottom: 70px;
@@ -1454,20 +1454,20 @@ $phone: 425px;
                             h4 {
                                 font-size: 26px;
                             }
-                            
+
                             p {
                                 padding: 0px 40px;
                                 font-size: 14px;
                             }
                         }
-                        
+
                         .statements {
                             margin-top: 30px;
                             .statement {
                                 margin: 20px 19px;
-                                
+
                             }
-                            
+
                             .goals {
                                 margin: auto;
                                 margin-top: 10px;
@@ -1476,9 +1476,9 @@ $phone: 425px;
                         }
                     }
                 }
-                
-                
-                //WHAT WE OFFER 
+
+
+                //WHAT WE OFFER
                 .offer {
                     //display: flex;
                     .offers {
@@ -1504,163 +1504,197 @@ $phone: 425px;
                                 font-size: 13px;
                             }
                         }
-                        
+
                     }
                 }
-                
+
+                //INFORMATION SECTION
+                .information{
+                    .tips {
+                        .audios {
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
                 //PERSONAL INFORMATION SECTION
                 .safe {
                     padding-bottom: 0px;
                     .tphone {
-                        
+
                         .phone {
                             //   width: 20%;
                             margin-right: 20px;
                             margin-top: 60px;
-                            
+
                         }
                     }
                 }
-                
+
                 //FOOTER
                 .footer {
                     .top {
                         .first {
                             padding-right: 20px;
-                            
+
                         }
                        .second {
                             padding-left: 0px;
                         }
-                    }   
+                    }
                 }
             }
-            
+
             @include tablet3{
                 //HERO SECTION
                 .hero {
-                    
+
                     .heal {
                         .mend {
                             padding-left: 0px;
                             h4 {
                                 font-size: 24px;
                             }
-                            
+
                             p{
                                 font-size: 12px;
                             }
-                            
+
                             .button {
                                 a {
                                     padding: 13px 27px;
                                     font-size: 14px;
-                                    
+
                                 }
                             }
                         }
-                        
+
                         .mind {
                             width: 320px;
-                            height: 300px; 
+                            height: 300px;
                         }
                     }
-                    
+
                     h6 {
                         font-size: 22px;
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     .access {
                         padding: 20px 40px 20px 15px;
-                        
+
                         .screen {
                             img {
                                 width: 400px;
                             }
                         }
-                        
+
                     }
                 }
-                
+
                 //INFORMATION SECTION
-                .information {
-                    padding: 90px 20px;
-                    .info {
-                        h4 {
-                            font-size: 26px;
-                        }
-                        
-                        p {
-                            font-size: 14px;
-                        }
-                    }
-                    
-                    .bg-info1 {
-                        bottom: 0;
-                        width: 87px;
-                    }
-                    
-                    .bg-info2 {
-                        width: 165px;
-                    }
-                    
-                    .tips {
-                        .tip {
-                            img {
-                                width: 100%;
-                                height: auto;
-                                image-resolution: 1000dpi;
-                            }
-                        }
-                    }
-                }
-                
+                // .information {
+                //     padding: 90px 20px;
+                //     .info {
+                //         h4 {
+                //             font-size: 26px;
+                //         }
+
+                //         p {
+                //             font-size: 14px;
+                //         }
+                //     }
+
+                //     .bg-info1 {
+                //         bottom: 0;
+                //         width: 87px;
+                //     }
+
+                //     .bg-info2 {
+                //         width: 165px;
+                //     }
+
+                //     .tips {
+                //         .tip {
+                //             img {
+                //                 width: 100%;
+                //                 height: auto;
+                //                 image-resolution: 1000dpi;
+                //             }
+
+                //             p {
+                //                 padding-top: 20px;
+                //                 padding-bottom: 20px;
+                //                 background-color: #fff;
+                //             }
+
+                            
+                //         }
+                //     }
+                // }
+
                 //INFORMATION SECTION
-                .information {
-                    padding: 80px 10px;
-                    .info {
-                        h4 {
-                            font-size: 24px;
-                        }
-                        
-                        p {
-                            font-size: 14px;
-                            padding: 0px 20px;
-                        }
-                        .tips {
-                            .tip {
-                                margin: 10px;
-                                
-                                img {
-                                    width: 100%;
-                                    border-top-left-radius: 20px;
-                                    border-top-right-radius: 20px;
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-                
+                // .information {
+                //     padding: 80px 10px;
+                //     .info {
+                //         h4 {
+                //             font-size: 24px;
+                //         }
+
+                //         p {
+                //             font-size: 14px;
+                //             padding: 0px 20px;
+                //         }
+                //         .tips {
+                //             .tip {
+                //                 margin: 10px;
+
+                //                 img {
+                //                     width: 100%;
+                //                     border-top-left-radius: 20px;
+                //                     border-top-right-radius: 20px;
+                //                 }
+                //             }
+
+                //             .articles {
+                //                 img {
+                //                     // width: 300px;
+                //                     // height: 300px;
+                //                 }
+                //                 p {
+                //                     // padding-top: -25px;
+                //                 // padding-bottom: -5px;
+                //                 }
+                //             }
+                //         }
+
+                //     }
+                // }
+
                 //INFORMATION SECTION
                 .information {
                     .tips {
                         .tip {
                             margin: 10px;
+
+                            p {
+                                padding-top: 10px;
+                            }
                         }
                     }
                 }
-                
-                //WHAT WE OFFER 
+
+                //WHAT WE OFFER
                 .offer {
-                    
+
                     h4 {
                         font-size: 25px;
                     }
-                    
+
                     .offers {
                         .frame {
                             p {
@@ -1674,14 +1708,14 @@ $phone: 425px;
                             }
                         }
                     }
-                    
+
                 }
                 //PERSONAL INFORMATION SECTION
                 .safe {
                     padding: 40px 70px 0px 70px ;
                     .tphone {
                         .text {
-                            
+
                             p {
                                 padding-bottom: 20px;
                                 font-size: 14px;
@@ -1696,72 +1730,72 @@ $phone: 425px;
                         }
                     }
                 }
-                
+
                 //GET STARTED SECTION
                 .started {
                     margin: 0px;
-                    
+
                     h5 {
                         font-size: 25px;
                     }
-                    
+
                     .timeline::after {
                         margin-left: 40px;
                         left: 18px;
-                        
+
                     }
-                    
+
                     .hand {
                         margin-right: 650px;
                         margin-left: 40px;
                         //left: 30%;
-                        
+
                     }
-                    
+
                     .row {
                         width: 100%;
                         //padding-left: 90px;
                         //padding-right: 55px;
                     }
-                    
+
                     .row-1 {
                         left: 0%;
                         //padding-left: 20px;
                     }
-                    
+
                     .row-2 {
                         left: 0%;
                     }
-                    
+
                     .row-1::before {
                         width: 70%;
                         left: 50px;
                     }
-                    
+
                     .row-2::before {
                         width: 20%;
                         left: 70px;
                     }
-                    
+
                     .row-1::after {
                         left: 45px;
                     }
-                    
+
                     .row-2::after {
                         left:45px;
                     }
-                    
-                    
+
+
                     .content {
                         width: 60%;
                         //padding-left: 10px;
                         left: 100px;
                     }
-                    
+
                     .content::before {
                         left: 60px;
                     }
-                    
+
                     .num {
                         margin-left: 120px;
                     }
@@ -1832,7 +1866,7 @@ $phone: 425px;
                                 padding-bottom: 35px;
                             }
                         }
-                        
+
                     }
 
                     .stay {
@@ -1840,7 +1874,7 @@ $phone: 425px;
                         text-align: center;
                         padding-bottom: 10px;
                         padding-top: 20px;
-                    
+
                         h6 {
                             justify-content: center;
                             font-size: 16px;
@@ -1863,12 +1897,12 @@ $phone: 425px;
                                 padding-right: 0px;
                                 // display: none;
                             }
-                        } 
+                        }
                     }
                    }
                 }
             }
-            
+
             @include phone1{
                 //HERO SECTION
                 .hero {
@@ -1883,40 +1917,40 @@ $phone: 425px;
                             h4 {
                                 font-size: 25px;
                             }
-                            
+
                             p{
                                 font-size: 13px;
                             }
-                            
+
                             .button {
                                 margin-top: 30px;
                                 a {
                                     padding: 13px 27px;
                                     font-size: 14px;
-                                    
+
                                 }
                             }
                         }
-                        
+
                         .mind {
                             width: 400px;
-                            height: 350px; 
+                            height: 350px;
                             text-align: center;
                             //margin: 0px 50px;
                         }
                     }
-                    
+
                     h6 {
                         margin-top: 50px;
                         font-size: 20px;
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     text-align: center;
                     justify-content: center;
-                    
+
                     .access {
                         display: flex;
                         flex-direction: column;
@@ -1935,15 +1969,15 @@ $phone: 425px;
                                 //image-resolution: 300dpi;
                             }
                         }
-                        
+
                         .bgresources1 {
                             width: 60px;
                         }
-                        
+
                         .bgresources2 {
                             width: 50px;
                         }
-                        
+
                         .help {
                             width: 100%;
                             padding: 0px 50px;
@@ -1953,52 +1987,52 @@ $phone: 425px;
                             p {
                                 margin-top: -30px;
                             }
-                            
+
                             div {
                                 width: 60px;
                                 margin: auto;
                                 margin-top: 10px;
-                                
+
                             }
                         }
                     }
                 }
-                
+
                 //ABOUT US SECTION
                 .about {
                     padding: 60px 0px;
-                    
+
                     .platform {
                         .text {
                             h4 {
                                 font-size: 24px;
                                 margin-bottom: 20px;
                             }
-                            
+
                             p {
                                 font-size: 13px;
                                 line-height: 30px;
                             }
-                            
+
                         }
-                        
+
                         .statements {
                             padding: 0px 10px;
-                            
+
                             .statement {
                                 margin: 10px 9px;
                                 margin-top: 15px;
                                 padding: 10px 10px;
                             }
-                            
+
                             .goals {
                                 margin: auto;
                                 width: 47%;
                             }
                         }
                     }
-                } 
-                
+                }
+
                 //WHAT WE OFFER SECTION
                 .offer {
                     padding: 50px 15px;
@@ -2010,12 +2044,12 @@ $phone: 425px;
                             align-items: center;
                             text-align: center;
                             padding: 30px 20px;
-                            
+
                             img {
                                 width: 40px;
                             }
                         }
-                        
+
                         .frame2 {
                             padding: 80px 20px;
                             height: 140px;
@@ -2025,17 +2059,17 @@ $phone: 425px;
                         }
                     }
                 }
-                
+
                 //INFORMATION SECTION
                 .information {
                     .bg-info1 {
                         width: 40px;
                     }
-                    
+
                     .bg-info2 {
                         width: 90px;
                     }
-                    
+
                     .tips {
                         flex-wrap: wrap;
                     }
@@ -2057,7 +2091,7 @@ $phone: 425px;
                             padding-top: 20px;
                             height: 400px;
                             width: 300px;
-                            
+
                             img {
                                 max-width: 100%;
                                 max-height: 100%;
@@ -2065,7 +2099,7 @@ $phone: 425px;
                         }
                     }
                 }
-                
+
                 //GET STARTED SECTION
                 .started {
                     h5 {
@@ -2084,15 +2118,15 @@ $phone: 425px;
                         font-size: 13px;
                         padding-top: 30px;
                     }
-                    
+
                     .mail {
                         width: 400px;
                         //margin: auto;
-                        
+
                         .text {
                             width: 250px;
                         }
-                        
+
                         .sign {
                             width: 250px;
                         }
@@ -2110,7 +2144,7 @@ $phone: 425px;
                 //     }
                 // }
             }
-            
+
             @include phone{
                 //HERO SECTION
                 .hero {
@@ -2119,34 +2153,34 @@ $phone: 425px;
                             h4 {
                                 font-size: 23px;
                             }
-                            
+
                             p{
                                 font-size: 12px;
                             }
-                            
+
                             .button {
                                 margin-top: 30px;
                                 a {
                                     padding: 10px 20px;
                                     font-size: 12px;
-                                    
+
                                 }
                             }
                         }
-                        
+
                         .mind {
                             width: 300px;
-                            height: 280px; 
+                            height: 280px;
                             //margin: 0px 50px;
                         }
                     }
-                    
+
                     h6 {
                         margin-top: 40px;
                         font-size: 18px;
                     }
                 }
-                
+
                 //RESOURCES SECTION
                 .resources {
                     .access {
@@ -2158,15 +2192,15 @@ $phone: 425px;
                                 margin: 0;
                             }
                         }
-                        
+
                         .bgresources1 {
                             width: 40px;
                         }
-                        
+
                         .bgresources2 {
                             width: 40px;
                         }
-                        
+
                         .help {
                             p {
                                 font-size: 11px;
@@ -2175,12 +2209,12 @@ $phone: 425px;
                                 width: 60px;
                                 margin: auto;
                                 margin-top: 10px;
-                                
+
                             }
                         }
                     }
                 }
-                
+
                 //ABOUT US SECTION
                 .about {
                     .platform {
@@ -2192,33 +2226,33 @@ $phone: 425px;
                                 font-size: 12px;
                             }
                         }
-                        
+
                         .statements {
                             .statement {
                                 h6 {
                                     font-size: 12px;
                                 }
-                                
+
                                 p {
                                     font-size: 11px;
                                 }
                             }
-                            
+
                             .goals {
                                 padding: 20px 10px;
                                 margin-top: 15px;
                             }
-                            
-                            
+
+
                         }
                     }
                 }
-                
+
                 ////WHAT WE OFFER SECTION
                 .offer {
                     padding-bottom: 10px;
                     .offers {
-                        
+
                         .frame {
                             img {
                                 justify-self: center ;
@@ -2245,15 +2279,15 @@ $phone: 425px;
                         h4 {
                             font-size: 18px;
                         }
-                        
+
                         p {
                             font-size: 11px;
                         }
-                        
+
                         .tips {
                             .tip {
                                 margin: 60px;
-                                
+
                                 p {
                                     font-size: 11px;
                                 }
@@ -2261,7 +2295,7 @@ $phone: 425px;
                         }
                     }
                 }
-                
+
                 //PERSONAL INFORMATION SECTION
                 .safe {
                     padding: 40px 10px 0px 20px;
@@ -2280,7 +2314,7 @@ $phone: 425px;
                             padding-top: 20px;
                             height: 300px;
                             width: 300px;
-                            
+
                             img {
                                 max-width: 100%;
                                 max-height: 100%;
@@ -2288,18 +2322,18 @@ $phone: 425px;
                         }
                     }
                 }
-                
-                
+
+
                 //GET STARTED SECTION
                 .started {
                     h5 {
                         font-size: 22px;
                         margin-top: 0px;
                     }
-                    
+
                     .timeline {
                         margin-left: 0;
-                        
+
                         h6 {
                             font-size: 14px;
                         }
@@ -2312,85 +2346,85 @@ $phone: 425px;
                             }
                         }
                     }
-                    
+
                     .timeline::after {
                         margin-left: 10px;
-                        
+
                     }
-                    
+
                     .hand {
                         margin-right: 850px;
                         margin-left: 10px;
                         //left: 30%;
-                        
+
                     }
                     .row-1::before {
                         width: 20%;
                         left: 30px;
                     }
-                    
+
                     .row-2::before {
                         width: -2%;
                         left: 40px;
                     }
-                    
+
                     .row-1::after {
                         left: 15px;
                     }
-                    
+
                     .row-2::after {
                         left:15px;
                     }
-                    
+
                     .content {
                         //padding-left: 10px;
                         width: 80%;
                         left: 10px;
                         padding: 15px 25px;
                     }
-                    
+
                     .num {
                         margin-left: 30px;
                     }
-                    
-                    
+
+
                 }
-                
-                
+
+
                 //EMAIL SECTION
                 .updates {
                     h6 {
                         font-size: 18px;
-                        
+
                     }
 
                     .share {
                         font-size: 12px;
                         padding-top: 30px;
                     }
-                    
+
                     .mail {
                         width: 280px;
                         //margin: auto;
                         border: 2px solid black;
                         border-radius: 20px;
                         padding: 25px 10px;
-                        
-                        
+
+
                         .text {
                             padding: 10px;
                         }
-                        
+
                         .sign {
                             padding: 15px 17px;
                             border-radius: 16px;
                             font-size: 15px;
                         }
-                        
+
                     }
                 }
 
-                //FOOTER 
+                //FOOTER
                 .footer {
                    .top {
                        .first {
@@ -2428,10 +2462,10 @@ $phone: 425px;
                         //         padding-left: 0px;
                         //     }
                         // }
-                   } 
+                   }
                 }
             }
-            
+
             // @include sPhone{
             //     //FOOTER
             //     .footer {

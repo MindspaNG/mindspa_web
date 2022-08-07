@@ -426,7 +426,7 @@
   /*.leaf {
                     width: 50px;
                     margin-left: -200px;
-                    
+
                 }*/
 }
 
@@ -1293,6 +1293,9 @@
   * body .offer .offers .frame2 p {
     font-size: 13px;
   }
+  * body .information .tips .audios p {
+    font-size: 14px;
+  }
   * body .safe {
     padding-bottom: 0px;
   }
@@ -1335,47 +1338,11 @@
   * body .resources .access .screen img {
     width: 400px;
   }
-  * body .information {
-    padding: 90px 20px;
-  }
-  * body .information .info h4 {
-    font-size: 26px;
-  }
-  * body .information .info p {
-    font-size: 14px;
-  }
-  * body .information .bg-info1 {
-    bottom: 0;
-    width: 87px;
-  }
-  * body .information .bg-info2 {
-    width: 165px;
-  }
-  * body .information .tips .tip img {
-    width: 100%;
-    height: auto;
-    image-resolution: 1000dpi;
-  }
-  * body .information {
-    padding: 80px 10px;
-  }
-  * body .information .info h4 {
-    font-size: 24px;
-  }
-  * body .information .info p {
-    font-size: 14px;
-    padding: 0px 20px;
-  }
-  * body .information .info .tips .tip {
-    margin: 10px;
-  }
-  * body .information .info .tips .tip img {
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
   * body .information .tips .tip {
     margin: 10px;
+  }
+  * body .information .tips .tip p {
+    padding-top: 10px;
   }
   * body .offer h4 {
     font-size: 25px;
