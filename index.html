@@ -10,9 +10,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
         <title>Mind-Spa NG</title>
         <link rel="icon" type="image/x-icon" href="Assets/images/mind-spa_logo_green_with_white_backgound.png">
+    
+        <script>
+            var shiftWindow = function() { scrollBy(0, -50) };
+            window.addEventListener("hashchange", shiftWindow);
+            function load() { if (window.location.hash) shiftWindow(); }
+        </script>
     </head>
 
-    <body>
+    <body onload="load()">
         
         <header>
             <nav class="navbar">
@@ -38,7 +44,7 @@
             <div class="heal">
                 <div class="mend">
                     <h4>Heal, mend and<br/>renew your <span>mind</span>.</h4>
-                    <p>Mind-Spa NG is a platform that helps improve your mental wellbeing.</p>
+                    <p>Mind-Spa NG is a platform that helps you begin or optimize your mental health journey through app-based therapy.</p>
                     <div class="button">
                         <a href="#">Download App</a>
                     </div>
@@ -55,10 +61,10 @@
             <div class="access">
                 <img src="Assets/images/bgresources1.svg" alt="" class="bgresources1">
                 <div class="screen">
-                    <img src="Assets/images/phone-screen-with-notifications.png" alt="">
+                    <img src="Assets/images/Group 998.png" alt="">
                 </div>
                 <div class="help">
-                    <p>Mind-Spa helps people with severe anxiety, depression and other mental health issues find the resources they need to get better.</p>
+                    <p>Mind-Spa helps people with anxiety, depression and other mental health issues find the resources they need to get better.</p>
                     <div></div>
                 </div>
                 <img src="Assets/images/bgresources2.svg" alt="" class="bgresources2">
@@ -69,8 +75,8 @@
         <div class="about" id="about-us">
             <div class="platform">
                 <div class="text">
-                    <h4>About us</h4>
-                    <p>Mind-Spa is a platform for the rejuvenation of the mind - Heal, Mend, Renew. It addresses major mental health challenges such as severe anxiety, depression, schizo-active disorders, and re-occurring symptoms associated with a number of mental health challenges prevalent in the West-African communities.</p>
+                    <h4>About Us</h4>
+                    <p>Mind-Spa is a platform for the rejuvenation of the mind hence our motto, Heal, Mend, Renew. It addresses some of the major mental illnesses such as severe anxiety, depression, schizo-affective disorders, and re-occurring symptoms associated with a number of mental health challenges prevalent in West-African communities.</p>
                 </div>
                 <div class="statements">
                     <div class="mission statement">
@@ -106,7 +112,7 @@
                 </div>
                 <div class="frame frame3">
                     <img src="Assets/images/offer3.svg" alt="">
-                    <p>Be monitored closely for conditions requiring more intensive care.</p>
+                    <p>Have interactive sessions with our Mind-bot that provides resources to deal with various mental health challenges.</p>
                 </div>
             </div>
         </div> 
@@ -116,18 +122,18 @@
             <img src="Assets/images/bg-info1.svg" alt="" class="bg-info1">
             <div class="info">
                 <h4>Information at your fingertips</h4>
-                <p>Taking this first step may feel daunting and overwhelming but we'll take your hand every step of the way.</p>
+                <p>Taking this first step may feel daunting and overwhelming but we'll be with you every step of the way.</p>
             </div>
             <div class="tips">
-                <div class="tip">
+                <div class="tip audios">
                     <img src="Assets/images/Audio.png" alt="">
-                    <p>Audios & podcasts</p>
+                    <p>Audios & Podcasts</p>
                 </div>
                 <div class="tip articles">
                     <img src="Assets/images/article.png" alt="">
                     <p>Articles</p>
                 </div>
-                <div class="tip">
+                <div class="tip course">
                     <img src="Assets/images/take-a-course.png" alt="">
                     <p>Take a course</p>
                 </div>
@@ -141,7 +147,7 @@
             <h6>Your personal information is safe with us.</h6>
             <div class="tphone">
                 <div class="text">
-                    <p>You can trust us with your private individual data. Mind-Spa NG guarantees 100% protection and uncompromising usage practices with our practices with our information security.</p>
+                    <p>You can trust us with your private information. Mind-Spa NG guarantees 100% information security and uncompromising data usage practices.</p>
                     <span><a href="#">More about privacy and security</a></span>    
                 </div>
                 <div class="phone">
@@ -176,7 +182,7 @@
                         <div class="circle"></div>
                         <div class="details detail-2">
                             <h6>Create an account</h6>
-                            <span>Quickly get started with just a username</span>
+                            <span>Get started with just a username</span>
                         </div>
                     </div>
                 </div>
@@ -185,7 +191,7 @@
                     <div class="content">
                         <div class="circle"></div>
                         <div class="details detail-1" id="detail-3">
-                            <span>Begin your journey towards<br/> better health </span>
+                            <span>Begin your mental health journey</span>
                         </div>
                     </div>
                 </div>
@@ -194,7 +200,7 @@
                     <div class="content">
                         <div class="circle"></div>
                         <div class="details detail-2" id="detail-4">
-                            <span >Access a variety of materials that have been meticulously organized to aid navigation and bring the most important features to your fingertips</span>
+                            <span >Access several relevant resources curated to aid your mental health journey right at your fingertips</span>
                         </div>
                     </div>
                 </div>
@@ -203,7 +209,8 @@
 
         <!-- EMAIL SECTION -->
         <section class="updates">
-            <h6>Get the latest events, tips and job offers in your mail</h6>
+            <h6 class="get">Get relevant mental health tips<br /> and resources right in your mail</h6>
+            <h6 class="share">Share your most active email address with us</h6>
                 <form class="mail" id="form">
                     <input type="email" id="email" name="email" placeholder="Your email" class="text">
                     <input type="submit" value="Sign me in!" class="sign">
@@ -230,27 +237,29 @@
                     <div class="contact" id="contact">
                         <h6>Contact us</h6>
                         <div class="gmail">
-                            <a href=""><img src="Assets/images/email.svg" alt=""></a>
+                            <a href="mailto:mindspang@gmail.com"><img src="Assets/images/email.svg" alt=""></a>
                             <a href="mailto:mindspang@gmail.com"><p>themindspang@gmail.com</p></a>
                             
                         </div>
                         <div class="socials">
                             <a href="https://www.instagram.com/mindspa_ng"><img src="Assets/images/instagram.svg" alt="" class="insta"></a>
-                            <a href="https://facebook.com/MindSpaNG"><img src="Assets/images/facebook.svg" alt=""></a>
+                            <a href="https://facebook.com/MindSpaNG"><img src="Assets/images/facebook.svg" alt="" class="facebook"></a>
+                            <a href="https://twitter.com/MindSpa_Ng"><img src="Assets/images/Group 1046.png" alt=""></a>
                         </div>
                     </div>
                     <div class="stay">
                         <h6>Stay up to date</h6>
                         <form class="form" id="form">
                             <input type="email" id="email" name="email" placeholder="Submit email address" class="input">
-                            <input type="submit" id="submit">
+                            <input class="button" type="submit" id="submit">
+                            <!-- <img src="Assets/images/send.svg"> -->
                         </form>
                     </div>
             </div>
             </div>
             <div class="bottom">
                 <hr/>
-                <p>Copyright &copy Mind-Spa NG 2022. All rights reserved.</p>
+                <p>Copyright &copy Mind-Spa NG <script type="text/javascript"> document.write(new Date().getFullYear()); </script>. All rights reserved.</p>
             </div>
         </div>
 
